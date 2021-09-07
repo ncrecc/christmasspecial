@@ -1,0 +1,10 @@
+- Equipment could probably use more finalization! Current pool is basically just vanilla warrior_normal with items selectively replaced with similar modded items.
+- Add more oomph/uniqueness? Extra dice isn't much.
+- Shock and Weaken still aren't fully implemented.
+- Fury breaks everything. This will take some concentration to fix due to the difficulty in determining whether an equipment has been used due to fury in "On Any Equipment Use".
+- Curse breaks everything, though Reunion has an "On Curse Activate" field I could probably kludge/horrifically mass-script inject something into.
+- Using an item *after using Cycle and while it's traveling off-screen* will result in no next card being cycled to. Why someone would do this outside of curiosity is beyond me.
+- giveequipment is borked.
+These are mainly notes-to-self (and to the rest of my system).
+
+-Titku of Wibi

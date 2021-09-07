@@ -1,0 +1,14 @@
+h1|Bookworm
+
+In this episode[;] you can switch between 3 different
+spellbooks using a special card in your 4th spell slot.
+
+You also start with 4 dice and your limit is stronger.
+But[;] you don't have a prepared spell slot
+and you can't throw dice.
+
+Your starter spells are [yellow]Fruit Bowl[][;] [yellow]Snapdragon[]
+and [yellow]Daffodil[][;] located between 3 spellbooks.
+
+That's all. Good luck there!
+                   -[vanish][]Fiship
