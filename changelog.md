@@ -1,3 +1,18 @@
+9/7/2021 abagail of wibi
+- fixed snowcloud saying `2x<d6>` instead of `<double>` which was overlooked forever
+- fixed stomp not inflicting shock on initial use
+- more grammar fixes on equipment
+- added a few items to excludefromrandomlists that didn't make sense to get from card reroll as warrior (or other "get a random item this turn" cards): snowdrift, mortal sin, acceleration kick, bet
+- snowdrift is actually always offered for scrap now
+- acceleration kick no longer has change_power as upgrade and downgrade (it had no corresponding upgraded/downgraded versions)
+- certain passive items now avoid shock: acceleration kick, bet
+- certain items with no weakened version now avoid weaken: acceleration kick, bet
+- timely demise actuator now actually works
+- heater and heater+ should no longer weaken weaken-avoiding/weaken-immune equipment
+- "never roll x" statuses were ultra broken and always made you roll 1; this is because the input was effectively e.g. `Rules.playerdicerange([[1, 2, 3, 4, 5, 6]])` - double-heaping of brackets made it interpret the array itself as one of the dice ranges, which somehow it simplified to being 1 instead of throwing an error.
+- fixed a separate bug with "never roll x" statuses where it wouldn't actually exclude the roll corresponding to the status (getstatusself was checked in "when inflicted", before the inflicted status actually counted for it)
+- tit somehow left the episodes.csv ~lock file in
+
 9/7/2021 6:47 PM: by Titku of Wibi
 - Introduced the changelog. A big thank you to Abagail for doing all the GitHub setup.
 
@@ -22,4 +37,4 @@ No written changelog.
 needs to be fixed since actuators are confusing and i dont know what im doing
 crashes after beating an enemy
 
-Beyond: Lost to antiquity. :P Project was started on August 19th.
+Beyond: Lost to antiquity. :P Project was started on August 19th, 2021.
