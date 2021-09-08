@@ -1,3 +1,11 @@
+9/8/2021 abagail of wibi
+- winter witch and demise actuators no longer use the same selfvar
+- winter witch and demise actuators now use .stop() after combat instead of ._repeat = 0
+- winter witch and demise selfvars are now properly reset so the actuators won't be serialized
+- winter witch now uses default witch generator (could crash because the previous generator contained non-spell equipment because witch used a deck instead of a spellbook)
+- minor grammar fix for "never roll x" statuses; "you can't roll x this fight" instead of "you can't roll x on this fight"
+the winter witch stuff here is mildly pointless since the episode is going to be tossed pretty soon
+
 9/7/2021 abagail of wibi
 - fixed snowcloud saying `2x<d6>` instead of `<double>` which was overlooked forever
 - fixed stomp not inflicting shock on initial use
