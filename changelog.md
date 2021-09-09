@@ -1,3 +1,12 @@
+9/9/2021 abagail of wibi
+- merged in levelworld's robot puzzle stuff thus far
+- frozen gloves (the special robot version and the normal version) now has an on dodge script
+- added a placeholderesque rule screen to winter jester
+- added bear to characters.csv to probably prevent crashes if you transform into bear somehow
+- fixed the introductions.csv placeholder line being all fucky
+- added angelmoon's shop theme
+- added a credits file
+
 9/8/2021 abagail of wibi
 - winter witch and demise actuators no longer use the same selfvar
 - winter witch and demise actuators now use .stop() after combat instead of ._repeat = 0

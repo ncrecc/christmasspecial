@@ -52,3 +52,6 @@ bearcurse,Bear's_Curse,curse,Curse yourself each turn,NO,NO,NO,NO,NO,beartransfo
 creativecrisis,creativecrisis,recycle,(text should not appear),NO,NO,NO,YES,NO,,,,,,,,Rules.inventor_inspiration = false; Gadget.changegadget(self[;] Gadget.getcurrentgadget(self)[;]~Broken Gadget~);,,,
 consumerism,consumerism,recycle,(text should not appear),YES,NO,NO,YES,NO,,,,,,,,,,,
 creativecrisis+,creativecrisis+,recycle,(text should not appear),NO,NO,NO,YES,NO,,,,,,,,Rules.inventor_inspiration = false;,,,
+reversecpu,Garbage Collector,cog,Next roll reduces CPU instead of increasing it.,YES,YES,NO,NO,NO,,,,,,,,,,,
+robotfreeze,Frozen,ice,Turns the highest dice rolled into a 1.,YES,YES,NO,NO,NO,,,,,,,,,,,
+oddcpureduce,Odd CPU Reduce,cog,You shouldn't be seeing this.,NO,YES,NO,YES,NO,,,,,,,,,,,
