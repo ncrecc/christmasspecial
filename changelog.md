@@ -1,4 +1,18 @@
 9/9/2021 abagail of wibi
+- flame whip now has an on dodge script
+- added matt101's robot cutscene
+- fixed What_s -equipment.csv about.txt's filename
+- moved credits.txt out of data\text\
+- credited matt101 for the jester1 concept in credits.txt
+- deleted Winter Jester Todo.txt which is now contained in the github repo's issues page
+- fixed grammar issue in last word that was fixed in last word+ ("survive the fatal blow" instead of "survive next fatal blow")
+- fixed frosty bufu and burning agi's description (used `<d6>` instead of `<slotdoubles>` breaking consistency with other needs doubles items)
+- finally did it. finally nerfed bloody drill+. now max2 but drains 2 for d6 turns instead of 1
+- fixed text bleed on burning agi and frosty bufu
+- made present shotgun size 2 (forgot to do this when making it max3 for balance; also makes things not break when it pulls large items)
+- fixed crash from invalid downgrade type for confetti popper ("reducerange" should be "decreaserange")
+
+9/9/2021 abagail of wibi
 - merged in levelworld's robot puzzle stuff thus far
 - frozen gloves (the special robot version and the normal version) now has an on dodge script
 - added a placeholderesque rule screen to winter jester
