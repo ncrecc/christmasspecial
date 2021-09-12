@@ -1,4 +1,10 @@
 9/12/2021 Titku of Wibi
+Hotfix. Er, patch. Hotpatch?
+- Merged in Matt101's Pip Master redesign.
+- Changed Pip Master's script, which didn't make sense with the previous description ("Do 1 damage per pip to dice", which I'm assuming means "Do damage equal to the absolute difference between the old and new dice", but only did 1 damage if the new dice was smaller or equal to the old dice and did damage equal to the difference otherwise?).
+- Tidied up Pip Master's description.
+
+9/12/2021 Titku of Wibi
 - Added more Angelmoon themes (tradingpost, blacksmith, openchest, lowhealth).
 - Merged in Green's Thief episode!
 - Rewrote some character descriptions a little.
