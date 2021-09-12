@@ -33,3 +33,4 @@ Randomizer,Get a temporary gadget (once),Gadget.givegadget(self[;]rand([~Pea Gun
 Globe,Roll 4 extra dice,givedice([rand([1[;]2[;]3[;]4[;]5[;]6])[;]rand([1[;]2[;]3[;]4[;]5[;]6])[;]rand([1[;]2[;]3[;]4[;]5[;]6])[;]rand([1[;]2[;]3[;]4[;]5[;]6])][;]~~[;]true); sfx(~useitem~);
 Random Hit,Do 1-6 dmg of a random type,var type = rand([FIRE[;]ICE[;]WEAKEN[;]SHOCK]); var dam = rand([1[;]2[;]3[;]4[;]5[;]6]); attack(dam[;] type); sfxdamage(target[;] dam); sfx(~_~ + type);
 Telescope,+1 dice this fight; get a new dice,givedice(); self.extradice++; sfx(~magic_gaindice~);
+thiefyboi,AAAAAAAAAAAAAAAAAAAAAAAAA,var a = ~Thieving Tools@~ + rand([~roll~|~vise~|~dupli~|~spanner~|~screw~|~bump~|~nudge~|~pick~]); self.replaceskillcard(a); self.getskillcard().animate(~error~); 

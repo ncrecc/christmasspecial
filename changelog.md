@@ -1,3 +1,9 @@
+9/12/2021 Titku of Wibi
+- Added more Angelmoon themes (tradingpost, blacksmith, openchest, lowhealth).
+- Merged in Green's Thief episode!
+- Rewrote some character descriptions a little.
+- Sorted the characters in characters.csv according to their vanilla placement.
+
 9/9/2021 abagail of wibi
 - flame whip now has an on dodge script
 - added matt101's robot cutscene
