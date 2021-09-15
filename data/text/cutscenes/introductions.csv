@@ -5,9 +5,9 @@ Intensity;Class;State;Introduction
 1;Warrior;normal;Let's welcome the Warrior back to the Christmas Special!||{sly}Barely a special more of an extension...
 1;Witch;normal;Put your hands together for the Witch!||Time for another magical adventure!
 1;Witch;normal;Let's welcome back my wonderful Witch!||{sly}What spell will she cast on us today?
-1;Witch;normal;Let's welcome back my favourite enchanting|adventurer, and the only contestant I follow|on social media - it's the Witch! 
+1;Witch;normal;Let's welcome back my favourite enchanting|adventurer, and the only contestant I follow|on social media - it's the Witch!
 1;Witch;normal;Let's give a big hand for our wily Witch!||She's playing to win fame and fortune - no, wait, sorry,|no fortune. Just the fame! Great choice!
-1;Witch;sly;Remember the Witch?||{normal}Well, she's back, for some reason! 
+1;Witch;sly;Remember the Witch?||{normal}Well, she's back, for some reason!
 1;Witch;normal;Welcome back to the stage my favourite|perennial failure, the Witch!
 1;Witch;normal;Give a big cheer for the Witch,|my favourite little braggart!||Did you know her account is up|to ten thousand followers?||{sly}Well, it was until I had it deleted.
 1;Witch;normal;It's time for another episode with our determined|little Witch!||She's working very hard to defeat the Dungeons|and find fame.||{sly}It's definitely possible that it'll all pay off.
@@ -20,4 +20,4 @@ Intensity;Class;State;Introduction
 1;MummyEpisodeWin;normal;Such a persistent little dice friend!||Sure, let's give the wheel a spin, why not!#No amazing prize this time, I'm afraid.||Bad luck. Maybe it's time to just|give up for ever?
 1;MummyEpisodeWin;normal;Here to give it another whirl?||Yeah, absolutely!||This could DEFINITELY be the time that|you win your heart's desire!#Oooh, look at that!||What are the chances?
 1;MummyEpisodeWin;normal;Honestly, what would you even DO with|your heart's desire, if you won it?||No, no, sorry, silly question, let's just|get on with the wheel...#Anyway it looks like you don't need to make|any big decisions about what you would do.||At least not just yet.||Maybe next time!
-1;Thief|Robot|Inventor;normal;This is a placeholder line so the game|won't crash if any character is added without|yet having corresponding lines.||If you're removing a character's normal lines,|remember to add them to this message's Class column!
+1;Thief|Robot|Inventor|Lady Luck;normal;This is a placeholder line so the game|won't crash if any character is added without|yet having corresponding lines.||If you're removing a character's normal lines,|remember to add them to this message's Class column!
