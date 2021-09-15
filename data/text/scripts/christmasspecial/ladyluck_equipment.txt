@@ -1,0 +1,3 @@
+Sword,Broadsword,Sword
+Battle Axe,Battle Axe,Battle Axe
+Bop,Bop,Bop

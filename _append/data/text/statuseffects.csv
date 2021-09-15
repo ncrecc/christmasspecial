@@ -55,3 +55,4 @@ creativecrisis+,creativecrisis+,recycle,(text should not appear),NO,NO,NO,YES,NO
 reversecpu,Garbage Collector,cog,Next roll reduces CPU instead of increasing it.,YES,YES,NO,NO,NO,,,,,,,,,,,
 robotfreeze,Frozen,ice,Turns the highest dice rolled into a 1.,YES,YES,NO,NO,NO,,,,,,,,,,,
 oddcpureduce,Odd CPU Reduce,cog,You shouldn't be seeing this.,NO,YES,NO,YES,NO,,,,,,,,,,,
+commandment,Commandment,curse,Something really bad happens to you! Woo!,NO,NO,NO,NO,,,,,,,,,,,
