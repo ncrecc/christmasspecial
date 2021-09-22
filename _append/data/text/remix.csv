@@ -1,0 +1,4 @@
+Name,Description,Image,ImageOffset,Implemented,Rule Change,Apply On Continue
+Elf,All enemies gain 1 regen every turn,frog,-80|-40,YES,Rules.addenemyinnatestatus(~Regen~[;] 1[;] false); ,YES
+Gingerbread Man,First attack deals 50% less damage,frog,-80|-40,YES,Rules.addplayerinnatestatus(~Too Sweet~[;] 1[;] false);,YES
+The Warrior,Enemies gain a random item each turn,_warrior,-90|-20,YES,Rules.addenemyinnatestatus(~Karen Rule~); ,YES

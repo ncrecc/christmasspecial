@@ -1,3 +1,8 @@
+9/21/2021 geddy of wibi
+- merged in inventor ep 2 and jester ep 2
+- and various other shit that was present in the inventor ep 2 build, e.g. new victory.ogg
+if i missed anything hollar it out and i'll add it. this is what happens when a lot of builds go by without one simple full changelog and no pull request
+
 9/12/2021 Titku of Wibi
 Hotfix. Er, patch. Hotpatch?
 - Merged in Matt101's Pip Master redesign.
