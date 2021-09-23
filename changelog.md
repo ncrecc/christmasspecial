@@ -1,3 +1,7 @@
+9/22/2021 gost of wibi
+- added a non-mana witch generator (currently witch 1) and several modded items to go with it. we plan to make a mana witch generator later; if neither episode will be non-mana then the mana generator will likely be built upon the non-mana generator
+- minor grammatical changes
+
 9/21/2021 geddy of wibi
 - merged in inventor ep 2 and jester ep 2
 - and various other shit that was present in the inventor ep 2 build, e.g. new victory.ogg

@@ -11,7 +11,7 @@ Intensity;Class;State;Introduction
 1;Witch;normal;Welcome back to the stage my favourite|perennial failure, the Witch!
 1;Witch;normal;Give a big cheer for the Witch,|my favourite little braggart!||Did you know her account is up|to ten thousand followers?||{sly}Well, it was until I had it deleted.
 1;Witch;normal;It's time for another episode with our determined|little Witch!||She's working very hard to defeat the Dungeons|and find fame.||{sly}It's definitely possible that it'll all pay off.
-1;Jester;sly;Good Luck Jester buddy||I didn't mean that
+1;Jester;sly;"Good luck[;] Jester buddy!||Not from me[;] of course."
 1;MummyEpisodeWin;normal;Ah look, you've won yet another episode.||Congratulations!#But, oh no! how unexpected!||I've spun the wheel and it doesn't look like|you're taking home a prize this time...
 1;MummyEpisodeWin;normal;You know, NONE of you contestants have|won your heart's desire yet.||What a baffling stretch of bad luck!||Anyway, it's time for one more|unlucky spin of the wheel...#Oooof, how unfortunate!||Probably next time though, right? Right!
 1;MummyEpisodeWin;normal;You must think you've been doing SO|well at all this fighting.||So sure, stick with it!||Let's spin the wheel yet again!#Ah, how tragic.||You lose again.
@@ -21,3 +21,4 @@ Intensity;Class;State;Introduction
 1;MummyEpisodeWin;normal;Here to give it another whirl?||Yeah, absolutely!||This could DEFINITELY be the time that|you win your heart's desire!#Oooh, look at that!||What are the chances?
 1;MummyEpisodeWin;normal;Honestly, what would you even DO with|your heart's desire, if you won it?||No, no, sorry, silly question, let's just|get on with the wheel...#Anyway it looks like you don't need to make|any big decisions about what you would do.||At least not just yet.||Maybe next time!
 1;Thief|Robot|Inventor|Lady Luck;normal;This is a placeholder line so the game|won't crash if any character is added without|yet having corresponding lines.||If you're removing a character's normal lines,|remember to add them to this message's Class column!
+1;Lady Luck;normal;but who says this line
