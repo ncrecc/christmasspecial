@@ -31,11 +31,9 @@ items = [];
 gooditems = [];
 otherstuff = [];
 goodotherstuff = [];
-
-addfloor("tiny")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor1 = addfloor('tiny').additems(items, gooditems);
+mycoolfloor1.theme = rand(['music_combat2']);
+mycoolfloor1.generate();
 
 //Floor 2:
 items = [];
@@ -43,10 +41,9 @@ gooditems = [];
 otherstuff = [health(), health()];
 goodotherstuff = [];
 
-addfloor("small")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor2.theme = mycoolfloor1.theme;
+mycoolfloor2.generate();
 
 //Floor 3:
 items = [];
@@ -56,10 +53,9 @@ otherstuff = [health(), health()];
 
 goodotherstuff = [];
 
-addfloor("normal")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor3 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor3.theme = rand(['music_combat1']);
+mycoolfloor3.generate();
   
 //Floor 4:
 items = [];
@@ -68,10 +64,9 @@ gooditems = [];
 otherstuff = [health(), health(), health()];
 goodotherstuff = [];
 
-addfloor("normal")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor4 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor4.theme = mycoolfloor3.theme;
+mycoolfloor4.generate();
   
 //Floor 5:
 items = [];
@@ -80,10 +75,9 @@ gooditems = [];
 otherstuff = [health(), health(), health()];
 goodotherstuff = [shop(["health", "health", "health"], [4, 3, 4])];
 
-addfloor("big")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor5.theme = 'music_combat3';
+mycoolfloor5.generate();
 
 //Floor 6:
 items = [];
