@@ -1,3 +1,16 @@
+10/1/2021 diane of wibi
+- !!purged all unused vanilla equipment!! with the rest being marked excludefromrandomlists
+- rehauled warrior from the ground up
+- added "rudy" enemy and his "redshift" status effect
+- renamed "antler" item for lightning to "ram"
+- updated credits.txt to not mention 2nd episodes
+- fixed some jinx syntax to not use "%VAR%x2", instead taking the number that would be %VAR% and manually multiplying it by 2
+- removed equipment for now unused jester 2
+- added neypah's "endless winter" status and associated equipment (currently unused)
+
+9/22/2021-10/1/2021
+...bunch of stuff by plok and matt, who didn't update changelog.md; fill this in later...
+
 9/22/2021 gost of wibi
 - added a non-mana witch generator (currently witch 1) and several modded items to go with it. we plan to make a mana witch generator later; if neither episode will be non-mana then the mana generator will likely be built upon the non-mana generator
 - minor grammatical changes
