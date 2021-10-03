@@ -1,5 +1,0 @@
--equipment.csv should eventually have the dash at the start be removed, such that it overrides the normal equipment.csv, removing most vanilla items (those that aren't used by enemies), and marking the rest excludefromrandomlists, such that no vanilla items can be gotten by "get a random item" cards.
-Borrowed modded equipment being part of _append/data/text/equipment.csv is actually just a temporary thing; in the future, _append/data/text/equipment.csv will only contain the new Christmas items, and all of the borrowed equipment will be in -equipment.csv, for the sake of organization.
-The same won't be necessary for gadgets, since nothing like "select a random gadget of those in skills.csv" exists.
--Titku
-(Abagail put most of this into motion!)

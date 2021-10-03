@@ -1,3 +1,18 @@
+10/3/2021 diane of wibi
+- readded tons of vanilla equipment that actually was being used
+- warrior now starts with an "a blade" themecard that ensures he'll receive a normal-slot weapon
+- warrior's gimmick now uses giveequipment instead of pushing equipment directly to self.equipment
+- merged in new lady luck commandments/overworld stuff from matt and plok
+- fixed warrior's gimmick not caring about themecards (e.g. A Weapon) after turn 1
+- fixed crash due to missing falseswipe status
+- fixed some missing sfx
+- fixed items not being marked excludefromrandomlists that should
+- wrapped the ghosts of christmas' "change form" script in if(!simulation)
+- fixed a harmless error that would happen when warrior's "themesequipped" variable was length 0
+- rewrote some statuses that decrease by 1 each turn to make it more clear that they do that
+- made commandments loaded from a separate commandments.csv file
+- fixed a crash that would happen when using bop bop due to https://github.com/TerryCavanagh/diceymodgeons/issues/59 (irony noted)
+
 10/1/2021 diane of wibi
 - !!purged all unused vanilla equipment!! with the rest being marked excludefromrandomlists
 - rehauled warrior from the ground up

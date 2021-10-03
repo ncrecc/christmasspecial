@@ -2,4 +2,4 @@ Divine Throwing Axe,Divine Incantation,Soul Crush
 Divine Throwing Dagger,Divine Throwing Dagger,Divine Grip
 Divine Zap,Divine Grip,Pip Master,Pip Master
 Divine Snowhammer,Divine Microphone,Divine Fire Axe
-Divine Storm,Divine Incantation,Divine Incantation
+Divine Storm,Pip Master,Divine Incantation

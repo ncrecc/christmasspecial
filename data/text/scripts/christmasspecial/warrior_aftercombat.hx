@@ -10,9 +10,14 @@ while(i > 0) {
 	}
 }
 
-for(themecard in f.getvar("themesequipped")) {
-	f.equipment.push(new elements.Equipment(themecard));
+var themesequipped = f.getvar("themesequipped");
+
+if(themesequipped.length > 0) {
+	for(themecard in themesequipped) {
+		f.equipment.push(new elements.Equipment(themecard));
+	}
 }
 
+f.resetvar("themesequipped");
 shuffle(f.equipment);
 f.fixskillcard();
