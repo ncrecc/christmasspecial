@@ -1,3 +1,16 @@
+10/4/2021 Diane and Black Widow of Wibi
+- buffed slide (freeze on even instead of on 8, which was very rare)
+- commented out traces from thesaurus.hx
+- bear equipment is now marked excludefromrandomlists like the rest of the vanilla equipment
+- marked spare parts as excludefromrandomlists
+- marked some equipment that assumes it stays between turns as excludefromrandomlists
+- technology and minigun are now consistent; technology's bonus depends on turn number rather than how many turns it's been in play
+- fixed some themecards not being black
+- present and the ghosts of christmas equipment preview now works
+- fixed some missing reference stuff items
+- Added Matt's new Lady Luck equipment.
+- Buffed Divine Storm to CD9.
+
 10/3/2021 diane of wibi
 - readded tons of vanilla equipment that actually was being used
 - warrior now starts with an "a blade" themecard that ensures he'll receive a normal-slot weapon

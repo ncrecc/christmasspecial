@@ -68,10 +68,10 @@ diane of wibi
 =concept=
 matt101
 =design=
-matt101, plok
+matt101
+plokmijnuhby
 =coding=
 matt101
-plok
 plokmijnuhby
 
 =new equipment=
@@ -95,6 +95,9 @@ see [mod begin]/[mod end] sections in equipment.csv for exactly what mods comes 
 
 =music=
 xangelmoonx
+
+=art=
+mondaybear21
 
 =special thanks=
 YOU!!!!

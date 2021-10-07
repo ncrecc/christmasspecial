@@ -11,8 +11,8 @@ if(f.equipment.length > 0 && f.layout != "DECK") {
   allequipmentsmall.sort(function(a,b) return a > b ? 1 : -1);
   for(eq in f.equipment) {
     if(eq.skillcard == "" && eq.isready(true) && !eq.temporary_thisturnonly && eq.onscreen() && !eq.hastag("skillcard")) {
-	  eqlist.push(eq);
-	}
+      eqlist.push(eq);
+    }
   }
   if(eqlist.length > 0) {
     for(choseneq in eqlist) {
@@ -21,8 +21,10 @@ if(f.equipment.length > 0 && f.layout != "DECK") {
       else { allequipment = allequipmentsmall; }
       var myindex = allequipment.indexOf(choseneq);
       if(myindex == -1 || myindex == allequipment.length - 1) continue;
+      /*
       trace(allequipment[myindex]);
       trace(allequipment[myindex + 1]);
+      */
       var neweq = new elements.Equipment(allequipment[myindex + 1]);
       runscript("christmasspecial/replaceequipment",[f,neweq,choseneq]);
       runscript("christmasspecial/evalstarthooks",[f,target,neweq]);
