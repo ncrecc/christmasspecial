@@ -1,3 +1,7 @@
+10/12/2021 Reyder of Wibi
+Hotfix, woo!
+- Lady Luck now uses a separate generator from Warrior.
+
 10/12/2021 gost of wibi, Reyder of Wibi
 - immunetotide items can no longer be rerolled into if you're warrior (their property is that they cannot be rerolled, so you could reroll into them and then not be able to reroll out)
 - immunetotide items now resist catalog and cannot be catalog'd into
