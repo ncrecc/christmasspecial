@@ -1,3 +1,16 @@
+10/12/2021 gost of wibi, Reyder of Wibi
+- immunetotide items can no longer be rerolled into if you're warrior (their property is that they cannot be rerolled, so you could reroll into them and then not be able to reroll out)
+- immunetotide items now resist catalog and cannot be catalog'd into
+- a gun now actually works and has more inclusive criteria
+- gave warrior a rudimentary generator
+- fixed a typo in a tool's description
+- added more items fitting a gun's query and a tool's query
+- snowcloud now actually does double damage like it says it does
+- card reroll now makes the `_thinghappens` sfx
+- Added Matt's "Cape Deflect" item.
+- Added mondaybear's Lady Luck art (with implementation by Matt).
+- Added Matt's Lady Luck cutscene; a bit buggy at the moment.
+
 10/4/2021 Diane and Black Widow of Wibi
 - buffed slide (freeze on even instead of on 8, which was very rare)
 - commented out traces from thesaurus.hx

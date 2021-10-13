@@ -16,7 +16,8 @@ var allsmalleqs = getequipmentlist(
 		"jesteronly",
 		"inventoronly",
 		"onceperbattle",
-		"alternateversion"
+		"alternateversion",
+		"immunetotide"
 	]
 );
 var alllargeeqs = getequipmentlist(
@@ -30,7 +31,8 @@ var alllargeeqs = getequipmentlist(
 		"jesteronly",
 		"inventoronly",
 		"onceperbattle",
-		"alternateversion"
+		"alternateversion",
+		"immunetotide"
 	]
 );
 var alleqs = allsmalleqs.concat(alllargeeqs);

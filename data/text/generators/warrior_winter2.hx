@@ -1,11 +1,12 @@
-var thisgenerator = "warrior_winter2";
-var warriorshops = [];
-var strangeshop = [];
-var awesomelist = [];
-var floor2gooditem = [];
-var floor3item = [];
-var floor5item = [];
-var vampireitem = [];
+var warriorshops = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
+var strangeshop = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
+var awesomelist = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
+var floor2gooditem = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
+var floor3item = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
+var floor5item = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
+var vampireitem = ["Silver Sword"];
+
+
 
 usestandardenemies();
 
@@ -16,51 +17,72 @@ var goodotherstuff = [];
 
 //Floor 1:
 items = [];
-gooditems = [];
+gooditems = [awesomelist.pop()];
 otherstuff = [];
 goodotherstuff = [];
-var mycoolfloor1 = addfloor('tiny').additems(items, gooditems);
-mycoolfloor1.generate();
+
+addfloor("tiny")
+  .additems(items, gooditems)
+  .addotherstuff(otherstuff, goodotherstuff)
+  .generate();
 
 //Floor 2:
 items = [];
-gooditems = [];
-otherstuff = [health(), health()];
-goodotherstuff = [];
+gooditems = [pick(["Budge", "Pip Master"])];
+otherstuff = [health()];
+goodotherstuff = [shop([warriorshops.pop(), warriorshops.pop(), warriorshops.pop()])];
 
-var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor2.generate();
+addfloor("small")
+  .additems(items, gooditems)
+  .addotherstuff(otherstuff, goodotherstuff)
+  .generate();
 
 //Floor 3:
 items = [];
+items.push(floor3item.pop());
 gooditems = [];
 
 otherstuff = [health(), health()];
 
-goodotherstuff = [];
+goodotherstuff = [
+  shop([warriorshops.pop(), warriorshops.pop(), warriorshops.pop()]),
+  upgrade()
+];
 
-var mycoolfloor3 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor3.generate();
+addfloor("normal")
+  .additems(items, gooditems)
+  .addotherstuff(otherstuff, goodotherstuff)
+  .generate();
   
 //Floor 4:
 items = [];
-gooditems = [];
+gooditems = [awesomelist.pop()];
 
-otherstuff = [health(), health(), health()];
-goodotherstuff = [];
+otherstuff = [health()];
+goodotherstuff = [
+  trade(["any"], [awesomelist.pop()])
+];
 
-var mycoolfloor4 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor4.generate();
+addfloor("normal")
+  .additems(items, gooditems)
+  .addotherstuff(otherstuff, goodotherstuff)
+  .generate();
   
 //Floor 5:
 items = [];
+items.push(floor5item.pop());
 gooditems = [];
 
-otherstuff = [health(), health(), health()];
-goodotherstuff = [shop(["health", "health", "health"], [4, 3, 4])];
+otherstuff = [health(), health()];
+goodotherstuff = [
+  upgrade(),
+  shop(["health", strangeshop.pop(), "health"], [4, 4, 4])
+];
 
-var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor5.generate();
+addfloor("big")
+  .additems(items, gooditems)
+  .addotherstuff(otherstuff, goodotherstuff)
+  .generate();
 
 //Floor 6:
 items = [];

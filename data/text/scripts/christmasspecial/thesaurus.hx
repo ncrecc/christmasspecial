@@ -3,14 +3,14 @@ var f = args[0];
 var dosound = false;
 if(f.equipment.length > 0 && f.layout != "DECK") {  
   var eqlist = [];
-  var exceptions = ["skillcard", "excludefromrandomlists", "onceperbattle", "alternateversion"];
+  var exceptions = ["skillcard", "excludefromrandomlists", "onceperbattle", "alternateversion", "immunetotide"];
   exceptions = exceptions.concat(runscript('christmasspecial/getexceptions',[f]));
   var allequipmentlarge = getequipmentlist(null,['large'],exceptions);
   allequipmentlarge.sort(function(a,b) return a > b ? 1 : -1);
   var allequipmentsmall = getequipmentlist(null,['small'],exceptions);
   allequipmentsmall.sort(function(a,b) return a > b ? 1 : -1);
   for(eq in f.equipment) {
-    if(eq.skillcard == "" && eq.isready(true) && !eq.temporary_thisturnonly && eq.onscreen() && !eq.hastag("skillcard")) {
+    if(eq.skillcard == "" && eq.isready(true) && !eq.temporary_thisturnonly && eq.onscreen() && !eq.hastag("skillcard") && !eq.hastag("immunetotide")) {
       eqlist.push(eq);
     }
   }

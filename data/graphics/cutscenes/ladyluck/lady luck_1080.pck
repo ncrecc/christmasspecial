@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
 <!-- $TexturePacker:SmartUpdate:1fcbb831b94bc32959a319d6e7cd37c1:d02e66c43b1012e5f066a5726976a604:813ac5c4bcbca3a1874326d517337272$ -->
-<TextureAtlas imagePath="lady luck_1080.atf" width="2048" height="2048">
+<TextureAtlas imagePath="lady luck_1080.png" width="2048" height="2048">
     <SubTexture name="blink1_jester_alpha" x="395" y="1766" rotated="true" width="55" height="233" frameX="-152" frameY="-248" frameWidth="661" frameHeight="620"/>
     <SubTexture name="blink2_jester_alpha" x="306" y="1766" rotated="true" width="87" height="240" frameX="-145" frameY="-248" frameWidth="661" frameHeight="620"/>
     <SubTexture name="blink3_jester_alpha" x="199" y="1766" rotated="true" width="105" height="243" frameX="-142" frameY="-248" frameWidth="661" frameHeight="620"/>
