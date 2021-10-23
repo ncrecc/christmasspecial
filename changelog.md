@@ -1,3 +1,13 @@
+10/23/2021 Reyder of Wibi, Black Widow of Wibi, gost of wibi
+- Lady Luck and Warrior now no longer get Budge or Pip Master.
+- Cape Deflect's upgrade is no longer a size reduce.
+- Per Matt: fixed Lady Luck generator crashing due to shops still being generated.
+- Fixed missing upgrade/downgrade type specifications on Polarized Cauldron, Pulsing Cauldron, and Earsplitter.
+- Before Combat/Before Start Turn/On Start Turn scripts are now properly run when rerolling items as Warrior.
+- Widow: Tagged Banhammer as excludefromrandomlists due to inconvenience from getting it as Warrior.
+- gost: inventor generator implemented (with new items)
+- gost: added two new currently unimplemented themecards: "a bat" (nailbatlike) and "a bonus" (passive item)
+
 10/12/2021 Reyder of Wibi
 Hotfix, woo!
 - Lady Luck now uses a separate generator from Warrior.

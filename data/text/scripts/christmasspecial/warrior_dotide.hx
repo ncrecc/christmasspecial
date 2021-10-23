@@ -3,6 +3,7 @@
 //999 was hewe!!!
 var f = args[0];
 var target = args[1];
+var midturn = args[2];
 
 var themesequipped = [];
 var allsmalleqs = getequipmentlist(
@@ -75,6 +76,12 @@ if(space == 1) {
 	space -= neweq.size;
 }
 shuffle(f.equipment);
+var oldequipment = f.equipment.copy();
 giveequipment(eqtoadd, true, false);
-for(eq in eqtoadd) runscript("christmasspecial/evalstarthooks",[f,target,eq]);
+var newequipment = f.equipment.copy();
+for(eq in newequipment) {
+	if(oldequipment.indexOf(eq) == -1) {
+		runscript("christmasspecial/evalstarthooks",[f,target,eq,true,true,midturn]);
+	}
+}
 f.fixskillcard();

@@ -28,7 +28,7 @@ addfloor("tiny")
 
 //Floor 2:
 items = [];
-gooditems = [pick(["Budge", "Pip Master"])];
+gooditems = [];
 otherstuff = [health()];
 goodotherstuff = [shop([warriorshops.pop(), warriorshops.pop(), warriorshops.pop()])];
 

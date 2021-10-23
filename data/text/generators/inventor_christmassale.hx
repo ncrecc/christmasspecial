@@ -1,40 +1,47 @@
 var thisgenerator = "inventor_normal";
-var floor1countdowns = [];
-var floor1sword = [];
-var floor1crap = [];
-var commonlist1 = [];
-var shoplist1 = [];
-var scrapitems = [];
-var midtierdrops = [];
-var floor3items = [];
-var commonlist2 = [];
-var floor5items = [];
-var vampireitem = [];
-var itempools = [floor1countdowns,floor1sword,floor1crap,commonlist1,shoplist1,scrapitems,midtierdrops,floor3items,commonlist2,floor5items,vampireitem]; //Initialize lists like this for clarity
+var floor1countdowns = ["Sceptre", "Chain Knife", "Steamstaff", "Revolver"];
+var scrapitems = ["Scrap Crystal", "Scraptula", "Scrap Lamp", "Scrapstick", "Scrapsies", "Scrap Slingshot", "Scrap Trap"];
+var floor1crap = ["Flicker","Pocket Sand","Washcloth","Create Opening","Cherry Bomb","Chain Link"];
+var commonlist1 = ["Umbrella", "Sharpie", "Bronze Medal", "Stockpick", "Waltzer", "Safety Scissors", "Cloak and Dagger", "Natural Charm", "Glue Pact", "Flamebringer", "Plasma Rifle"];
+var shoplist1 = ["Stopwatch", "Technology", "Rising Dagger", "Compact Resonator", "Burst Beam", "Repast Rapier", "Jester's Glove", "Hand Sanitiser", "Spin Attack", pick(["Eternal Cauldron","Plug Socket"]), "Metal Crusher", "Artificial Snow", "Two Handed Spatula", "Contact Juggling"];
+if (chance(30)) shoplist1.push("Gravity");
+//if (chance(30)) shoplist1.push("Sledgehammer");
+var midtierdrops = ["Permapick", "Matchbook", "Technology", "God's Pick", pick(["Wispy Kaboom Smash", "Snowball Launcher"]), "Tootsie Pop"];
+var floor3items = ["Occam's Razor", "Dice Pump", "Tension", "Adamant Rail", pick(["Hall of Daggers", "Devilsknife"]), "Pinball Machine", "Stop Sign", "Popcorn", "Gatling Pea", pick(["Reverse Emulation","Supersonic"]), "Ice Skates", "Zeus Dagger"];
+var commonlist2 = ["Sneksword", "Ale Bat", "Waltzer", "Janky Spanner", "Giga Drain", "Spirit Shield", pick(["Endless Pond", "Deva Form"]), "Present Shotgun", "Incapacitate", "Booster Pack", "Ubersaw", "Storm Reactor", "Stygian Blade", "Sand Hawk"];
+commonlist2.push(pick(scrapitems));
+var floor5items = ["Lucky Punch", "Russian Roulette", "Old Nail@2", "Renunciation", "Mass Grimoire", "Betelgeuse"];
+var threeturnsitems = shuffle(["Tyrant's Glare", "Brimstone"]);
+floor5items.push(threeturnsitems.pop());
+if(chance(25)) floor5items.push(threeturnsitems.pop());
 
-/*NOTICE TO MODDERS:
-  All you need to do to get your items in here is append the name of your mod to:
-    diceydungeons/itempools/[this generator's name minus file extension]/scriptstorun.txt
-  Then add a .hx script of the appropriate name to that directory that returns an array containing arrays of items
-  you want to add to each of the generator's item pools. Use the vanilla script for this generator for reference -
-  it's important you return the right amount of arrays!
-  
-  (If you want to replace the generator entirely, in case you have an extremely specific item pool in mind, you should
-  get rid of declaring scriptstorun and the "for scriptname in scriptstorun" bit. - but note it will no longer be quite as
-  compatible with other mods.)*/
-  
-itempools = runscript("diceydungeons/flexible_generator",[thisgenerator,itempools]);
-var floor1countdowns = itempools[0];
-var floor1sword = itempools[1];
-var floor1crap = itempools[2];
-var commonlist1 = itempools[3];
-var shoplist1 = itempools[4];
-var scrapitems = itempools[5];
-var midtierdrops = itempools[6];
-var floor3items = itempools[7];
-var commonlist2 = itempools[8];
-var floor5items = itempools[9];
-var vampireitem = itempools[10];
+var vampireitem = ["Silver Sword"];
+
+trace(floor1countdowns);
+/*
+var myitempools = [floor1countdowns,scrapitems,floor1crap,commonlist1,shoplist1,midtierdrops,floor3items,commonlist2,floor5items,vampireitem];
+for(i in 0...myitempools.length) {
+	var itempool = myitempools[i];
+	itempool = itempool.concat(itempool);
+	shuffle(itempool);
+}
+*/
+function dupeshuffle(itempool) {
+	shuffle(itempool);
+	var itempool1 = shuffle(itempool.copy());
+	return itempool.concat(itempool1);
+}
+floor1countdowns = dupeshuffle(floor1countdowns);
+scrapitems = dupeshuffle(scrapitems);
+floor1crap = dupeshuffle(floor1crap);
+commonlist1 = dupeshuffle(commonlist1);
+shoplist1 = dupeshuffle(shoplist1);
+midtierdrops = dupeshuffle(midtierdrops);
+floor3items = dupeshuffle(floor3items);
+commonlist2 = dupeshuffle(commonlist2);
+floor5items = dupeshuffle(floor5items);
+
+trace(floor1countdowns);
 
 usestandardenemies();
 
@@ -47,11 +54,11 @@ var goodotherstuff = [];
 items = [];
 gooditems = [];
 otherstuff = [
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 1]))
+  shop(shuffle([floor1countdowns.pop(),floor1countdowns.pop(),floor1countdowns.pop()]), shuffle([2, 2, 1])),
+  shop(shuffle([floor1crap.pop(),floor1crap.pop(),floor1crap.pop()]), shuffle([1, 2, 1])),
 ];
 goodotherstuff = [
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
+  shop(shuffle([scrapitems.pop(),scrapitems.pop(),scrapitems.pop()]), shuffle([1, 2, 1]))
 ];
 
 addfloor("smallwinterventorfirst")
@@ -67,10 +74,10 @@ otherstuff = [
   health()
 ];
 goodotherstuff = [
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 4]))
+  shop(shuffle([commonlist1.pop(),commonlist1.pop(),commonlist1.pop()]), shuffle([3, 2, 3])),
+  shop(shuffle(["upgrade", shoplist1.pop(), pick(scrapitems)]), shuffle([2, 3, 3])),
+  shop(shuffle([shoplist1.pop(),shoplist1.pop(),shoplist1.pop()]), shuffle([3, 2, 1])),
+  shop(shuffle(["upgrade", shoplist1.pop(), pick(scrapitems)]), shuffle([2, 3, 3]))
 ];
 
 addfloor("smallwinterventorsecond")
@@ -84,10 +91,10 @@ gooditems = [];
 
 otherstuff = [health()];
 goodotherstuff = [
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 4]))
+  shop(shuffle([scrapitems.pop(),floor3items.pop(),floor3items.pop()]), shuffle([1, 2, 1]))
+  shop(shuffle([commonlist2.pop(), commonlist2.pop(), "upgrade"])),
+  shop(shuffle([midtierdrops.pop(),midtierdrops.pop(),midtierdrops.pop()]), shuffle([1, 2, 1])),
+  shop(shuffle([commonlist2.pop(), commonlist2.pop(), "upgrade"]))
 ];
 	
 addfloor("bigwinterventor")
@@ -101,9 +108,9 @@ gooditems = [];
 		
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 4]))
+  shop(shuffle([floor1crap.pop(),shoplist1.pop(),floor1crap.pop()]), shuffle([3, 2, 1])),
+  shop(shuffle([floor1crap.pop(),midtierdrops.pop(),floor1crap.pop()]), shuffle([1, 2, 1])),
+  shop(shuffle([floor1crap.pop(),commonlist1.pop(),commonlist2.pop()]), shuffle([3, 2, 4]))
 ];
 		
 addfloor("normalwinterventor")
@@ -117,10 +124,10 @@ gooditems = [];
 		
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([1, 2, 1])),
-  shop(shuffle(["Backfire","Very Good Sword","LOL Sword"]), shuffle([3, 2, 4]))
+  shop(shuffle([floor5items.pop(),floor5items.pop(),midtierdrops.pop()]), shuffle([3, 2, 4])),
+  shop(shuffle([midtierdrops.pop(),midtierdrops.pop(),commonlist1.pop()]), shuffle([1, 2, 1])),
+  shop(shuffle([commonlist2.pop(), "health", commonlist2.pop()])),
+  shop(shuffle([shoplist1.pop(),commonlist1.pop(),shoplist1.pop()]), shuffle([3, 2, 1]))
 ];
 		
 addfloor("bigwinterventor")
@@ -136,10 +143,12 @@ goodotherstuff = [];
 
 var lastfloor = addfloor("boss");
 
+if (getfinalboss() == "Drake"){
+  items.push(vampireitem.pop());
+}
+
 lastfloor
   .additems(items, gooditems)
   .setlocation('BOSS')
   .addotherstuff(otherstuff, goodotherstuff)
   .generate();
-		
-		
