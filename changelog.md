@@ -1,3 +1,8 @@
+10/23/2021 gost of wibi
+hotfix again aren't we having such fun
+- repast rapier and baseball bat no longer crash the game due to their statuses being missing
+- added a damage indicator to burst beam (something i'd meant to do), however selfvars are completely broken in the latest build of dicey so i guess we'll see tomorrow if it works visually or not
+
 10/23/2021 Reyder of Wibi, Black Widow of Wibi, gost of wibi
 - Lady Luck and Warrior now no longer get Budge or Pip Master.
 - Cape Deflect's upgrade is no longer a size reduce.
