@@ -1,0 +1,8 @@
+Divine Throwing Axe,Divine Incantation,Soul Crush
+Divine Throwing Dagger,Divine Throwing Dagger,Divine Grip
+Divine Zap,Divine Grip,Pip Master,Pip Master
+Divine Snowhammer,Divine Microphone,Divine Fire Axe
+Divine Storm,Pip Master,Divine Incantation
+Cape Deflect,Pip Master,Divine Grip
+Divine Ooze,Pip Master,Pip Master
+Lady's Combo,Pip Master,Pip Master,Pip Master,Pip Master

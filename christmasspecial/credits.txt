@@ -1,0 +1,104 @@
+=organizer=
+matt101
+
+=github repo=
+abagail of wibi
+
+=general development=
+abagail of wibi
+titku of wibi
+
+=testing=
+abagail of wibi
+titku of wibi
+
+==warrior==
+=concept=
+matt101
+=design=
+matt101
+=coding=
+matt101
+
+==thief==
+=concept=
+the witness of wibi
+=design=
+green of the coral system
+=coding=
+green of the coral system
+
+==robot==
+=concept=
+the witness of wibi
+=design=
+levelworld
+=coding=
+levelworld
+
+==inventor==
+=concept=
+fiship
+=design=
+fiship
+=coding=
+fiship
+
+==witch==
+=concept=
+matt101
+=design=
+matt101
+=coding=
+matt101
+abagail of wibi
+
+==jester==
+=concept=
+matt101, titku of wibi
+=design=
+titku of wibi
+get this of wibi
+=coding=
+titku of wibi
+get this of wibi
+diane of wibi
+
+==lady luck==
+=concept=
+matt101
+=design=
+matt101
+plokmijnuhby
+=coding=
+matt101
+plokmijnuhby
+
+=new equipment=
+titku of wibi
+matt101
+
+=new enemies=
+matt101
+fiship
+gaetana & diane of wibi
+
+=modded equipment=
+taken from:
+ncrmod, by wibi
+more fluff, by jackeea
+grab bag, by xenonzed
+reference stuff, by neypah_tit
+indeed, by matt101
+further dungeons, by fiship
+see [mod begin]/[mod end] sections in equipment.csv for exactly what mods comes from where
+
+=music=
+xangelmoonx
+
+=art=
+mondaybear21
+
+=special thanks=
+YOU!!!!
+pluralkit

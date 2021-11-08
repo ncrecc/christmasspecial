@@ -1,0 +1,4 @@
+in this mod, we manually overwrite the vanilla equipment.csv to remove almost all unused vanilla items and ensure the rest are marked excludefromrandomlists. this is so "pick a random item" gimmicks will pick new equipment instead of equipment you've already seen 100 times.
+equipment.csv contains vanilla equipment used in the mod and borrowed modded equipment; _append/data/text/equipment.csv contains the actual new christmas items, for the sake of organization
+-diane
+(abagail got most of this started)

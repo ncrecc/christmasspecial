@@ -1,0 +1,15 @@
+h1|Winter Thief
+
+TCS included this file, but never actually
+wrote a description in here...
+
+Basically, before each turn, you permanently
+swap one of your items for an enemy item.
+Your skillcard is a dice manip or damage
+dealer that changes when used twice in
+one turn.
+
+This will probably be rebalanced a bit, but
+the basics will remain the same.
+
+-Titku

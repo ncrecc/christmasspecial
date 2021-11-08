@@ -1,0 +1,107 @@
+// SETUP
+
+setdatapath("data/graphics/cutscenes/intro/");
+addbackground("intro_stage", {animation: "background_stage.json", pack: "background_stage.pck"});
+#include ladyluckbiggraphics.txt
+
+setdatapath("data/graphics/cutscenes/ladyluck/");
+
+var witchgraphics = {
+	idle: {
+		animation: "ladyluck_idle.json",
+		pack: "lady luck.pck",
+		loop: true
+	},
+	worried_idle: {
+		animation: "ladyluck_idle.json",
+		pack: "lady luck.pck",
+		loop: true
+	},
+	transform: {
+		animation: "ladyluck_transform.json",
+		pack: "lady luck.pck",
+		speed: 2,
+		loop: false
+	}
+}
+var witch = addsprite("lady", 1, witchgraphics);
+
+// HELPER FUNCTIONS
+
+var fade_time = 0.4;
+
+// ACTORS
+actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+actor("Lady", 2600, 600, 0xb496ec, RIGHT, TOP, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
+
+// INTRO
+
+play("music_cutscene_cheery");
+
+witch.scale = 0.5;
+witch.x = 2700 - ((witch.getwidth("idle") * witch.scale) / 2);
+witch.y = 650;
+changebackground("intro_stage");
+fadein();
+witch.show("idle");
+//witch.show("idle");
+
+ladyluck_big.x = -screenwidth;
+ladyluck_big.show("idle");
+Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
+play("cutscene_audience");
+
+wait(0.5);
+
+ladyluck_big.show("talking", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Next scene!", "normal");
+
+fadeout();
+while(isfading()) {
+	// do nothing
+}
+changebackground("intro_transform");
+witch.hide();
+ladyluck_big.hide();
+fadein();
+
+witch.x = screenwidth;
+witch.y = 0;
+witch.scale = 1;
+var transform = witch.show("transform");
+Actuate.tween(witch, 2, { x: 0 }).ease(Expo.easeOut);
+
+var marker_human = false;
+var marker_dice = false;
+while(true) {
+	if(!marker_human && transform.marker == "human") {
+		marker_human = true;
+		transform.paused = true;
+		speak("Lady Luck", "It's... ME!!");
+		play("transformintodice");
+		transform.paused = false;
+	} else if(!marker_dice && transform.marker == "dice") {
+		marker_dice = true;
+		transform.paused = true;
+		actor("Lady", screenwidthmid, screenheightmid - 300, Col.multiplylightness(Col.GREEN, 1.25), CENTER, BOTTOM, "chat_thief", "characters/lady luck/charicon_lady_luck");
+    speak("Lady", "Wait, you meant that dice thing literally?", "thinking");
+		actor("Lady Luck", screenwidthmid, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+    speak("Lady Luck", "I mean *everything* literally.", "sly");
+    fadeout();
+	  break;
+	}
+}
+
+witch.scale = 0.5;
+witch.x = 2700 - ((witch.getwidth("idle") * witch.scale) / 2);
+witch.y = 650;
+changebackground("intro_stage");
+fadein();
+witch.show("idle");
+
+actor("Lady", screenwidthmid, screenheightmid - 300, Col.multiplylightness(Col.GREEN, 1.25), CENTER, BOTTOM, "chat_thief", "characters/lady luck/charicon_lady_luck");
+speak("Lady", "Wait, you meant that dice thing literally?", "thinking");
+		
+
+startgamefromcutscene();
