@@ -1,9 +1,0 @@
-h1|Puzzle mode
-
-In this episode[;] your equipment[;] CPU and dice rolled
-change before every fight.
-
-The goal is to defeat each enemy in one turn! If you fail[;]
-they recover to full health[;] and everything will reset.
-
-- Levelworld
