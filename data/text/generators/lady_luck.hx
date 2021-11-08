@@ -36,13 +36,12 @@ mycoolfloor2.generate();
 //Floor 3:
 items = [];
 gooditems = [];
-
 otherstuff = [health(), health()];
 
 goodotherstuff = [];
-var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor2.theme = mycoolfloor1.theme;
-mycoolfloor2.generate();
+var mycoolfloor3 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor3.theme = rand(['music_combat3']);
+mycoolfloor3.generate();
 
 //Floor 4:
 items = [];
@@ -50,11 +49,9 @@ gooditems = [];
 
 otherstuff = [health()];
 goodotherstuff = [];
-
-addfloor("normal")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor4 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor4.theme = rand(['music_combat3']);
+mycoolfloor4.generate();
   
 //Floor 5:
 items = [];

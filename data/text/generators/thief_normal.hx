@@ -1,39 +1,12 @@
-var thisgenerator = "thief_normal";
-var commonlist1 = [];
-var floor2items = [];
-var floor2shop = [];
-var commonlist2 = [];
-var rarelist1 = [];
-var commonlist3 = [];
-var floor4items = [];
-var tradeoffer = [];
-var traderesult = [];
-var vampireitem = [];
-var itempools = [commonlist1,floor2items,floor2shop,commonlist2,rarelist1,commonlist3,floor4items,tradeoffer,traderesult,vampireitem]; //Initialize lists like this for clarity
+var jestershops = shuffle(["Doom and Gloom", "Pip Master", "Christmas Pistol","Blighted Zap", "Christmas Revolver", "Nine Iron", "Shrug", "Gatling Pea", "Brace", "Pocket Protector", "Electric Arc", "Rock Crusher", "Dime", "Bloody Drill", "Power Glove", "Frosty Bufu", "Dynamite Shotgun", "Sandbag", "Asklepios", "Matchbook"]);
+var strangeshop = shuffle(["Bet", "Wide Spatula", "Ice Skates", "Quake Sigma", "Sickle", "Dazzler", "Cactus Cauldron"]);
+var awesomelist = shuffle(["Doom and Gloom", "Christmas Pistol","Countvalanche", "Roulette", "AC Unit", "Christmas Revolver", "Flame Lance", "Poison Sting", "Power Glove", "Ukulele", "Shovel Blade", "Lucky Punch"]);
+var floor2gooditem = shuffle(["Budge", "Pip Master"]);
+var floor3item = shuffle(["Parry", "Double Parry", "Lightreaver", "Minigun", "Shielding Potion", "The Monarch", "Innovate"]);
+var floor5item = shuffle(["Parrying Sword", "Parrying Claw", "Locket", "False Swipe", "The Monarch", "Biohazard"]);
+var vampireitem = ["Silver Sword"];
 
-/*NOTICE TO MODDERS:
-  All you need to do to get your items in here is append the name of your mod to:
-    diceydungeons/itempools/[this generator's name minus file extension]/scriptstorun.txt
-  Then add a .hx script of the appropriate name to that directory that returns an array containing arrays of items
-  you want to add to each of the generator's item pools. Use the vanilla script for this generator for reference -
-  it's important you return the right amount of arrays!
-  
-  (If you want to replace the generator entirely, in case you have an extremely specific item pool in mind, you should
-  get rid of declaring itempools and add items directly to the above lists (or replace pops from them with strings).
-  Note however that other mods will no longer be able to add items here.)*/
-  
-itempools = runscript("diceydungeons/flexible_generator",[thisgenerator,itempools]);
 
-var commonlist1 = itempools[0];
-var floor2items = itempools[1];
-var floor2shop = itempools[2];
-var commonlist2 = itempools[3];
-var rarelist1 = itempools[4];
-var commonlist3 = itempools[5];
-var floor4items = itempools[6];
-var tradeoffer = itempools[7];
-var traderesult = itempools[8];
-var vampireitem = itempools[9];
 
 usestandardenemies();
 
@@ -43,72 +16,59 @@ var otherstuff = [];
 var goodotherstuff = [];
 
 //Floor 1:
-items = [commonlist1.pop()];
+items = [];
+gooditems = [awesomelist.pop()];
+otherstuff = [];
+goodotherstuff = [];
 var mycoolfloor1 = addfloor('tiny').additems(items, gooditems);
 mycoolfloor1.theme = rand(['music_combat2']);
 mycoolfloor1.generate();
-  
+
 //Floor 2:
-commonlist1 = commonlist1.concat(floor2items);
-commonlist1 = shuffle(commonlist1);
-
-items = [commonlist1.pop()];
-gooditems = [];
-
-otherstuff = [health(), health()];
-goodotherstuff = [shop(shuffle([floor2shop.pop(), commonlist1.pop(), commonlist1.pop()]))];
+items = [];
+gooditems = [floor2gooditem.pop()];
+otherstuff = [health()];
+goodotherstuff = [shop([jestershops.pop(), jestershops.pop(), jestershops.pop()])];
 var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor2.theme = mycoolfloor1.theme;
 mycoolfloor2.generate();
 
-  
 //Floor 3:
-items = [commonlist2.pop()];
+items = [];
+items.push(floor3item.pop());
 gooditems = [];
-
-otherstuff = [
-  health(),
-  health()
-];
-goodotherstuff = [
-  shop([commonlist2.pop(), commonlist2.pop(), commonlist1.pop()]),
-  upgrade()
-];
-
-addfloor("normal")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
-  
-//Floor 4:
-items = [commonlist3.pop()];
-gooditems = [];
-
-var floor5item = commonlist3.pop();
-
-commonlist3 = commonlist3.concat(floor4items);
-commonlist3 = shuffle(commonlist3);
 
 otherstuff = [health(), health()];
 
-var thieftrade = trade(tradeoffer,traderesult);
 goodotherstuff = [
-  shop([rarelist1.pop(), rarelist1.pop(), commonlist2.pop()]),
-  thieftrade
-];
-
-addfloor("big")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
-  
- //Floor 5:
-items = [floor5item];
-gooditems = [];
-otherstuff = [health(), health(), health()];
-goodotherstuff = [
-  shop(shuffle(["health", commonlist3.pop(), pick([rarelist1.pop(), commonlist2.pop()])])), 
+  shop([jestershops.pop(), jestershops.pop(), jestershops.pop()]),
   upgrade()
+];
+var mycoolfloor3 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor3.theme = rand(['music_combat3']);
+mycoolfloor3.generate();
+  
+//Floor 4:
+items = [];
+gooditems = [awesomelist.pop()];
+
+otherstuff = [health()];
+goodotherstuff = [
+  trade(["any"], [awesomelist.pop()])
+];
+var mycoolfloor4 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor4.theme = rand(['music_combat3']);
+mycoolfloor4.generate();
+  
+//Floor 5:
+items = [];
+items.push(floor5item.pop());
+gooditems = [];
+
+otherstuff = [health(), health()];
+goodotherstuff = [
+  upgrade(),
+  shop(["health", strangeshop.pop(), "health"], [4, 4, 4])
 ];
 
 addfloor("big")
@@ -124,8 +84,8 @@ goodotherstuff = [];
 
 var lastfloor = addfloor("boss");
 
-if (getfinalboss() == "Drake"){
-  items.push(vampireitem.pop());
+if (getfinalboss() == "Mariah Carey"){
+  items.push("BOOO!");
 }
 
 lastfloor
@@ -133,4 +93,3 @@ lastfloor
   .setlocation('BOSS')
   .addotherstuff(otherstuff, goodotherstuff)
   .generate();
-		
