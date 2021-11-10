@@ -4,4 +4,9 @@ Divine Zap,Divine Grip,Pip Master,Pip Master
 Divine Snowhammer,Divine Microphone,Divine Fire Axe
 Divine Storm,Pip Master,Divine Incantation
 Cape Deflect,Pip Master,Divine Grip
+<<<<<<< HEAD
 Divine Ooze,Pip Master,Pip Master
+Lady's Combo,Pip Master,Pip Master,Pip Master,Pip Master
+=======
+Divine Ooze,Pip Master,Pip Master
+>>>>>>> 9d1791f0fa6c2f0a5edf0eb1cae607cb762ac611
