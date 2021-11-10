@@ -1,3 +1,7 @@
+11/10/2021 gost of wibi
+- added basic thief gimmick
+- i don't remember what else
+
 10/23/2021 gost of wibi
 - silver sword now only inflicts vampire on the target if they already had the vampire innate. wtf
 
