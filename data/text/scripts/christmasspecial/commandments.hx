@@ -9,14 +9,22 @@ var forbiddendice = rand([
 	["6s",[6]]
 ]);
 self.setvar("forbiddendice", forbiddendice);
-var bonus = rand([
-	["do [sword]5 damage.", "attack(5)"],
-	["heal [heal]5 hp.", "attackself(-5)"],
-	["burn all enemy dice.", "inflict(FIRE, ALL)"],
-	["roll a 6 next turn.", "inflictself(\"stash6\"); inflictself(\"illuminate\")"],
-	["freeze 2 enemy dice.", "inflict(ICE, 2)"],
-	["shock and[newline]weaken enemy.", "inflict(WEAKEN); inflict(SHOCK);"],
-	["enemy loses a dice.", "inflict(\"losedice\")"],
-]);
+var bonuses = [];
+if (args[0] == ALL || args[0] == "status") {
+	bonuses = bonuses.concat([
+		["burn all enemy dice.", "inflict(FIRE, ALL)"],
+		["roll a 6 next turn.", "inflictself(\"stash6\"); inflictself(\"illuminate\")"],
+		["freeze 2 enemy dice.", "inflict(ICE, 2)"],
+		["shock and[newline]weaken enemy.", "inflict(WEAKEN); inflict(SHOCK);"],
+		["enemy loses a dice.", "inflict(\"losedice\")"],
+	]);
+}
+if (args[0] == ALL || args[0] == "damage") {
+	bonuses = bonuses.concat([
+		["do [sword]5 damage.", "attack(5)"],
+		["heal [heal]5 hp.", "attackself(-5)"]
+	]);
+}
+var bonus = rand(bonuses);
 self.setvar("commandbonus",bonus);
 return "If you don't use " + forbiddendice[0] + " this[newline]turn, " + bonus[0];
