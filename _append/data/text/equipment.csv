@@ -265,6 +265,6 @@ Wheel Of Fortune_upgraded,Half enemy's max hp|Can't use limit break,2,var max = 
 Divine Ooze,Inflict [poison]1 poison|,2,inflict(POISON); sfx(~_poison~);,Poison Arrow,COUNTDOWN,3,PURPLE,halfcountdown,removereusable,,,5,NO,NO,,,,,,,,,,,,,
 Cape Deflect,Gain [shield]5 shield|On <var:number> gain [reduce]1 reduce|[80%]Slots change from EVEN & ODD,2,inflictself(SHIELD[;] 5); sfx(~_shield~); if(d == self.getvar(~number~)) { inflictself(REDUCE); },,NORMAL,,ORANGE,change_power,doublerequirements,,,0,YES,NO,,,,,,var oe = rand([~ODD~[;]~EVEN~]); e.changeslots([oe]); e.animate(~flashandshake~); if(oe == ~ODD~) { self.setvar(~number~[;]5); } else { self.setvar(~number~[;]6); },,,,,,,
 Cape Deflect_upgraded,Gain [shield]5 shield|Gain [reduce]1 reduce|[80%]Slots change from EVEN & ODD,1,inflictself(SHIELD[;] 5); inflictself(REDUCE); sfx(~_shield~);,,NORMAL,,ORANGE,change_power,doublerequirements,,,0,YES,NO,,,,,,var oe = rand([~ODD~[;]~EVEN~]); e.changeslots([oe]); e.animate(~flashandshake~);,,,,,,,
-A Bat,Each turn[;] guarantee|a [sword]<d6>+N-with-downside|of this size,2,,,,,BLACK,,,,,,,,excludefromrandomlists|themecard,,,,,,,,,,,,
-A Bonus,Each turn[;] guarantee|a passive item|of this size,1,,,,,BLACK,,,,,,,,excludefromrandomlists|themecard,,,,,,,,,,,,
+A Bat,Each turn[;] guarantee|a [sword]<d6>+N-with-downside|of this size,2,,,,,BLACK,,,,,0,NO,NO,excludefromrandomlists|themecard,,,,,,,,,,,,
+A Bonus,Each turn[;] guarantee|a passive item|of this size,1,,,,,BLACK,,,,,0,NO,NO,excludefromrandomlists|themecard,,,,,,,,,,,,
 Priceless Heirloom,Do [sword]<d6>[;] untradeable|[gray](Reuseable),1,attack(d);,Steal,MAX3,,GRAY,increaserange,complicate,,,-1,NO,NO,excludefromrandomlists,,,,,,,,,,,,
