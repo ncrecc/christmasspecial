@@ -28,7 +28,7 @@ actor("Thief", 2600, 780, Col.multiplylightness(Col.GREEN, 1.25), CENTER, BOTTOM
 
 // INTRO
 
-play("music_cutscene_dark");
+play("music_cutscene_cheery");
 
 thief.scale = 0.5;
 thief.x = 2620 - ((thief.getwidth("idle") * thief.scale) / 2);

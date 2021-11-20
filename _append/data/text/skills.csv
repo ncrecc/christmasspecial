@@ -47,7 +47,7 @@ Throwing Knife,Deal [sword]9 damage (once),attack(9); sfxdamage(target[;]9); Gad
 Magic Lantern,[]+1 dice next turn,inflictself(~stash~+rand([1[;]2[;]3[;]4[;]5[;]6])); inflictself(~lantern~); sfx(~magic_gaindice~);
 Toxic,Inflict [poison]5 poison (once),inflict(POISON[;]5); sfx(~_poison~); Gadget.changegadget(self[;] ~Toxic~[;] ~Broken Gadget~);
 Stinger,Inflict [poison]1 poison,inflict(POISON); sfx(~_poison~);
-Cheat,Set all dice to 6[;] roll a 6,var c = 0; for (mydice in self.dicepool){ if (mydice.available()){ mydice.animatereroll(6[;] self.screenposition()[;] c * 0.05); c++; } } givedice(6);
+Cheat,Set all dice to 6[;] roll a 6,var c = 0; for (mydice in self.dicepool){ if (mydice.available()){ mydice.animatereroll(6[;] self.screenposition()[;] c * 0.05); c++; } } givedice(6); sfx(~entercombat_ladyluck_phase3~);
 Catalog,Replace each item with the next item alphabetically,runscript(~christmasspecial/thesaurus~[;][self]);
 Ignition,3 to all counts,boostcountdowns(3);
 Disorient,Swap enemy's next target,inflict(~reversenexttarget~); sfx(~_cure~);
