@@ -21,16 +21,18 @@ gooditems = [];
 otherstuff = [];
 goodotherstuff = [];
 var mycoolfloor1 = addfloor('tiny').additems(items, gooditems);
-mycoolfloor1.theme = rand(['music_combat2']);
+mycoolfloor1.theme = rand(['music_ladyluck2']);
+mycoolfloor1.setlocation("GAMESHOW");
 mycoolfloor1.generate();
 
 //Floor 2:
-items = [];
+items = ["Commandments@status"];
 gooditems = [];
 otherstuff = [health()];
 goodotherstuff = [];
-var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+var mycoolfloor2 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor2.theme = mycoolfloor1.theme;
+mycoolfloor2.setlocation("GAMESHOW");
 mycoolfloor2.generate();
 
 //Floor 3:
@@ -40,17 +42,19 @@ otherstuff = [health(), health()];
 
 goodotherstuff = [];
 var mycoolfloor3 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor3.theme = rand(['music_combat3']);
+mycoolfloor3.theme = rand(['music_ladyluck1']);
+mycoolfloor3.setlocation("GAMESHOW");
 mycoolfloor3.generate();
 
 //Floor 4:
 items = [];
 gooditems = [];
 
-otherstuff = [health()];
+otherstuff = [health(), health()];
 goodotherstuff = [];
 var mycoolfloor4 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor4.theme = rand(['music_combat3']);
+mycoolfloor4.theme = rand(['music_ladyluck1']);
+mycoolfloor4.setlocation("GAMESHOW");
 mycoolfloor4.generate();
   
 //Floor 5:
@@ -63,10 +67,10 @@ goodotherstuff = [
   shop(["health", "health", "health"], [4, 4, 4])
 ];
 
-addfloor("big")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor5.theme = rand(['music_ladyluck3']);
+mycoolfloor5.setlocation("GAMESHOW");
+mycoolfloor5.generate();
 
 //Floor 6:
 items = [];
@@ -74,14 +78,7 @@ gooditems = [];
 otherstuff = [];
 goodotherstuff = [];
 
-var lastfloor = addfloor("boss");
-
-if (getfinalboss() == "Mariah Carey"){
-  items.push("BOOO!");
-}
-
-lastfloor
-  .additems(items, gooditems)
-  .setlocation('BOSS')
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor6 = addfloor('boss').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor6.theme = rand(['music_ladyluck3']);
+mycoolfloor6.setlocation("FINALEPISODE");
+mycoolfloor6.generate();

@@ -32,5 +32,162 @@
 				"value": 1
 			}
 		}]
+	},
+     "music_ladyluck1": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/ladyluck1",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    },
+     "music_ladyluck2": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/ladyluck2",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    },
+      "music_ladyluck3": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/ladyluck3",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    },
+	"_ladysnap": {
+		"playsounds": [{
+			"channel": 0,
+			"delay": 0,
+			"effect": "",
+			"filter": "",
+			"folder": "sfx/status/snap1",
+			"loop": false,
+			"panning": {
+				"fade": 0,
+				"max": 0,
+				"min": 0,
+				"random": false,
+				"value": 0
+			},
+			"pitch": {
+				"fade": 0,
+				"max": 1,
+				"min": 0,
+				"random": false,
+				"value": 1
+			},
+			"position": 0,
+			"syncbpm": 0,
+			"tag": "",
+			"volume": {
+				"fade": 0,
+				"max": 1,
+				"min": 0,
+				"random": false,
+				"value": 1
+			}
+		}]
 	}
 }
