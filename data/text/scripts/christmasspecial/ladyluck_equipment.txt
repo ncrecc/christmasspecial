@@ -5,7 +5,7 @@ Divine Snowhammer,Divine Microphone,Divine Fire Axe
 Divine Storm,Pip Master,Divine Incantation
 Cape Deflect,Pip Master,Divine Grip
 Lady's Combo,Pip Master,Pip Master,Pip Master,Pip Master
-Random judgement,Random judgement
+Random Judgement,Random Judgement
 Divine Dagger@LL,Backstab@LL,Soul Crush
 Divine Throwing Axe,Divine Dagger@LL,Cape Deflect
 Soul Crush,Divine Ooze,Soul Crush

@@ -9,6 +9,8 @@ var eq = null;
 while(eq == null) {
 	var testeq = new elements.Equipment(alllargeeqs.pop());
 	if(
+		(!eq.hastag("notweapon"))
+		&&
 		(
 			(
 				testeq.script.indexOf('attack(') != -1 &&
