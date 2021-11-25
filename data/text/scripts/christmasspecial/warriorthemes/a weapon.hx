@@ -16,11 +16,15 @@ var eq = null;
 while(eq == null) {
 	var testeq = new elements.Equipment(eqlist.pop());
 	if(
+		(!eq.hastag("notweapon"))
+		&&
 		(
-			testeq.script.indexOf('attack(') != -1 &&
-			testeq.script.split('attack(-').join('').indexOf('attack(') != -1
-		) || (
-			testeq.script.indexOf('drain(') != -1
+			(
+				testeq.script.indexOf('attack(') != -1 &&
+				testeq.script.split('attack(-').join('').indexOf('attack(') != -1
+			) || (
+				testeq.script.indexOf('drain(') != -1
+			)
 		)
 	) {
 		eq = testeq;

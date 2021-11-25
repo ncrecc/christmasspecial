@@ -1,12 +1,17 @@
 Divine Throwing Axe,Divine Incantation,Soul Crush
-Divine Throwing Dagger,Divine Throwing Dagger,Divine Grip
+Divine Throwing Dagger,Divine Throwing Dagger,Divine Throwing Dagger
 Divine Zap,Divine Grip,Pip Master,Pip Master
 Divine Snowhammer,Divine Microphone,Divine Fire Axe
 Divine Storm,Pip Master,Divine Incantation
 Cape Deflect,Pip Master,Divine Grip
-Divine Ooze,Pip Master,Pip Master
 Lady's Combo,Pip Master,Pip Master,Pip Master,Pip Master
-Random judgement,Random judgement
+Random Judgement,Random Judgement
 Divine Dagger@LL,Backstab@LL,Soul Crush
 Divine Throwing Axe,Divine Dagger@LL,Cape Deflect
 Soul Crush,Divine Ooze,Soul Crush
+Divine Tazer
+Divine Flamethrower
+Pip Master,Pip Master,Divine Cap Gun,Pip Master,Pip Master
+Divine Snap,Pip Master,Pip Master,Divine Grip
+Call for Backup Thief?,Call for Backup Thief?,Call for Backup Thief
+Call for Backup Robot?,Call for Backup Robot,Call for Backup Robot

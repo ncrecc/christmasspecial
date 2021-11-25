@@ -155,5 +155,39 @@
                 "file": "music/title/title"
             }
         ]
-    }
+    },
+	"_ladysnap": {
+		"playsounds": [{
+			"channel": 0,
+			"delay": 0,
+			"effect": "",
+			"filter": "",
+			"folder": "sfx/status/snap1",
+			"loop": false,
+			"panning": {
+				"fade": 0,
+				"max": 0,
+				"min": 0,
+				"random": false,
+				"value": 0
+			},
+			"pitch": {
+				"fade": 0,
+				"max": 1,
+				"min": 0,
+				"random": false,
+				"value": 1
+			},
+			"position": 0,
+			"syncbpm": 0,
+			"tag": "",
+			"volume": {
+				"fade": 0,
+				"max": 1,
+				"min": 0,
+				"random": false,
+				"value": 1
+			}
+		}]
+	}
 }

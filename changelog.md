@@ -1,3 +1,29 @@
+11/25/2021 diane of wibi
+- introduced "notweapon" tag to mark items that include "attack(" but do not actually damage the opponent (e.g. in a jinx that attacks you) and should not be considered for weapon/blade/pole/etc. themecards. currently only iron helmet is tagged with this
+- the judgement variations (except "singers") and the player call for backup cards are now in data/text/equipment.csv to reflect being base-game equipment
+- per matt101: renamed "Christmasspecial" png/pck files in data/graphics/overworld/ to "christmasspecial", changed contents of pck file to match
+- per matt101: deleted .sfk files in music/combat/
+- in commandments.hx, replaced inflicting "losedice" status with decrementing target.bonusdice
+- fixed divine ooze- just saying "inflict"
+- soul crush now has an on dodge script
+- commandments will not activate if the turn ends due to defeating the enemy
+- random judgement no longer has an unnecessary 80% zoom tag at the start
+- fixed random judgement's capitalization ("Random judgement" -> "Random Judgement")
+
+11/10/2021-11/24/2021 matt101
+- Adds snap sounds to the "cheat" skill combination equipment skillcards when you use them
+- Fixed generator for lady luck to make it more themed towards her
+- Fixes some other bugs as well
+- Adds some testing stuff to her generator as well
+- Added high intensity music to floor 5 and 6
+- Added more itemd to lady luck
+- Added more loadouts to her
+- added art removed some random effects and added equipment plus loadouts
+- Added changes to losedice status now its based on the stack to how much dice you lose if you have 3 losedice you lose 3 dice
+- Added new loadouts for lady luck
+- Added call for back up thief and robot with the alt and downgraded version
+- Fixed divine backstab
+
 11/10/2021 gost of wibi
 - added basic thief gimmick
 - i don't remember what else

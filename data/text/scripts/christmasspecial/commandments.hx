@@ -16,7 +16,7 @@ if (args[0] == ALL || args[0] == "status") {
 		["roll a 6 next turn.", "inflictself(\"stash6\"); inflictself(\"illuminate\")"],
 		["freeze 2 enemy dice.", "inflict(ICE, 2)"],
 		["shock and[newline]weaken enemy.", "inflict(WEAKEN); inflict(SHOCK);"],
-		["enemy loses a dice.", "inflict(\"losedice\")"],
+		["enemy loses a dice.", "target.bonusdice--;"],
 	]);
 }
 if (args[0] == ALL || args[0] == "damage") {
