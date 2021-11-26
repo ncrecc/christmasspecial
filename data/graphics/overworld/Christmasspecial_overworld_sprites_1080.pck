@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
 <!-- $TexturePacker:SmartUpdate:dbf084dc18256c2e53f928fc2b9e84bb:1cf219b9fae40e550dd6a38dad5b638a:a20c72795d792e1b9d55d1c311ad142d$ -->
-<TextureAtlas imagePath="christmasspecial_overworld_sprites_1080.png" width="300" height="300">
+<TextureAtlas imagePath="Christmasspecial_overworld_sprites_1080.png" width="300" height="300">
     <SubTexture name="enemies/christmastree_01" x="0" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/christmastree_02" x="750" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/christmastree" x="0" y="0" rotated="false" width="150" height="150"/>
