@@ -11,7 +11,6 @@ Divine Throwing Axe,Divine Dagger@LL,Cape Deflect
 Soul Crush,Divine Ooze,Soul Crush
 Divine Tazer
 Divine Flamethrower
-Pip Master,Pip Master,Divine Cap Gun,Pip Master,Pip Master
 Divine Snap,Pip Master,Pip Master,Divine Grip
 Call for Backup Thief?,Call for Backup Thief?,Call for Backup Thief
 Call for Backup Robot?,Call for Backup Robot,Call for Backup Robot
