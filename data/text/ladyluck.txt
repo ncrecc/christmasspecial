@@ -1,10 +1,10 @@
 h1|Lady Luck
 
-Hey Lady Luck! Now your in our 
-shoes! You change your items each turn
+Hey, Lady Luck! Now you're in our shoes!
 
-and if you use all of them you issue
-your commandments on the enemy!
+Each turn, your items change, and if you
+follow the commandments on your skillcard,
+you receive a bonus effect.
 
-Good luck! I didn't mean that 
+Good luck! Not from me, of course. 
 		-Jester [jester]

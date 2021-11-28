@@ -14,3 +14,4 @@ Divine Flamethrower
 Divine Snap,Pip Master,Pip Master,Divine Grip
 Call for Backup Thief?,Call for Backup Thief?,Call for Backup Thief
 Call for Backup Robot?,Call for Backup Robot,Call for Backup Robot
+Dapper Snapper,Random Judgement,Divine Zap

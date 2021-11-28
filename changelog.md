@@ -1,4 +1,9 @@
 11/28/2021 bert
+-added newer christmas titlescreen with thief, robot, and witch
+-rewrote lady luck's episode rules slightly
+-per matt: added "dapper snapper" equipment and a lady luck layout associated with it
+
+11/28/2021 bert
 -fixed divine zap still using the old "hp" var in its on execute script
 -changed "lose a dice" commandment reward to "lock 1 dice" to make it status-relevant
 -added "a merry christmas" themecard idea (suggested by matt)

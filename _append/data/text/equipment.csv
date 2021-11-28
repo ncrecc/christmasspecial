@@ -382,3 +382,4 @@ A Bonus_upgraded,Each turn[;] guarantee|a passive item|of this size|(will be upg
 Priceless Heirloom,Do [sword]<d6>[;] untradeable|[gray](Reuseable),1,attack(d);,Steal,MAX3,,GRAY,increaserange,complicate,,,-1,NO,NO,excludefromrandomlists|nonnegotiable,,,,,,,,,,,,
 A Merry Christmas,Each turn[;] guarantee|a red or green item|of this size,2,,,,,BLACK,change_power,,,,,,,excludefromrandomlists|themecard,,,,,,,,,,,,
 A Merry Christmas_upgraded,Each turn[;] guarantee|a red or green item|of this size|(will be upgraded),2,,,,,BLACK,,,,,,,,excludefromrandomlists|themecard,,,,,,,,,,,,
+Dapper Snapper,Snap 2 items,2,inflictself(~ncr_snap~[;] 2); sfx(~_ladysnap~);,Time Stop,REQUIRE6,,RED,simplify,doublerequirements,,none,0,YES,NO,,,,,,,,,,,,,
