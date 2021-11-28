@@ -1,4 +1,8 @@
 11/27/2021 bert of wibi
+-fixed "a blade" and "a weapon" themecards as warrior failing
+-idiotproofed warrior's card selection script a tiny bit so that if a themecard returns null it doesn't error and do nothing
+
+11/27/2021 bert of wibi
 -changed "ncrecc" credit to "wibi"
 -fixed usage of double quotes on credits
 

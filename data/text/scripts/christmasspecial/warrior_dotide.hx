@@ -36,6 +36,7 @@ var alllargeeqs = getequipmentlist(
 		"immunetotide"
 	]
 );
+trace(alllargeeqs);
 var alleqs = allsmalleqs.concat(alllargeeqs);
 
 var i = f.equipment.length;
@@ -58,22 +59,26 @@ var space = f.spaceleft();
 while(space > 1 && themesequipped.length > 0) {
 	var neweq = runscript("christmasspecial/warriorthemes/" + themesequipped.pop().toLowerCase(),[allsmalleqs,alllargeeqs,alleqs,false]); //4th arg requests the script to return only a small equipment if set to true. if the script receives the 4th arg as true, it MUST return either a small equipment or null. -diane
 	if(neweq != null) eqtoadd.push(neweq);
-	space -= neweq.size;
+	if(neweq != null) space -= neweq.size;
+	if(neweq == null) trace("we got a null one (1)");
 }
 if(space == 1 && themesequipped.length > 0) {
-	var neweq = runscript("christmasspecial/warriorthemes/" + themesequipped.pop(),[allsmalleqs,alllargeeqs,alleqs,true]);
+	var neweq = runscript("christmasspecial/warriorthemes/" + themesequipped.pop().toLowerCase(),[allsmalleqs,alllargeeqs,alleqs,true]);
 	if(neweq != null) eqtoadd.push(neweq);
-	space -= neweq.size;
+	if(neweq != null) space -= neweq.size;
+	if(neweq == null) trace("we got a null one (2)");
 }
 while(space > 1) {
 	var neweq = new elements.Equipment(rand(alleqs));
 	if(neweq != null) eqtoadd.push(neweq);
-	space -= neweq.size;
+	if(neweq != null) space -= neweq.size;
+	if(neweq == null) trace("we got a null one (3)");
 }
 if(space == 1) {
 	var neweq = new elements.Equipment(rand(allsmalleqs));
 	if(neweq != null) eqtoadd.push(neweq);
-	space -= neweq.size;
+	if(neweq != null) space -= neweq.size;
+	if(neweq == null) trace("we got a null one (4)");
 }
 shuffle(f.equipment);
 var oldequipment = f.equipment.copy();

@@ -3,13 +3,12 @@ var alllargeeqs = args[1];
 var pleasereturnsmall = args[3];
 if(pleasereturnsmall) return null;
 
-shuffle(alllargeeqs);
-
 var eq = null;
 while(eq == null) {
 	var testeq = new elements.Equipment(alllargeeqs.pop());
+	trace(testeq);
 	if(
-		(!eq.hastag("notweapon"))
+		(!testeq.hastag("notweapon"))
 		&&
 		(
 			(

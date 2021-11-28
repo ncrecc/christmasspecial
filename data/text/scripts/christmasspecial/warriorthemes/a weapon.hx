@@ -16,7 +16,7 @@ var eq = null;
 while(eq == null) {
 	var testeq = new elements.Equipment(eqlist.pop());
 	if(
-		(!eq.hastag("notweapon"))
+		(!testeq.hastag("notweapon"))
 		&&
 		(
 			(
