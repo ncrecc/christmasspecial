@@ -1,4 +1,7 @@
 11/28/2021 bert
+-redid lady luck's character icon (she didn't have a shadow and there were some minor alpha issues)
+
+11/28/2021 bert
 -added newer christmas titlescreen with thief, robot, and witch
 -rewrote lady luck's episode rules slightly
 -per matt: added "dapper snapper" equipment and a lady luck layout associated with it
