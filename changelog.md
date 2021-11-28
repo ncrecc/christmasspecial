@@ -1,3 +1,43 @@
+11/28/2021 bert of wibi
+-jester's glove now works. ctrl+c ctrl+v'd snap.hx from ncrmod, coding skill of the century
+
+11/28/2021 bert of wibi
+-themecards can now be upgraded and will return upgraded equipment
+-fixed "a blade" not shuffling equipment list
+-hand sanitiser no longer crashes the game (added missing mf_healnextturn status)
+-removed john denver's voice clips (were not meant to be left in by matt)
+-condensed lady luck's "heya warrior" introduction line to 3 lines
+-removed unnecessary "on enemy" line of divine storm's description
+-fixed "increaced" typo on sponge_upgraded and sponge_weakened
+-divine zap now has a second line ("drain 40% of enemy health") instead of a mysterious newline for no reason
+-tweaked divine throwing axe's description to avoid textbleed
+-fixed missing space after comma in sing's description
+-fixed catalog not affecting upgraded cards correctly... not like you could run across this bug in normal gameplay prior to this update
+-removed baton pass_upgraded and baton pass_downgraded (equipment whose base version was removed)
+-priceless heirloom is now correctly tagged non-negotiable
+
+11/27/2021 bert of wibi
+-fixed "a blade" and "a weapon" themecards as warrior failing
+-idiotproofed warrior's card selection script a tiny bit so that if a themecard returns null it doesn't error and do nothing
+
+11/27/2021 bert of wibi
+-changed "ncrecc" credit to "wibi"
+-fixed usage of double quotes on credits
+
+11/27/2021 Matt
+-Added new title screen
+-Changed credits in game
+-added a credit picture at the end of game credits just the title screen for now
+-Changed the wheel spin so that jester now has his icon and is now orange text
+-made wheel spinning chance 45% instead of 33%
+-made it so that when you win the wheel music plays and crowd cheers
+
+11/26/2021 Matt
+-Added voicelines to Present
+-Changed difficulty for Lady Luck
+-Fixed present to not crash anymore
+-Changed present back to level 5
+
 11/25/2021 diane of wibi
 - introduced "notweapon" tag to mark items that include "attack(" but do not actually damage the opponent (e.g. in a jinx that attacks you) and should not be considered for weapon/blade/pole/etc. themecards. currently only iron helmet is tagged with this
 - the judgement variations (except "singers") and the player call for backup cards are now in data/text/equipment.csv to reflect being base-game equipment

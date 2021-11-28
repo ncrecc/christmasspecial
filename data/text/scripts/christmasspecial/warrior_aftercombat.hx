@@ -14,7 +14,9 @@ var themesequipped = f.getvar("themesequipped");
 
 if(themesequipped.length > 0) {
 	for(themecard in themesequipped) {
-		f.equipment.push(new elements.Equipment(themecard));
+		var cardtoget = themecard[0];
+		if(themecard[1]) cardtoget += "+";
+		f.equipment.push(new elements.Equipment(cardtoget));
 	}
 }
 
