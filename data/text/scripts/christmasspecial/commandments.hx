@@ -1,25 +1,43 @@
-var forbiddendice = rand([
-	["odds", [1,3,5]],
-	["evens", [2,4,6]],
-	["1s",[1]],
-	["2s",[2]],
-	["3s",[3]],
-	["4s",[4]],
-	["5s",[5]],
-	["6s",[6]]
-]);
+var script = new elements.DiceyScript('
+if (self.dicepool.length == 0) {
+	return;
+}
+var type = args[0];
+var e = args[1];
+var trailer = args[2];
+
+var odds = false;
+var evens = false;
+var forbiddendicepool = [];
+for (dice in self.dicepool) {
+	forbiddendicepool.push([dice + "s", [dice.basevalue]]);
+	if (dice % 2 == 1) {
+		odds = true;
+	} else {
+		evens = true;
+	}
+}
+if (odds) {
+	forbiddendicepool.push(["odds", [1,3,5]]);
+}
+if (evens) {
+	forbiddendicepool.push(["evens", [2,4,6]]);
+}
+// forbiddendice has a distribution skewed towards the values the player has the
+// most of. Also, "odds" and "evens" are rarer. This is all intentional.
+var forbiddendice = rand(forbiddendicepool);
 self.setvar("forbiddendice", forbiddendice);
 var bonuses = [];
-if (args[0] == ALL || args[0] == "status") {
+if (type == "all" || type == "status") {
 	bonuses = bonuses.concat([
 		["burn all enemy dice.", "inflict(FIRE, ALL)"],
-		["roll a 6 next turn.", "inflictself(\"stash6\"); inflictself(\"illuminate\")"],
+		["roll a 6 next turn.", "inflictself(\'stash6\'); inflictself(\'illuminate\')"],
 		["freeze 2 enemy dice.", "inflict(ICE, 2)"],
 		["shock and[newline]weaken enemy.", "inflict(WEAKEN); inflict(SHOCK);"],
 		["enemy loses a dice.", "target.bonusdice--;"],
 	]);
 }
-if (args[0] == ALL || args[0] == "damage") {
+if (type == "all" || type == "damage") {
 	bonuses = bonuses.concat([
 		["do [sword]5 damage.", "attack(5)"],
 		["heal [heal]5 hp.", "attackself(-5)"]
@@ -27,4 +45,17 @@ if (args[0] == ALL || args[0] == "damage") {
 }
 var bonus = rand(bonuses);
 self.setvar("commandbonus",bonus);
-return "If you don't use " + forbiddendice[0] + " this[newline]turn, " + bonus[0];
+e.fulldescription =
+	"If you don\'t use " + forbiddendice[0] + " this[newline]turn, "
+	+ bonus[0] + trailer
+;
+act.stop();
+');
+var act = new motion.actuators.SimpleActuator(null, 0, null);
+script.set("self", self);
+script.set("args", args);
+script.set("rand", rand);
+script.set("act", act);
+act.onRepeat(script.execute, []);
+act._repeat = -1;
+act.move();
