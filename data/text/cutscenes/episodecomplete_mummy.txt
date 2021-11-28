@@ -49,6 +49,10 @@ if(player == "Warrior"){
   actor("Inventor", 150, screenheight - 100, 0xffe48d, LEFT, BOTTOM, "chat_inventor", "characters/inventor/charicon_inventor");
 }else if(player == "Witch"){
   actor("Witch", 150, screenheight - 100, 0xb496ec, LEFT, BOTTOM, "chat_witch", "characters/witch/charicon_witch");
+}else if(player == "Jester"){
+  actor("Jester", 150, screenheight - 100, Col.ORANGE, LEFT, BOTTOM, "chat_jester", "characters/jester/charicon_jester");
+}else if(player == "Lady Luck"){
+  actor("Lady Luck@dice", 150, screenheight - 100, Col.RED, LEFT, BOTTOM, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
 }
 // INTRO
 
@@ -88,7 +92,7 @@ ladyluck_sign.show("idle");
 
 ladyluck_sign.hide();
 
-var wheelwins = chance(33); // 33% chance to win
+var wheelwins = chance(45); // 45% chance to win
 spinthewheel(sign, wheel, wheelwins ? "spin2" : "spin1");
 
 signanimate(sign);
@@ -97,6 +101,9 @@ ladyluck_sign.show("talking");
 actor("Lady Luck", screenwidthmid + 200, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 
 if (wheelwins) {
+    play("stopallmusic");    
+    play("cutscene_audience");
+    play("music_cutscene_cheery");
     speak("Lady Luck", "Wow, it looks like it landed on the prize!", "normal");
     speak("Lady Luck", "What do you want, " + player + "?");
     speak(player, "I want some candy!");

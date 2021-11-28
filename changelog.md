@@ -1,3 +1,21 @@
+11/27/2021 bert of wibi
+-changed "ncrecc" credit to "wibi"
+-fixed usage of double quotes on credits
+
+11/27/2021 Matt
+-Added new title screen
+-Changed credits in game
+-added a credit picture at the end of game credits just the title screen for now
+-Changed the wheel spin so that jester now has his icon and is now orange text
+-made wheel spinning chance 45% instead of 33%
+-made it so that when you win the wheel music plays and crowd cheers
+
+11/26/2021 Matt
+-Added voicelines to Present
+-Changed difficulty for Lady Luck
+-Fixed present to not crash anymore
+-Changed present back to level 5
+
 11/25/2021 diane of wibi
 - introduced "notweapon" tag to mark items that include "attack(" but do not actually damage the opponent (e.g. in a jinx that attacks you) and should not be considered for weapon/blade/pole/etc. themecards. currently only iron helmet is tagged with this
 - the judgement variations (except "singers") and the player call for backup cards are now in data/text/equipment.csv to reflect being base-game equipment
