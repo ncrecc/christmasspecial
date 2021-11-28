@@ -1,4 +1,7 @@
 11/28/2021 bert of wibi
+-jester's glove now works. ctrl+c ctrl+v'd snap.hx from ncrmod, coding skill of the century
+
+11/28/2021 bert of wibi
 -themecards can now be upgraded and will return upgraded equipment
 -fixed "a blade" not shuffling equipment list
 -hand sanitiser no longer crashes the game (added missing mf_healnextturn status)
