@@ -1,8 +1,8 @@
 Intensity;Class;State;Introduction
 1;Warrior;normal;Welcome back, my holly jolly fighter!||{dissapointed}Still want some candy?
-1;Warrior;normal;Heya Warrior!||How's your Christmas going?||Bad you say?||Oh good thing this gauntlet will cheer ya up!
+1;Warrior;normal;Heya, Warrior! How's your Christmas going?||{thinking}Bad, you say?||{sly}I'm sure this gauntlet will cheer you up!
 1;Warrior;thinking;I wonder maybe this run will help Warrior clear his head!||{angry}Out of everything he could wish for CANDY? Is what he wants?!
-1;Warrior;normal;Let's welcome the Warrior back to the Christmas Special!||{sly}Barely a special more of an extension...
+1;Warrior;normal;Let's welcome the Warrior back|to the Christmas Special!||{sly}Barely a special, more of an extension...
 1;Witch;normal;Put your hands together for the Witch!||Time for another magical adventure!
 1;Witch;normal;Let's welcome back my wonderful Witch!||{sly}What spell will she cast on us today?
 1;Witch;normal;Let's welcome back my favourite enchanting|adventurer, and the only contestant I follow|on social media - it's the Witch!

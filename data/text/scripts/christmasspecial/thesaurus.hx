@@ -19,7 +19,7 @@ if(f.equipment.length > 0 && f.layout != "DECK") {
       var allequipment = [];
       if(choseneq.size > 1) { allequipment = allequipmentlarge; }
       else { allequipment = allequipmentsmall; }
-      var myindex = allequipment.indexOf(choseneq);
+      var myindex = allequipment.indexOf(choseneq.name);
       if(myindex == -1 || myindex == allequipment.length - 1) continue;
       /*
       trace(allequipment[myindex]);

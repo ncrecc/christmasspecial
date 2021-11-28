@@ -76,7 +76,7 @@ gooditems = [];
 otherstuff = [health(), health()];
 goodotherstuff = [
   upgrade(),
-  shop(["health", strangeshop.pop(), "health"], [4, 4, 4])
+  shop(["upgrade", strangeshop.pop(), "health"], [4, 4, 4])
 ];
 
 addfloor("big")
