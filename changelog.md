@@ -1,3 +1,11 @@
+11/28/2021 bert
+-fixed divine zap still using the old "hp" var in its on execute script
+-changed "lose a dice" commandment reward to "lock 1 dice" to make it status-relevant
+-added "a merry christmas" themecard idea (suggested by matt)
+
+11/28/2021 plok
+-(plok internally reworked commandments a fair bit)
+
 11/28/2021 bert of wibi
 -jester's glove now works. ctrl+c ctrl+v'd snap.hx from ncrmod, coding skill of the century
 
