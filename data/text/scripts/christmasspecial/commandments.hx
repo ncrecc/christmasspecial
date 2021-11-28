@@ -34,7 +34,7 @@ if (type == "all" || type == "status") {
 		["roll a 6 next turn.", "inflictself(\'stash6\'); inflictself(\'illuminate\')"],
 		["freeze 2 enemy dice.", "inflict(ICE, 2)"],
 		["shock and[newline]weaken enemy.", "inflict(WEAKEN); inflict(SHOCK);"],
-		["enemy loses a dice.", "target.bonusdice--;"],
+		["lock 1 enemy dice.", "inflict(LOCK);"],
 	]);
 }
 if (type == "all" || type == "damage") {
