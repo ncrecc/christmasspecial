@@ -2,43 +2,50 @@
 
 #include endepisodegraphics_ladyluck.txt
 
+var player = getplayername();
+var isladyluck = player == "Lady Luck";
+var announcer = isladyluck ? jester : ladyluck_sign;
+
 // HELPER FUNCTIONS
 
 function signanimate(sign) {
-	var s = sign.show("turn");
-	//s.onComplete(function() { resume(); sign.show("loop"); });
-	//pause();
-	while(!s.completed) {
-		// do nothing
-	}
-	sign.show("loop");
+    var s = sign.show("turn");
+    //s.onComplete(function() { resume(); sign.show("loop"); });
+    //pause();
+    while(!s.completed) {
+        // do nothing
+    }
+    sign.show("loop");
 }
 
 function spinthewheel(sign, wheel, animation) {
   var s = sign.show("turn");
-	//s.onComplete(function() { resume(); sign.show("loop"); });
-	//pause();
-	while(!s.completed) {
-		// do nothing
-	}
-	sign.hide();
+    //s.onComplete(function() { resume(); sign.show("loop"); });
+    //pause();
+    while(!s.completed) {
+        // do nothing
+    }
+    sign.hide();
 
   wheel.x = 30;
   wheel.y = -30;
   play("spinthewheel");
-	var s = wheel.show(animation);
-	//s.onComplete(function() { resume(); sign.show("loop"); });
-	//pause();
-	while(!s.completed) {
-		// do nothing
-	}
-	wheel.hide();
+    var s = wheel.show(animation);
+    //s.onComplete(function() { resume(); sign.show("loop"); });
+    //pause();
+    while(!s.completed) {
+        // do nothing
+    }
+    wheel.hide();
 }
 
 // ACTORS
-actor("Lady Luck", screenwidthmid + 400, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+if (isladyluck) {
+	actor("Jester", screenwidthmid + 200, 100, Col.multiplylightness(Col.RED, 1.25), LEFT, TOP, "chat_jester", "characters/misc/charicon_humanjester");
+} else {
+	actor("Lady Luck", screenwidthmid + 200, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+}
 
-var player = getplayername();
 if(player == "Warrior"){
   actor("Warrior", 150, screenheight - 100, Col.LIGHTBLUE, LEFT, BOTTOM, "chat_warrior", "characters/warrior/charicon_warrior");
 }else if(player == "Thief"){
@@ -51,8 +58,8 @@ if(player == "Warrior"){
   actor("Witch", 150, screenheight - 100, 0xb496ec, LEFT, BOTTOM, "chat_witch", "characters/witch/charicon_witch");
 }else if(player == "Jester"){
   actor("Jester", 150, screenheight - 100, Col.ORANGE, LEFT, BOTTOM, "chat_jester", "characters/jester/charicon_jester");
-}else if(player == "Lady Luck"){
-  actor("Lady Luck@dice", 150, screenheight - 100, Col.RED, LEFT, BOTTOM, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
+}else{
+  actor("Lady Luck", 150, screenheight - 100, Col.RED, LEFT, BOTTOM, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
 }
 // INTRO
 
@@ -61,12 +68,12 @@ play("music_cutscene_lesscheery");
 changebackground("intro_sign");
 
 sign.y = -screenheight;
-ladyluck_sign.y = -screenheight;
+announcer.y = -screenheight;
 sign.show("loop");
-ladyluck_sign.show("idle");
+announcer.show("idle");
 
 Actuate.tween(sign, 2, { y: 0 }).ease(Expo.easeOut);
-Actuate.tween(ladyluck_sign, 2, { y: 0 }).ease(Expo.easeOut);
+Actuate.tween(announcer, 2, { y: 0 }).ease(Expo.easeOut);
 
 wait(0.5);
 
@@ -74,47 +81,56 @@ fadein();
 
 wait(1.5);
 
-ladyluck_sign.show("talking");
-actor("Lady Luck", screenwidthmid + 200, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+announcer.show("talking");
 
-var firstlinevoice = false;
-for(message in variables.messages_beforespin) {
-  var mood = "normal";
-  if(!firstlinevoice){
-    firstlinevoice = true;
-    speak("Lady Luck", message.text, "normal");
-  }else{
-    speak("Lady Luck", message.text);
-  }
+if (isladyluck) {
+    speak("Jester", "Here's some dialogue.", "personality");
+    speak("Lady Luck", "Okay.");
+} else {
+    var firstlinevoice = false;
+    for(message in variables.messages_beforespin) {
+      var mood = "normal";
+      if(!firstlinevoice){
+        firstlinevoice = true;
+        speak("Lady Luck", message.text, "normal");
+      }else{
+        speak("Lady Luck", message.text);
+      }
+    }
 }
 
-ladyluck_sign.show("idle");
+announcer.show("idle");
 
-ladyluck_sign.hide();
+announcer.hide();
 
 var wheelwins = chance(45); // 45% chance to win
 spinthewheel(sign, wheel, wheelwins ? "spin2" : "spin1");
 
 signanimate(sign);
 
-ladyluck_sign.show("talking");
-actor("Lady Luck", screenwidthmid + 200, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+announcer.show("talking");
 
 if (wheelwins) {
     play("stopallmusic");    
     play("cutscene_audience");
     play("music_cutscene_cheery");
-    speak("Lady Luck", "Wow, it looks like it landed on the prize!", "normal");
-    speak("Lady Luck", "What do you want, " + player + "?");
-    speak(player, "I want some candy!");
-    speak("Lady Luck", "Really? Candy?");
-    speak(player, "Yep!");
-    speak("Lady Luck", "Okay then...");
+    if (isladyluck) {
+        speak("Jester", "Okay, you're turning into a human now!", "personality");
+    } else {
+        speak("Lady Luck", "Wow, it looks like it landed on the prize!", "normal");
+        speak("Lady Luck", "What do you want, " + player + "?");
+        speak(player, "I want some candy!");
+        speak("Lady Luck", "Really? Candy?");
+        speak(player, "Yep!");
+        speak("Lady Luck", "Okay then...");
+    }
+} else if (isladyluck) {
+    speak("Jester", "Too bad!", "personality");
 } else {
     var secondlinevoice = false;
     for(message in variables.messages_afterspin) {
       var mood = "normal";
-    	if(!secondlinevoice){
+        if(!secondlinevoice){
         secondlinevoice = true;
         speak("Lady Luck", message.text, "normal");
       }else{
@@ -123,6 +139,6 @@ if (wheelwins) {
     }
 }
 
-ladyluck_sign.show("idle");
+announcer.show("idle");
 
 gamecompletefromcutscene();
