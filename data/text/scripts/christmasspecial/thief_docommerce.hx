@@ -1,3 +1,5 @@
+//old gimmick no longer in use. -bert
+
 //written by diane of wibi, with needling about how possible it is to write a "satisfying" trade function by gost of wibi
 
 var _self = args[0];

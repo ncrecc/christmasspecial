@@ -1,3 +1,19 @@
+11/29/2021 diane
+-fixed 2 crashy typos in commandments.hx (backslash after a quote, stray comma)
+-(also bert was working on thief overhaul at the time so you'll see a brief snippet of that in thief_dosharing.hx
+
+11/28/2021 bert
+-added a "snap your items next turn" commandment
+-fixed double quotes in the divine killer, the second chance, and the middle road
+
+11/28/2021 bert
+-redid lady luck's character icon (she didn't have a shadow and there were some minor alpha issues)
+
+11/28/2021 bert
+-added newer christmas titlescreen with thief, robot, and witch
+-rewrote lady luck's episode rules slightly
+-per matt: added "dapper snapper" equipment and a lady luck layout associated with it
+
 11/28/2021 bert
 -fixed divine zap still using the old "hp" var in its on execute script
 -changed "lose a dice" commandment reward to "lock 1 dice" to make it status-relevant
