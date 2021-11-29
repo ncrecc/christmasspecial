@@ -1,4 +1,8 @@
-11/28/2021
+11/29/2021 diane
+-fixed 2 crashy typos in commandments.hx (backslash after a quote, stray comma)
+-(also bert was working on thief overhaul at the time so you'll see a brief snippet of that in thief_dosharing.hx
+
+11/28/2021 bert
 -added a "snap your items next turn" commandment
 -fixed double quotes in the divine killer, the second chance, and the middle road
 

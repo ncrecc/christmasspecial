@@ -30,18 +30,18 @@ self.setvar("forbiddendice", forbiddendice);
 var bonuses = [];
 if (type == "all" || type == "status") {
 	bonuses = bonuses.concat([
-		["burn all enemy dice.", "inflict(FIRE, ALL)"],
-		["freeze 2 enemy dice.", "inflict(ICE, 2)"],
+		["burn all enemy dice.", "inflict(FIRE, ALL);"],
+		["freeze 2 enemy dice.", "inflict(ICE, 2);"],
 		["shock and[newline]weaken enemy.", "inflict(WEAKEN); inflict(SHOCK);"],
-		["lock 1 enemy dice.", "inflict(LOCK);"],
+		["lock 1 enemy dice.", "inflict(LOCK);"]
 	]);
 }
 if (type == "all" || type == "damage") {
 	bonuses = bonuses.concat([
-		["do [sword]5 damage.", "attack(5)"],
-		["heal [heal]5 hp.", "attackself(-5)"],
-		["roll a 6 next turn.", "inflictself(\'stash6\'); inflictself(\'illuminate\')"],
-		["snap an item.", "inflictself(\'ncr_snap'\)"]
+		["do [sword]5 damage.", "attack(5);"],
+		["heal [heal]5 hp.", "attackself(-5);"],
+		["roll a 6 next turn.", "inflictself(\'stash6\'); inflictself(\'illuminate\');"],
+		["snap an item.", "inflictself(\'ncr_snap\');"]
 	]);
 }
 var bonus = rand(bonuses);
