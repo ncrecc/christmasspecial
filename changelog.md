@@ -1,3 +1,7 @@
+11/28/2021
+-added a "snap your items next turn" commandment
+-fixed double quotes in the divine killer, the second chance, and the middle road
+
 11/28/2021 bert
 -redid lady luck's character icon (she didn't have a shadow and there were some minor alpha issues)
 
