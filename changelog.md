@@ -1,3 +1,14 @@
+12/1/2021 Matt
+-Added voicelines for Ultra Mariah Carey and Mega Snowman
+-added robots generator 
+-added Ultra Mariah Carey and Mega Snowman
+-added Ultra Mariah Carey and Mega Snowman items
+-removed _merge skills.csv (Was messing with robot calculate)
+-added robots episode
+-added diceydungeons folder in scripts folder
+-added more jackpot skills
+-merged in witch
+
 11/29/2021 diane
 -fixed 2 crashy typos in commandments.hx (backslash after a quote, stray comma)
 -(also bert was working on thief overhaul at the time so you'll see a brief snippet of that in thief_dosharing.hx

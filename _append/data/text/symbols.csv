@@ -38,3 +38,7 @@ redshift,redshift,0xFD5E6C,IMAGE
 endlesswinter,endlesswinter,0xffffff,IMAGE
 glove,29,0xfff830,SYMBOLTILE
 ncr_error,ncr_error,0x9d9d9d,IMAGE
+nospellbook,nospellbook,0xec6cee,IMAGE
+fireweakness,fireweakness,0xfd5e6c,IMAGE
+liltails,liltails,0xffffff,IMAGE
+lilheads,lilheads,0xffffff,IMAGE

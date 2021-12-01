@@ -43,6 +43,21 @@ var ladyluckgraphics = {
 }
 var ladyluck_sign = addsprite("ladyluck_sign", 1, ladyluckgraphics);
 
+var jestergraphics = {
+	idle: {
+		animation: "jester_sign_idle.json",
+		pack: "jester_ladyluck.pck",
+		loop: true
+	},
+	talking: {
+		animation: "jester_sign_talking.json",
+		pack: "jester_ladyluck.pck",
+		speed: 1,
+		loop: true
+	}
+}
+var jester = addsprite("jester", 1, jestergraphics);
+
 setdatapath("data/graphics/ui/wheel_spin/");
 
 var wheelgraphics = {
