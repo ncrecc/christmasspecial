@@ -2,8 +2,7 @@ Name,Description,Script
 Slushie,Inflicts [shiver]3 slush,inflict(~Slush~[;] 3); sfx(~_ice~);
 Regenative Ablity,Gain [grace]1 regeneration,inflictself(~regeneration~[;] 1); sfx(~_cure~);
 Hibernate,+[heal]2 health[;] +[shield]2 shield,attackself(-2); inflictself(SHIELD[;] 2); sfx(~_shield~); sfx(~_heal~);
-Faith,30% chance to gain [reduce]6,if(chance(30)){ inflictself(REDUCE[;] 6); sfx(~_shield~); } else { self.textparticle(~No effect!~);
-Candy Spear,Do [sword]2 dmg][;] +[heal]2 health,attack(2); sfxdamage(target[;] 2); attackself(-2); sfx(~_heal~);
+Candy Spear,Do [sword]2 dmg[;] +[heal]2 health,attack(2); sfxdamage(target[;] 2); attackself(-2); sfx(~_heal~);
 AGAIN!,Take another turn,inflictself(EXTRATURN); sfx(~_thinghappens~);
 Card Redraw,Reroll all random cards,self.destroyallequipment(); giveequipment([~Short Sword~][;]true[;]false); giveequipment([~Card Reroll~][;]true[;]false); giveequipment(rand(getequipmentlist(null[;][][;][~alternateversion~[;]~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~]))[;] -1); giveequipment(rand(getequipmentlist(null[;][][;][~alternateversion~[;]~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~]))[;] -1); sfx(~_thinghappens~);
 Blue Flame,Do [ice]3 and [fire]3 damage,attack(3[;] ICE); attack(3[;] FIRE); sfx(~_fire~); sfx(~_ice~);
