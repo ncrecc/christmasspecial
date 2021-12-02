@@ -4,7 +4,7 @@
 
 var player = getplayername();
 var isladyluck = player == "Lady Luck";
-var announcer = isladyluck ? jester : ladyluck_sign;
+var announcer = isladyluck ? mariah : ladyluck_sign;
 
 // HELPER FUNCTIONS
 
@@ -41,7 +41,7 @@ function spinthewheel(sign, wheel, animation) {
 
 // ACTORS
 if (isladyluck) {
-	actor("Jester", screenwidthmid + 200, 100, Col.multiplylightness(Col.RED, 1.25), LEFT, TOP, "chat_jester", "characters/misc/charicon_humanjester");
+	actor("Mariah Carey", screenwidthmid + 200, 100, Col.multiplylightness(Col.RED, 1.25), LEFT, TOP, "chat_jester");
 } else {
 	actor("Lady Luck", screenwidthmid + 200, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 }
@@ -84,8 +84,16 @@ wait(1.5);
 announcer.show("talking");
 
 if (isladyluck) {
-    speak("Jester", "Here's some dialogue.", "personality");
-    speak("Lady Luck", "Okay.");
+    speak("Mariah Carey", "Hey there, is it weird from your side?");
+	announcer.show("idle");
+    speak("Lady Luck", "Yes, a little bit. Are you going to spin the wheel or not?");
+	announcer.show("talking");
+	speak("Mariah Carey", "Just a minute, dear. Let me bask in this glory for a moment.");
+	announcer.show("idle");
+	wait(5);
+	speak("Lady Luck", "Are you done yet?");
+	announcer.show("talking");
+	speak("Mariah Carey", "Sure.");
 } else {
     var firstlinevoice = false;
     for(message in variables.messages_beforespin) {
@@ -115,7 +123,41 @@ if (wheelwins) {
     play("cutscene_audience");
     play("music_cutscene_cheery");
     if (isladyluck) {
-        speak("Jester", "Okay, you're turning into a human now!", "personality");
+        speak("Mariah Carey", "What the he- how did yo- wha?");
+		announcer.show("idle");
+		speak("Lady Luck", "Turn me back NOW.");
+		announcer.show("talking");
+		speak("Mariah Carey", "Okay, fine.");
+		
+		fadeout();
+		while(isfading()) {
+			// do nothing
+		}
+		changebackground("intro_transform");
+		announcer.hide();
+		sign.hide();
+		fadein();
+		
+		ladyluckdice.x = screenwidth;
+		var transform = ladyluckdice.show("transform");
+		Actuate.tween(ladyluckdice, 2, { x: 0 }).ease(Expo.easeOut);
+		
+		var marker_human = false;
+		var marker_dice = false;
+		while(true) {	
+			if(!marker_human && transform.marker == "human") {
+				marker_human = true;
+				transform.paused = true;
+				speak("Lady Luck", "Changing...");
+		    play("transformintodice");
+				transform.paused = false;
+			} else if(!marker_dice && transform.marker == "dice") {
+				marker_dice = true;
+				transform.paused = true;
+				speak("Lady Luck", "And, scene!");
+		    	break;
+			}
+		}
     } else {
         speak("Lady Luck", "Wow, it looks like it landed on the prize!", "normal");
         speak("Lady Luck", "What do you want, " + player + "?");
@@ -123,9 +165,16 @@ if (wheelwins) {
         speak("Lady Luck", "Really? Candy?");
         speak(player, "Yep!");
         speak("Lady Luck", "Okay then...");
+		announcer.show("idle");
     }
 } else if (isladyluck) {
-    speak("Jester", "Too bad!", "personality");
+    speak("Mariah Carey", "Oof, better luck next time!");
+	announcer.show("idle");
+	speak("Lady Luck", "There won't be a next time. I'm turning back.");
+	announcer.show("talking");
+	speak("Mariah Carey", "Oh no you're not. You're going to be a dice until you win the wheel.");
+	announcer.show("idle");
+	speak("Lady Luck", "What?!");
 } else {
     var secondlinevoice = false;
     for(message in variables.messages_afterspin) {
@@ -137,8 +186,7 @@ if (wheelwins) {
         speak("Lady Luck", message.text);
       }
     }
+	announcer.show("idle");
 }
-
-announcer.show("idle");
 
 gamecompletefromcutscene();

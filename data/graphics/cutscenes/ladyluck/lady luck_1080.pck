@@ -59,4 +59,5 @@
     <SubTexture name="right_bell_jester_alpha" x="241" y="2011" rotated="true" width="37" height="34" frameX="-627" frameY="-195" frameWidth="661" frameHeight="620"/>
     <SubTexture name="right_bit_jester_alpha" x="882" y="1682" rotated="true" width="185" height="318" frameX="-332" frameY="-28" frameWidth="661" frameHeight="620"/>
     <SubTexture name="shadow_char_transformation" x="548" y="1002" rotated="true" width="97" height="460" frameX="-722" frameY="-864" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="human_char_transformation" x="1500" y="500" width="494" height="713"/>
 </TextureAtlas>
