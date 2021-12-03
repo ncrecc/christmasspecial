@@ -1,6 +1,7 @@
 // SETUP
 
 #include endepisodegraphics_ladyluck.txt
+#include ladyluckbiggraphics.txt
 
 var player = getplayername();
 var isladyluck = player == "Lady Luck";
@@ -111,7 +112,7 @@ announcer.show("idle");
 
 announcer.hide();
 
-var wheelwins = chance(45); // 45% chance to win
+var wheelwins = chance(100); // 45% chance to win
 spinthewheel(sign, wheel, wheelwins ? "spin2" : "spin1");
 
 signanimate(sign);
@@ -154,12 +155,45 @@ if (wheelwins) {
 			} else if(!marker_dice && transform.marker == "dice") {
 				marker_dice = true;
 				transform.paused = true;
-				speak("Lady Luck", "And, scene!");
-				play("stopallmusic");
-				endingcredits();
-		    	return;
+				speak("Lady Luck", "Tada!");
+				break;
 			}
 		}
+		
+		fadeout();
+		while(isfading()) {
+			// do nothing
+		}
+		changebackground("after_transform");
+		ladyluckdice.hide();
+		fadein();
+		ladyluck_big.x = -screenwidth;
+		ladyluck_big.show("talking", true);
+		Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
+		speak("Lady Luck", "What an adventure! That was really interesting!");
+		speak("Lady Luck", "Now, what were we doing?");
+		speak("Lady Luck", "I'm so glad you all played this mod to its entirety.");
+		speak("Lady Luck", "And if you skipped straight to me, please keep playing this mod.");
+		ladyluck_big.show("talking-sly", true);
+		speak("Lady Luck", "I know I'm great, but please look at everything in the mod.");
+		ladyluck_big.show("talking", true);
+		speak("Lady Luck", "Now where were we?");
+		speak("Lady Luck", "Mariah, how would you like to be a contestant?");
+		
+		play("stopallmusic");
+		fadeout();
+		while(isfading()) {
+			// do nothing
+		}
+		ladyluck_big.hide();
+		changebackground("nothing");
+		fadein();
+		play("_ladysnap");
+		while(isfading()) {
+			// do nothing
+		}
+		endingcredits();
+		return;
     } else {
         speak("Lady Luck", "Wow, it looks like it landed on the prize!", "normal");
         speak("Lady Luck", "What do you want, " + player + "?");

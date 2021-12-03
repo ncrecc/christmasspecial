@@ -1,7 +1,12 @@
+setdatapath("data/graphics/characterselect/");
+
+addbackground("after_transform", {animation: "background.json", pack: "pack.pck"});
+
 setdatapath("data/graphics/cutscenes/intro/");
 
 addbackground("intro_sign", {animation: "background_sign.json", pack: "sign.pck"});
 addbackground("intro_transform", {sprites: ["background_transform.png"]});
+addbackground("nothing", {animation: "nothing.json", pack: "sign.pck"});
 
 var signgraphics = {
 	turn: {
