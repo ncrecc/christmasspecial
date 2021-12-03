@@ -112,7 +112,7 @@ announcer.show("idle");
 
 announcer.hide();
 
-var wheelwins = chance(100); // 45% chance to win
+var wheelwins = chance(45); // 45% chance to win
 spinthewheel(sign, wheel, wheelwins ? "spin2" : "spin1");
 
 signanimate(sign);
