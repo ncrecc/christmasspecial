@@ -60,3 +60,4 @@ script.set("act", act);
 act.onRepeat(script.execute, []);
 act._repeat = -1;
 act.move();
+self.setvar("commandmentact", act);

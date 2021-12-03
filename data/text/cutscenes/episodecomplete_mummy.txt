@@ -155,7 +155,9 @@ if (wheelwins) {
 				marker_dice = true;
 				transform.paused = true;
 				speak("Lady Luck", "And, scene!");
-		    	break;
+				play("stopallmusic");
+				endingcredits();
+		    	return;
 			}
 		}
     } else {
