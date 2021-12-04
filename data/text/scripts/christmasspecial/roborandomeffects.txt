@@ -1,0 +1,21 @@
+Slush
+ShieldEater
+Bleed
+Stun
+Drowning
+Powerdown
+Demise
+heater
+heater+
+never6
+nothing
+Storm
+redshift
+ncr_error
+reversenexttarget
+mf_stun
+FIRE
+ICE
+LOCK
+Blighted
+Too Sweet

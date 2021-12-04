@@ -42,7 +42,7 @@ function spinthewheel(sign, wheel, animation) {
 
 // ACTORS
 if (isladyluck) {
-	actor("Mariah Carey", screenwidthmid + 200, 100, Col.multiplylightness(Col.RED, 1.25), LEFT, TOP, "chat_jester");
+	actor("Mariah Carey", screenwidthmid + 200, 100, Col.multiplylightness(Col.RED, 1.25), LEFT, TOP, "chat_jester", "characters/misc/charicon_mariahcarey");
 } else {
 	actor("Lady Luck", screenwidthmid + 200, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 }
@@ -112,7 +112,7 @@ announcer.show("idle");
 
 announcer.hide();
 
-var wheelwins = chance(45); // 45% chance to win
+var wheelwins = chance(50); // 50% chance to win
 spinthewheel(sign, wheel, wheelwins ? "spin2" : "spin1");
 
 signanimate(sign);
@@ -149,7 +149,7 @@ if (wheelwins) {
 			if(!marker_human && transform.marker == "human") {
 				marker_human = true;
 				transform.paused = true;
-				speak("Lady Luck", "Changing...");
+				wait(2);
 		    play("transformintodice");
 				transform.paused = false;
 			} else if(!marker_dice && transform.marker == "dice") {
@@ -171,14 +171,13 @@ if (wheelwins) {
 		ladyluck_big.show("talking", true);
 		Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
 		speak("Lady Luck", "What an adventure! That was really interesting!");
-		speak("Lady Luck", "Now, what were we doing?");
 		speak("Lady Luck", "I'm so glad you all played this mod to its entirety.");
 		speak("Lady Luck", "And if you skipped straight to me, please keep playing this mod.");
 		ladyluck_big.show("talking-sly", true);
 		speak("Lady Luck", "I know I'm great, but please look at everything in the mod.");
 		ladyluck_big.show("talking", true);
 		speak("Lady Luck", "Now where were we?");
-		speak("Lady Luck", "Mariah, how would you like to be a contestant?");
+		speak("Lady Luck", "Oh right! Mariah, how would you like to be a contestant?");
 		
 		play("stopallmusic");
 		fadeout();

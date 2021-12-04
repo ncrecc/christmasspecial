@@ -1,3 +1,8 @@
+12/3/2021 Matt
+-Added a ton of new items for robot
+-Added items to robots generator
+_Added a new script with new random statuses
+
 12/1/2021 Matt
 -Added voicelines for Ultra Mariah Carey and Mega Snowman
 -added robots generator 
