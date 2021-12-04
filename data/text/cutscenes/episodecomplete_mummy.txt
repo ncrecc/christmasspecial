@@ -42,7 +42,7 @@ function spinthewheel(sign, wheel, animation) {
 
 // ACTORS
 if (isladyluck) {
-	actor("Mariah Carey", screenwidthmid + 200, 100, Col.multiplylightness(Col.RED, 1.25), LEFT, TOP, "chat_jester", "characters/misc/charicon_mariahcarey");
+	actor("Mariah Carey", screenwidthmid + 200, 100, Col.multiplylightness(Col.RED, 1.25), LEFT, TOP, "chat_inventor", "characters/misc/charicon_mariahcarey");
 } else {
 	actor("Lady Luck", screenwidthmid + 200, 100, Col.YELLOW, LEFT, TOP, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 }
@@ -91,7 +91,7 @@ if (isladyluck) {
 	announcer.show("talking");
 	speak("Mariah Carey", "Just a minute, dear. Let me bask in this glory for a moment.");
 	announcer.show("idle");
-	wait(5);
+	wait(3);
 	speak("Lady Luck", "Are you done yet?");
 	announcer.show("talking");
 	speak("Mariah Carey", "Sure.");
@@ -149,7 +149,6 @@ if (wheelwins) {
 			if(!marker_human && transform.marker == "human") {
 				marker_human = true;
 				transform.paused = true;
-				wait(2);
 		    play("transformintodice");
 				transform.paused = false;
 			} else if(!marker_dice && transform.marker == "dice") {
