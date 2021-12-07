@@ -1,0 +1,105 @@
+// SETUP
+
+setdatapath("data/graphics/cutscenes/intro/");
+addbackground("intro_stage", {animation: "background_stage.json", pack: "background_stage.pck"});
+#include ladyluckbiggraphics.txt
+
+setdatapath("data/graphics/cutscenes/inventor/");
+
+var inventorgraphics = {
+	idle: {
+		animation: "inventor_idle.json",
+		pack: "inventor.pck",
+		loop: true
+	},
+	worried_idle: {
+		animation: "inventor_worried_idle.json",
+		pack: "inventor.pck",
+		loop: true
+	}
+}
+var inventor = addsprite("inventor", 1, inventorgraphics);
+
+// HELPER FUNCTIONS	
+
+var fade_time = 0.4;
+
+// ACTORS
+actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+actor("Inventor", 2600, 780, 0xffe48d, CENTER, BOTTOM, "chat_inventor", "characters/inventor/charicon_inventor");
+
+
+changebackground("intro_stage");
+fadein();
+
+play("music_cutscene_cheery");
+
+inventor.scale = 0.5;
+inventor.x = 2570 - ((inventor.getwidth("idle") * inventor.scale) / 2);
+inventor.y = 840;
+changebackground("intro_stage");
+fadein();
+inventor.show("idle");
+
+ladyluck_big.x = -screenwidth;
+ladyluck_big.show("idle");
+Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
+play("cutscene_audience");
+
+wait(0.5);
+
+ladyluck_big.show("talking", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+
+speak("Lady Luck", "Hello, Inventor!|Are you prepared for a wonderful Christmas?", "normal");
+ladyluck_big.show("idle", true);
+
+speak("Inventor", "Of course!");
+speak("Inventor", "I'm hoping I'll get a larger toolbox.|You can never have too many widgets|and gizmos, really.", "thinking");
+
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "You're speaking to the host of this show|and the goddess of chance, sweetie.", "sly");
+speak("Lady Luck", "If you just take a spin of the wheel, you could|easily receive an ENDLESS toolbox.");
+ladyluck_big.show("idle-sly", true);
+
+speak("Inventor", "Oh, wow, sure!");
+speak("Inventor", "Let's get on with the episode!", "determined");
+
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "Before we get started, though,|what does Christmas mean to you?", "thinking");
+ladyluck_big.show("idle", true);
+
+speak("Inventor", "Hmmm...", "thinking");
+
+speak("Inventor", "Well, it's a celebration of the birth|of Jesus of Nazareth.").dismiss_in = 1;
+speak("Inventor", "Known mainly in Christian faith as|Jesus Christ, or the son of God.").dismiss_in = 0.85;
+speak("Inventor", "He was born in a stable in Bethlehem, to Saint Mary.").dismiss_in = 0.7;
+speak("Inventor", "Although the date Christmas is celebrated|depends on where you go.").dismiss_in = 0.6;
+speak("Inventor", "Its traditional celebration on December 25th|actually aligned with the winter solstice.").dismiss_in = 0.5;
+speak("Inventor", "The actual date of Jesus's birth is probably in Spring,").dismiss_in = 0.4;
+ladyluck_big.show("idle-sly", true);
+speak("Inventor", "since that's when the shepherds would|have been watching their flocks at night.").dismiss_in = 0.3;
+speak("Inventor", "And, of course, it probably|wasn't in a stable,").dismiss_in = 0.25;
+speak("Inventor", "and there weren't three|kings there either...").dismiss_in = 0.2;
+
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "Hon, this is a game show on national television.", "sly");
+ladyluck_big.show("idle-sly", true);
+
+speak("Inventor", "Oh, right! Um, Christmas is all about|family and giving gifts!", "personality");
+
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "That's what we like to hear!", "normal");
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "Now, you'd better start on|your Christmas shopping!", "personality");
+ladyluck_big.show("idle", true);
+
+inventor.show("worried_idle");
+inventor.y += 40;
+speak("Inventor", "...Oh. THAT'S what Christmas is all about.", "worried");
+
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "Spot on, dear.", "sly");
+ladyluck_big.show("idle", true);
+
+startgamefromcutscene();

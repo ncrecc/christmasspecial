@@ -1,3 +1,20 @@
+12/7/2021 Titku & bert
+-Fixed Creative Crisis crash (item changed to have no slots, but dice weren't destroyed in the process).
+-Rewrote Inventor's cutscene a little, and added voice cues.
+-Added Hall of Daggers. (It showed up in Inventor's generator, but wasn't actually in the mod.)
+-Fixed missing sfx on Flicker.
+-Fixed crash when using Waltzer.
+-Tagged all of the music!
+-bert: rebalanced and tweaked matt's new robot items a bit
+
+12/3/2021-12/7/2021
+Various undocumented stuff! Including the addition of Hinata's new credits art, and mondaybear's character select screen art.
+
+12/3/2021 Matt
+-Added a ton of new items for robot
+-Added items to robots generator
+_Added a new script with new random statuses
+
 12/1/2021 Matt
 -Added voicelines for Ultra Mariah Carey and Mega Snowman
 -added robots generator 
