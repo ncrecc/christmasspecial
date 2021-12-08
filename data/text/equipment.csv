@@ -461,6 +461,8 @@ Sword,Do [sword]<d6> damage,2,attack(d);,Plasma Gun,NORMAL,,RED,add1,decreaseran
 Nail Bat,Do [sword]<d6> damage|(You lose [heart]2 hp each turn),2,attack(d);,Lucky Shot,NORMAL|FREE3,,RED,reducesize,change_power,,,0,NO,NO,excludefromrandomlists,,,,,e.animate(~flashandshake~); pierceattackself(2); sfx(~_damage~);,,,,,,,
 Nail Bat_downgraded,Do [sword]<d6> damage|(You lose [heart]2 hp each turn),2,attack(d);,Lucky Shot,NORMAL|FREE1,,RED,,,,,0,NO,NO,excludefromrandomlists,,,,,e.animate(~flashandshake~); pierceattackself(2); sfx(~_damage~);,,,,,,,
 Nail Bat_weakened,Do [sword]<d6> damage|(You lose [heart]2 hp each turn),1,attack(d);,Lucky Shot,NORMAL|FREE1,,RED,,,,,0,NO,NO,excludefromrandomlists,,,,,e.animate(~flashandshake~); pierceattackself(2); sfx(~_damage~);,,,,,,,
+Shadow Dice,Duplicate a dice|Lose [heart]<d6> health,1,givedice([d| d]); pierceattackself(d);,Clone Device,NORMAL,,PURPLE,change_power,complicate,,,0,YES,NO,excludefromrandomlists,1,,,,,,,,,,,
+Shadow Dice_upgraded,Duplicate a dice|Lose [heart]<d6> health|[gray](Reuseable),1,givedice([d| d]); pierceattackself(d);,Clone Device,NORMAL,,PURPLE,,,,,2,YES,NO,excludefromrandomlists,,,,,,,,,,,,
 [END MISC USED IN MOD],,1,,,,,,,,,,0,NO,NO,internal|excludefromrandomlists,,,,,,,,,,,,
 [BEGIN REFERENCE STUFF],,1,,,,,,,,,,0,NO,NO,internal|excludefromrandomlists,,,,,,,,,,,,
 Gatling Pea,Do [sword]2 damage[;] roll a 1|,1,attack(2); sfxdamage(target[;]2); givedice(1);,Pea Gun,COUNTDOWN,3,RED,change_power,change_power,,,-1,NO,NO,rs,,,,,,,,,,,,
