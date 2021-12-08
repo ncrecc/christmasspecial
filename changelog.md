@@ -1,3 +1,6 @@
+12/8/2021 bert
+- thief preliminary. gimmick is now 99% working barring some edge-cases or last minute typos (VERY nearly missed a semicolon right before pushing this). hurrah.
+
 12/7/2021 bert
 - fixed dice printer upgrade crashing due to a single-character typo during buster's rebalancing (dice printer was accidentally kept size 1 when it should be size 2, but its upgrade was made reducesize regardless)
 

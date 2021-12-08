@@ -75,30 +75,53 @@ if(timing == "endturn_enemy") { //we want to piggyback on internal stolencard ma
 
 if(timing == "beforestartturn_player") {
 	if(turn % 2 == 0 && turn > 0) {
-		//reverse stealing time
-		for(eq in enemy.equipment) {
-			if(eq.hastag("madecannotsteal")) {
-				eq.removetag("madecannotsteal");
-				eq.removetag("cannotsteal");
+		if(enemy.spaceleft() > 0) {
+			//reverse stealing time
+			for(eq in enemy.equipment) {
+				if(eq.hastag("madecannotsteal")) {
+					eq.removetag("madecannotsteal");
+					eq.removetag("cannotsteal");
+				}
+				if(eq.hastag("reversestolencard")) {
+					eq.name = "bustersaysdeleteme";
+				}
 			}
-			if(eq.hastag("reversestolencard")) {
-				eq.name = "bustersaysdeleteme";
+			removeequipment("bustersaysdeleteme",enemy);
+			var equipmentpool = [];
+			for(eq in player.equipment) {
+				if(!eq.hastag("cannotsteal")) {
+					equipmentpool.push(eq);
+				}
+			}
+			if(equipmentpool.length > 0) {
+				var cardtoreversesteal = pick(equipmentpool);
+				cardtoreversesteal.addtag("dostolenanim");
+				var reversestolencard = new elements.Equipment(cardtoreversesteal);
+				reversestolencard.x = -9999;
+				reversestolencard.y = -9999; //without this, equipment very briefly displays as on-screen once created, before it's pushed into the enemy's equipment and the game realizes it's not supposed to draw it
+				enemy.equipment.push(reversestolencard);
+				reversestolencard.addtag("reversestolencard");
+				reversestolencard.addtag("weakenavoid");
+				reversestolencard.addtag("weakenimmune");
+				reversestolencard.addtag("shockavoid");
+				reversestolencard.addtag("shockimmune");
+				reversestolencard.addtag("cannotsteal");
 			}
 		}
-		removeequipment("bustersaysdeleteme",enemy)
-		var equipmentpool = [];
+	}
+	if(turn % 2 == 1 && turn > 0) {
+		player.setvar("mystolencard", self.stolencard.name);
+	}
+}
+
+if(timing == "onstartturn_player") {
+	if(turn % 2 == 0 && turn > 0) {
 		for(eq in player.equipment) {
-			if(!eq.hastag("cannotsteal")) {
-				equipmentpool.push(eq);
+			if(eq.hastag("dostolenanim")) {
+				eq.animate("flashandshake");
+				eq.animation[0].addcommand("textparticle", "Shared!", 16777215);
+				eq.removetag("dostolenanim");
 			}
 		}
-		var reversestolencard = new elements.Equipment(pick(equipmentpool));
-		enemy.equipment.push(reversestolencard);
-		reversestolencard.addtag("reversestolencard");
-		reversestolencard.addtag("weakenavoid");
-		reversestolencard.addtag("weakenimmune");
-		reversestolencard.addtag("shockavoid");
-		reversestolencard.addtag("shockimmune");
-		reversestolencard.addtag("cannotsteal");
 	}
 }
