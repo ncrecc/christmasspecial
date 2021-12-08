@@ -1,3 +1,13 @@
+12/7/2021 buster of wibi
+-added introduction lines for each class without one yet (bert did the robot line)
+-removed vanilla introduction lines
+-updated credits.txt a little
+-further balancing of dice printer and back up drive
+-rehauled robot generator a little (the robot-only items that appeared at the start of every array are now all in one array and that array is popped from in numerous places)
+-fixed witch_generatorchange using csv-only symbols
+-more progress on thief gimmmick
+-per matt: updated credits.csv, though it only really shows properly in the post-LL credits sequence
+
 12/7/2021 Titku & bert
 -Fixed Creative Crisis crash (item changed to have no slots, but dice weren't destroyed in the process).
 -Rewrote Inventor's cutscene a little, and added voice cues.
