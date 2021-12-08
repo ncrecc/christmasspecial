@@ -1,4 +1,10 @@
 12/8/2021 bert
+- "if you're seeing this yell at wibi" no longer shows after episodes (we didn't know how episodecomplete actually worked and assumed the mummyepisodewin lines of introductions.csv would never actually play)
+- per matt: inventor no longer uses blindinspiration
+- per matt: inventor items are usually cheaper
+- per matt: robot no longer gets a vampire item
+
+12/8/2021 bert
 - thief preliminary. gimmick is now 99% working barring some edge-cases or last minute typos (VERY nearly missed a semicolon right before pushing this). hurrah.
 
 12/7/2021 bert

@@ -15,7 +15,7 @@ var threeturnsitems = shuffle(["Tyrant's Glare", "Brimstone"]);
 floor5items.push(threeturnsitems.pop());
 if(chance(25)) floor5items.push(threeturnsitems.pop());
 
-var vampireitem = ["Silver Sword"];
+var vampireitem = ["BOOO!"];
 
 trace(floor1countdowns);
 /*
@@ -74,10 +74,11 @@ otherstuff = [
   health()
 ];
 goodotherstuff = [
-  shop(shuffle([commonlist1.pop(),commonlist1.pop(),commonlist1.pop()]), shuffle([3, 2, 3])),
-  shop(shuffle(["upgrade", shoplist1.pop(), pick(scrapitems)]), shuffle([2, 3, 3])),
-  shop(shuffle([shoplist1.pop(),shoplist1.pop(),shoplist1.pop()]), shuffle([3, 2, 1])),
-  shop(shuffle(["upgrade", shoplist1.pop(), pick(scrapitems)]), shuffle([2, 3, 3]))
+  shop(shuffle([commonlist1.pop(),commonlist1.pop(),commonlist1.pop()]), shuffle([1, 2, 3])),
+  shop(shuffle([shoplist1.pop(), shoplist1.pop(), pick(scrapitems)]), shuffle([2, 1, 1])),
+  shop(shuffle([shoplist1.pop(),shoplist1.pop(),shoplist1.pop()]), shuffle([2, 2, 1])),
+  shop(shuffle(["upgrade", shoplist1.pop(), pick(scrapitems)]), shuffle([2, 1, 2])),
+  upgrade()
 ];
 
 addfloor("smallwinterventorsecond")
@@ -92,9 +93,11 @@ gooditems = [];
 otherstuff = [health()];
 goodotherstuff = [
   shop(shuffle([scrapitems.pop(),floor3items.pop(),floor3items.pop()]), shuffle([1, 2, 1]))
-  shop(shuffle([commonlist2.pop(), commonlist2.pop(), "upgrade"])),
+  shop(shuffle([commonlist2.pop(), commonlist2.pop(), commonlist2.pop()])),
   shop(shuffle([midtierdrops.pop(),midtierdrops.pop(),midtierdrops.pop()]), shuffle([1, 2, 1])),
-  shop(shuffle([commonlist2.pop(), commonlist2.pop(), "upgrade"]))
+  shop(shuffle([commonlist2.pop(), commonlist2.pop(), commonlist2.pop()])),
+  upgrade(),
+  upgrade()
 ];
 	
 addfloor("bigwinterventor")
@@ -124,10 +127,10 @@ gooditems = [];
 		
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle([floor5items.pop(),floor5items.pop(),midtierdrops.pop()]), shuffle([3, 2, 4])),
+  shop(shuffle([floor5items.pop(),floor5items.pop(),midtierdrops.pop()]), shuffle([2, 2, 1])),
   shop(shuffle([midtierdrops.pop(),midtierdrops.pop(),commonlist1.pop()]), shuffle([1, 2, 1])),
   shop(shuffle([commonlist2.pop(), "health", commonlist2.pop()])),
-  shop(shuffle([shoplist1.pop(),commonlist1.pop(),shoplist1.pop()]), shuffle([3, 2, 1]))
+  shop(shuffle([shoplist1.pop(),commonlist1.pop(),shoplist1.pop()]), shuffle([2, 2, 1]))
 ];
 		
 addfloor("bigwinterventor")
@@ -139,13 +142,9 @@ addfloor("bigwinterventor")
 items = [];
 gooditems = [];
 otherstuff = [];
-goodotherstuff = [];
+goodotherstuff = [shop(["upgrade","BOOO!","BOOO!"]), shuffle([2, 2, 1])];   
 
 var lastfloor = addfloor("boss");
-
-if (getfinalboss() == "Drake"){
-  items.push(vampireitem.pop());
-}
 
 lastfloor
   .additems(items, gooditems)
