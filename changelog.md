@@ -1,3 +1,10 @@
+12/7/2021 bert
+- fixed dice printer upgrade crashing due to a single-character typo during buster's rebalancing (dice printer was accidentally kept size 1 when it should be size 2, but its upgrade was made reducesize regardless)
+
+12/7/2021 buster
+- "mods used in this special" subheader no longer apperas over every mod in the category
+- fixed jackeea's name using double quotes instead of \[quote]
+
 12/7/2021 buster of wibi
 -added introduction lines for each class without one yet (bert did the robot line)
 -removed vanilla introduction lines
