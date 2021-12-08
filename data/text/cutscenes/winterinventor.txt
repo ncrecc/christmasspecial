@@ -50,22 +50,56 @@ wait(0.5);
 
 ladyluck_big.show("talking", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Hello inventor! I hope you're prepared for a wonderful Christmas!");
-speak("Lady Luck", "So, what does Christmas mean to you?");
+
+speak("Lady Luck", "Hello, Inventor!|Are you prepared for a wonderful Christmas?", "normal");
 ladyluck_big.show("idle", true);
-speak("Inventor", "Well, it's a celebration of the birth of Jesus Christ!").dismiss_in = 1;
-speak("Inventor", "It's when he was born in Bethlehem in a stable, to save us all!").dismiss_in = 0.7;
-speak("Inventor", "Although the date it's celebrated depends on what country you're living in.").dismiss_in = 0.5;
-speak("Inventor", "The actual date is probably in spring,").dismiss_in = 0.4;
-ladyluck_big.show("idle-sly", true);
-speak("Inventor", "since that's when the shepherds would have been watching their flocks at night.").dismiss_in = 0.3;
-speak("Inventor", "And, of course, it probably wasn't in a stable,").dismiss_in = 0.25;
-speak("Inventor", "And there weren't three kings there either...").dismiss_in = 0.2;
+
+speak("Inventor", "Of course!");
+speak("Inventor", "I'm hoping I'll get a larger toolbox.|You can never have too many widgets|and gizmos, really.", "thinking");
+
 ladyluck_big.show("talking-sly", true);
-speak("Lady Luck", "Hon, this is a game show on national television.");
+speak("Lady Luck", "You're speaking to the host of this show|and the goddess of chance, sweetie.", "sly");
+speak("Lady Luck", "If you just take a spin of the wheel, you could|easily receive an ENDLESS toolbox.");
 ladyluck_big.show("idle-sly", true);
-speak("Inventor", "Oh yeah! Um, Christmas is all about family and giving gifts!");
+
+speak("Inventor", "Oh, wow, sure!");
+speak("Inventor", "Let's get on with the episode!", "determined");
+
 ladyluck_big.show("talking", true);
-speak("Lady Luck", "That's what we like to hear!");
-speak("Lady Luck", "You'd better start on your Christmas shopping then!");
+speak("Lady Luck", "Before we get started, though,|what does Christmas mean to you?", "thinking");
+ladyluck_big.show("idle", true);
+
+speak("Inventor", "Hmmm...", "thinking");
+
+speak("Inventor", "Well, it's a celebration of the birth|of Jesus of Nazareth.").dismiss_in = 1;
+speak("Inventor", "Known mainly in Christian faith as|Jesus Christ, or the son of God.").dismiss_in = 0.85;
+speak("Inventor", "He was born in a stable in Bethlehem, to Saint Mary.").dismiss_in = 0.7;
+speak("Inventor", "Although the date Christmas is celebrated|depends on where you go.").dismiss_in = 0.6;
+speak("Inventor", "Its traditional celebration on December 25th|actually aligned with the winter solstice.").dismiss_in = 0.5;
+speak("Inventor", "The actual date of Jesus's birth is probably in Spring,").dismiss_in = 0.4;
+ladyluck_big.show("idle-sly", true);
+speak("Inventor", "since that's when the shepherds would|have been watching their flocks at night.").dismiss_in = 0.3;
+speak("Inventor", "And, of course, it probably|wasn't in a stable,").dismiss_in = 0.25;
+speak("Inventor", "and there weren't three|kings there either...").dismiss_in = 0.2;
+
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "Hon, this is a game show on national television.", "sly");
+ladyluck_big.show("idle-sly", true);
+
+speak("Inventor", "Oh, right! Um, Christmas is all about|family and giving gifts!", "personality");
+
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "That's what we like to hear!", "normal");
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "Now, you'd better start on|your Christmas shopping!", "personality");
+ladyluck_big.show("idle", true);
+
+inventor.show("worried_idle");
+inventor.y += 40;
+speak("Inventor", "...Oh. THAT'S what Christmas is all about.", "worried");
+
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "Spot on, dear.", "sly");
+ladyluck_big.show("idle", true);
+
 startgamefromcutscene();

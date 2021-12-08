@@ -1,24 +1,13 @@
 Intensity;Class;State;Introduction
-1;Warrior;normal;Welcome back, my holly jolly fighter!||{dissapointed}Still want some candy?
+1;Warrior|Thief|Robot|Inventor|Witch|Jester;normal;Let's welcome our returning contestant back|to the Christmas Special!||{sly}Barely a special, more of an extension...
+1;Warrior;normal;Welcome back, my holly jolly fighter!||{confused}Still want some candy?
 1;Warrior;normal;Heya, Warrior! How's your Christmas going?||{thinking}Bad, you say?||{sly}I'm sure this gauntlet will cheer you up!
-1;Warrior;thinking;I wonder maybe this run will help Warrior clear his head!||{angry}Out of everything he could wish for CANDY? Is what he wants?!
-1;Warrior;normal;Let's welcome the Warrior back|to the Christmas Special!||{sly}Barely a special, more of an extension...
-1;Witch;normal;Put your hands together for the Witch!||Time for another magical adventure!
-1;Witch;normal;Let's welcome back my wonderful Witch!||{sly}What spell will she cast on us today?
-1;Witch;normal;Let's welcome back my favourite enchanting|adventurer, and the only contestant I follow|on social media - it's the Witch!
-1;Witch;normal;Let's give a big hand for our wily Witch!||She's playing to win fame and fortune - no, wait, sorry,|no fortune. Just the fame! Great choice!
-1;Witch;sly;Remember the Witch?||{normal}Well, she's back, for some reason!
-1;Witch;normal;Welcome back to the stage my favourite|perennial failure, the Witch!
-1;Witch;normal;Give a big cheer for the Witch,|my favourite little braggart!||Did you know her account is up|to ten thousand followers?||{sly}Well, it was until I had it deleted.
-1;Witch;normal;It's time for another episode with our determined|little Witch!||She's working very hard to defeat the Dungeons|and find fame.||{sly}It's definitely possible that it'll all pay off.
+1;Warrior;thinking;I wonder if this run will help Warrior clear his head!||Out of everything he could wish for... CANDY?|Is what he wants?!
+1;Warrior;normal;Our friend the Warrior gets quite the variety|of weapons and items in this episode!||{sly}If only he could keep them!
+1;Witch;sly;Let's offer the Witch our best of wishes....||Today, she's got PLENTY of new material to study.
 1;Jester;sly;Good luck, Jester buddy!||Not from me, of course.
-1;Lady Luck;normal;Welcome to the episode where I love my|Contestants so much!||So I became one myself!
-1;MummyEpisodeWin;normal;Ah look, you've won yet another episode.||Congratulations!#But, oh no! how unexpected!||I've spun the wheel and it doesn't look like|you're taking home a prize this time...
-1;MummyEpisodeWin;normal;You know, NONE of you contestants have|won your heart's desire yet.||What a baffling stretch of bad luck!||Anyway, it's time for one more|unlucky spin of the wheel...#Oooof, how unfortunate!||Probably next time though, right? Right!
-1;MummyEpisodeWin;normal;You must think you've been doing SO|well at all this fighting.||So sure, stick with it!||Let's spin the wheel yet again!#Ah, how tragic.||You lose again.
-1;MummyEpisodeWin;normal;Well, I've got to give you one thing:|you're persistent.||Still thinking about your heart's desire?||Focused on that win?||Then let's set the wheel spinning!#And now let's STOP the wheel on, look|at that, another unfortunate loss...
-1;MummyEpisodeWin;normal;Ah look, here we are at the wheel again!||Let's give it a spin and see...||...whether this time, THIS time, you|might win your heart's desire.#Nope! Oh well, I'm sure things will look|up for you eventually.
-1;MummyEpisodeWin;normal;Such a persistent little dice friend!||Sure, let's give the wheel a spin, why not!#No amazing prize this time, I'm afraid.||Bad luck. Maybe it's time to just|give up for ever?
-1;MummyEpisodeWin;normal;Here to give it another whirl?||Yeah, absolutely!||This could DEFINITELY be the time that|you win your heart's desire!#Oooh, look at that!||What are the chances?
-1;MummyEpisodeWin;normal;Honestly, what would you even DO with|your heart's desire, if you won it?||No, no, sorry, silly question, let's just|get on with the wheel...#Anyway it looks like you don't need to make|any big decisions about what you would do.||At least not just yet.||Maybe next time!
-1;Thief|Robot|Inventor;normal;This is a placeholder line so the game|won't crash if any character is added without|yet having corresponding lines.||If you're removing a character's normal lines,|remember to add them to this message's Class column!
+1;Lady Luck;normal;Welcome to the episode where I loved my|contestants so much....||I became one myself!
+1;MummyEpisodeWin;normal;If this message ever shows up, something's wrong.|Go yell at Wibi.#Anyway, you lost. Booooo.||Or maybe you won.|Who cares.
+1;Inventor;thinking;Perhaps the Inventor should've done|her shopping on Black Friday...
+1;Robot;normal;Ah, the Robot...||It's a soulless being of steel and wires|who hasn't slept in weeks!||{sly}And yet even it enjoys a good Christmas run!
+1;Thief;normal;The Thief will get to do a LOT of sharing today.||Maybe his heart will even grow|ten sizes! Who can tell?

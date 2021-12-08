@@ -1,3 +1,32 @@
+12/7/2021 bert
+- fixed dice printer upgrade crashing due to a single-character typo during buster's rebalancing (dice printer was accidentally kept size 1 when it should be size 2, but its upgrade was made reducesize regardless)
+
+12/7/2021 buster
+- "mods used in this special" subheader no longer apperas over every mod in the category
+- fixed jackeea's name using double quotes instead of \[quote]
+
+12/7/2021 buster of wibi
+-added introduction lines for each class without one yet (bert did the robot line)
+-removed vanilla introduction lines
+-updated credits.txt a little
+-further balancing of dice printer and back up drive
+-rehauled robot generator a little (the robot-only items that appeared at the start of every array are now all in one array and that array is popped from in numerous places)
+-fixed witch_generatorchange using csv-only symbols
+-more progress on thief gimmmick
+-per matt: updated credits.csv, though it only really shows properly in the post-LL credits sequence
+
+12/7/2021 Titku & bert
+-Fixed Creative Crisis crash (item changed to have no slots, but dice weren't destroyed in the process).
+-Rewrote Inventor's cutscene a little, and added voice cues.
+-Added Hall of Daggers. (It showed up in Inventor's generator, but wasn't actually in the mod.)
+-Fixed missing sfx on Flicker.
+-Fixed crash when using Waltzer.
+-Tagged all of the music!
+-bert: rebalanced and tweaked matt's new robot items a bit
+
+12/3/2021-12/7/2021
+Various undocumented stuff! Including the addition of Hinata's new credits art, and mondaybear's character select screen art.
+
 12/3/2021 Matt
 -Added a ton of new items for robot
 -Added items to robots generator

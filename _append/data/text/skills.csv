@@ -75,3 +75,6 @@ Comedy,Error [ncr_error]1 card,inflict(~ncr_error~); sfx(~roboterror~);
 Keyring,Lock [lock]2 dice,inflict(LOCK[;]2); sfx(~_lock~);
 Fun Fact!,Get a fun fact,var e = self.getskillcard(); e.availablethisturn = false; e.unavailabletext = ~Fun Fact!~; e.unavailabledetails = rand(loadtext(~ncrmod/funfacts~)).split(~#~.substr(0[;]1)); e.animate(~flashandshake~);
 Improvise,Get a temporary item,giveequipment(rand(getequipmentlist(null[;][][;][~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~[;]~onceperbattle~[;]~alternateversion~])));
+Waltzer Quine,,jinx(~Waltzer~|~take [sword]%VAR% damage~|~Take [sword]%VAR% damage~|~attack(%VAR%); sfxdamage(null|%VAR%); var s = new elements.Skill(\~Waltzer Quine\~); s.execute(self|target);~|target|self|3|3); 
+Waltzer Quine Upgraded,,jinx(~Waltzer+~|~take [sword]%VAR% damage~|~Take [sword]%VAR% damage~|~attack(%VAR%); sfxdamage(null|%VAR%); var s = new elements.Skill(\~Waltzer Quine Upgraded\~); s.execute(self|target);~|target|self|2|3); 
+Waltzer Quine Downgraded,,jinx(~Waltzer-~|~take [sword]%VAR% damage~|~Take [sword]%VAR% damage~|~attack(%VAR%); sfxdamage(null|%VAR%); var s = new elements.Skill(\~Waltzer Quine Downgraded\~); s.execute(self|target);~|target|self|4|3); 
