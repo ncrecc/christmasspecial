@@ -10,6 +10,15 @@
 // Argument 1 - The equipment that needs to be activated.
 // Argument 2 - Set to true if the Snap! animation should be played.
 
+// and then bert realized this completely breaks if enemies try to use it how did no-one think of this.
+// argument 3 - the fighter running this script
+// argument 4 - the other fighter
+
+var self = self;
+if(args[2] != null) self = args[2];
+var target = target;
+if(args[3] != null) target = args[3];
+
 var e = args[0];
 e.shockedsetting = 0;
 e.positionshockslots();
@@ -18,6 +27,7 @@ if (e.countdown > 0 && e.slots.indexOf("COUNTDOWN") > -1) {
     if(e.equippedby == null || !e.equippedby.isplayer) {
         e.remainingcountdown = 0;
         e.reducecountdownby = 0;
+        e.doequipmentaction(self, target, e.castdirection, e.assigneddice);
     }
     else {
         if(e.remainingcountdown > 6) e.remainingcountdown = 6;
@@ -80,7 +90,7 @@ if (newdice.length > 0) {
         c++;
     }
 }
-if (e.countdown == 0 && slotsFilled) e.doequipmentaction(self, target, (self.isplayer ? 1 : -1), e.assigneddice);
+if (e.countdown == 0 && slotsFilled) e.doequipmentaction(self, target, e.castdirection, e.assigneddice);
 e.animate("flashandshake");
 if (args[1]) e.animate("snap");
 if (e.countdown > 0 || slotsFilled) return true;

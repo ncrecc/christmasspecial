@@ -1,3 +1,9 @@
+12/9/2021 bert
+- thief can no longer "share" once per battle equipment that's already been used
+- started work on thief generator (not actually used yet, & references some items that are not yet implemented)
+- fixed ncr_snap not disappearing on your turn and working improperly with enemies
+- renamed "special package" to "booby trap"
+
 12/8/2021 buster
 - fixed crash when using create opening
 - fixed crash when using jester's glove+ or jester's glove-

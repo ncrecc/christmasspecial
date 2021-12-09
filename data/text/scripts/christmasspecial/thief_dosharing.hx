@@ -63,6 +63,7 @@ if(timing == "endturn_enemy") { //we want to piggyback on internal stolencard ma
 					}
 				} else mystolencardfound = true;
 			}
+			//comment out this part? it makes it so if you steal a once per battle card and use it, it will regenerate next turn, which feels wrong -bert
 			if(!mystolencardfound) {
 				//unlike the actual reverse stolen card, sharinghinttemp is a card that only exists between end of enemy's turn and beforestart of player's turn, so that thief's stealing mechanic will pick it up. the reverse stolen card stays indefinitely. -buster
 				sharinghint = new elements.Equipment(player.getvar("mystolencard"));
@@ -89,7 +90,7 @@ if(timing == "beforestartturn_player") {
 			removeequipment("bustersaysdeleteme",enemy);
 			var equipmentpool = [];
 			for(eq in player.equipment) {
-				if(!eq.hastag("cannotsteal")) {
+				if(!eq.hastag("cannotsteal") && !(eq.onceperbattle & eq.usedthisbattle)) {
 					equipmentpool.push(eq);
 				}
 			}
