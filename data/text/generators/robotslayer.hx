@@ -5,7 +5,9 @@ var awesomelist = shuffle(["Doom and Gloom", "Christmas Pistol","Countvalanche",
 var floor2gooditem = shuffle(["Budge", "Pip Master"]);
 var floor3item = shuffle(["Parry", "Double Parry", "Lightreaver", "Minigun", "Shielding Potion", "The Monarch", "Innovate"]);
 var floor5item = shuffle(["Parrying Sword", "Parrying Claw", "Locket", "False Swipe", "The Monarch", "Biohazard"]);
-var vampireitem = ["Silver Sword"];
+var vampireitem = ["Bunker Buster", "Binary Code", "Encryption", "Password", "Dice Printer", "Back Up Drive", "Risky Bet", "Antivirus", "Copy Machine", "Cooling Dagger", "The Deal Offer"];
+var mariah = ["BOOO!"];
+
 
 var bosses = ["Mega Snowman", "Ultra Mariah Carey"];
 bosses = shuffle(bosses);
@@ -21,7 +23,7 @@ var goodotherstuff = [];
 items = [robotitems.pop(),awesomelist.pop(),floor3item.pop()];
 gooditems = [awesomelist.pop(),pick(floor2gooditem),pick([awesomelist.pop(), strangeshop.pop()]),vampireitem.pop(),robotitems.pop(),robotitems.pop()];
 otherstuff = [];
-goodotherstuff = [shop(shuffle([jestershops.pop(), strangeshop.pop(), jestershops.pop()])),upgrade(),shop(shuffle(["upgrade", jestershops.pop(), strangeshop.pop()])),upgrade()];
+goodotherstuff = [shop(shuffle([robotitems.pop(), strangeshop.pop(), jestershops.pop()])),upgrade(),shop(shuffle(["upgrade", robotitems.pop(), strangeshop.pop()])),upgrade()];
 
 addfloor("chestandshops")
   .additems(items, gooditems)
@@ -30,7 +32,7 @@ addfloor("chestandshops")
   .generate();
 
 //Floor 2:
-items = [];
+items = ["BOOO!"];
 gooditems = [];
 otherstuff = [];
 goodotherstuff = [];
