@@ -1,3 +1,14 @@
+12/8/2021 buster
+- fixed crash when using create opening
+- fixed crash when using jester's glove+ or jester's glove-
+- removed loads of Nulls that appeared in numerous places in the last column of spreadsheets
+- thief now starts with christmas dagger instead of normal dagger
+- christmas dagger now changes colors before execute (which actually took quite a while to rig up), and not at other arbitrary hooks
+- nerfed christmas dagger+ ("heal 3" effect now only heals 1)
+- christmas dagger+'s description now includes the changing effects
+- per matt: added new items and gadgets for inventor
+- per matt: added new spotlight stage art by mondaybear
+
 12/8/2021 bert
 - "if you're seeing this yell at wibi" no longer shows after episodes (we didn't know how episodecomplete actually worked and assumed the mummyepisodewin lines of introductions.csv would never actually play)
 - per matt: inventor no longer uses blindinspiration
