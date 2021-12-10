@@ -1,4 +1,11 @@
 12/9/2021 bert
+- subdivide is now in base equipment list
+- per matt: added a few more new items
+- per matt: added items to thief, inventor, and robot generators
+- renamed "read" to "study"
+- made goggles size 2
+
+12/9/2021 bert
 - thief can no longer "share" once per battle equipment that's already been used
 - started work on thief generator (not actually used yet, & references some items that are not yet implemented)
 - fixed ncr_snap not disappearing on your turn and working improperly with enemies

@@ -1,13 +1,13 @@
 var thisgenerator = "inventor_normal";
 var floor1countdowns = ["Sceptre", "Chain Knife", "Steamstaff", "Revolver"];
-var scrapitems = ["Scrap Crystal", "Scraptula", "Scrap Lamp", "Scrapstick", "Scrapsies", "Scrap Slingshot", "Scrap Trap"];
+var scrapitems = ["Scrap Ooze", "Scrap Heater", "Scrap Sleet", "Scrap Crystal", "Scraptula", "Scrap Lamp", "Scrapstick", "Scrapsies", "Scrap Slingshot", "Scrap Trap"];
 var floor1crap = ["Flicker","Pocket Sand","Washcloth","Create Opening","Cherry Bomb","Chain Link"];
-var commonlist1 = ["Umbrella", "Sharpie", "Bronze Medal", "Stockpick", "Waltzer", "Safety Scissors", "Cloak and Dagger", "Natural Charm", "Glue Pact", "Flamebringer", "Plasma Rifle"];
-var shoplist1 = ["Stopwatch", "Technology", "Rising Dagger", "Compact Resonator", "Burst Beam", "Repast Rapier", "Jester's Glove", "Hand Sanitiser", "Spin Attack", pick(["Eternal Cauldron","Plug Socket"]), "Metal Crusher", "Artificial Snow", "Two Handed Spatula", "Contact Juggling"];
+var commonlist1 = ["Study", "Tennis Racket", "Umbrella", "Sharpie", "Bronze Medal", "Stockpick", "Waltzer", "Safety Scissors", "Cloak and Dagger", "Natural Charm", "Glue Pact", "Flamebringer", "Plasma Rifle"];
+var shoplist1 = ["Study", "Tennis Racket", "Stopwatch", "Technology", "Rising Dagger", "Compact Resonator", "Burst Beam", "Repast Rapier", "Jester's Glove", "Hand Sanitiser", "Spin Attack", pick(["Eternal Cauldron","Plug Socket"]), "Metal Crusher", "Artificial Snow", "Two Handed Spatula", "Contact Juggling"];
 if (chance(30)) shoplist1.push("Gravity");
 //if (chance(30)) shoplist1.push("Sledgehammer");
-var midtierdrops = ["Permapick", "Matchbook", "Technology", "God's Pick", pick(["Wispy Kaboom Smash", "Snowball Launcher"]), "Tootsie Pop"];
-var floor3items = ["Occam's Razor", "Dice Pump", "Tension", "Adamant Rail", pick(["Hall of Daggers", "Devilsknife"]), "Pinball Machine", "Stop Sign", "Popcorn", "Gatling Pea", pick(["Reverse Emulation","Supersonic"]), "Ice Skates", "Zeus Dagger"];
+var midtierdrops = ["Goggles", "Permapick", "Matchbook", "Technology", "God's Pick", pick(["Wispy Kaboom Smash", "Snowball Launcher"]), "Tootsie Pop"];
+var floor3items = ["Vacuum", "Occam's Razor", "Dice Pump", "Tension", "Adamant Rail", pick(["Hall of Daggers", "Devilsknife"]), "Pinball Machine", "Stop Sign", "Popcorn", "Gatling Pea", pick(["Reverse Emulation","Supersonic"]), "Ice Skates", "Zeus Dagger"];
 var commonlist2 = ["Sneksword", "Ale Bat", "Waltzer", "Janky Spanner", "Giga Drain", "Spirit Shield", pick(["Endless Pond", "Deva Form"]), "Present Shotgun", "Incapacitate", "Booster Pack", "Ubersaw", "Storm Reactor", "Stygian Blade", "Sand Hawk"];
 commonlist2.push(pick(scrapitems));
 var floor5items = ["Lucky Punch", "Russian Roulette", "Old Nail@2", "Renunciation", "Mass Grimoire", "Betelgeuse"];
