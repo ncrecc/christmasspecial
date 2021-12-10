@@ -609,3 +609,4 @@ Mouse Trap_upgraded,Do [sword]<double> damage|[90%]On enemy they take [sword]<d6
 Tennis Racket,Do [sword]<d6> dmg[;] on 6[;]|reverse next enemy move,2,attack(d); if(d == 6) { inflict(~reversenexttarget~); } sfxdamage(target[;] d);,,NORMAL,,YELLOW,reducesize,change_power,,,0,NO,NO,,,,,,,,,,,,,
 Tennis Racket_downgraded,Do [sword]<d6> dmg[;] on 3[;]|reverse next enemy move,2,attack(d); if(d == 3) { inflict(~reversenexttarget~); } sfxdamage(target[;] d);,,MAX3,,YELLOW,,,,,0,NO,NO,,,,,,,,,,,,,
 Tennis Racket_weakened,Do [sword]<d6> dmg[;] on 3[;]|reverse next enemy move,2,attack(d); if(d == 3) { inflict(~reversenexttarget~); } sfxdamage(target[;] d);,,MAX3,,YELLOW,,,,,0,NO,NO,,,,,,,,,,,,,
+Greedy Crowbar,Reduce counts by <d6>,1,,,,,,,,,,,,,excludefromrandomlists,,,,,,,,,,,,
