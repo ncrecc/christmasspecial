@@ -1,10 +1,17 @@
-var commonlist1 = ["Leather Armor", "Bump", "Bandage", "Pickpocket", "Pea Shooter", "Snake Eye Charm"];
+//already in: umbrella, hand sanitiser, glue gun, pocket protector, giga drain, stockpick, permapick, 
+
+//to add: bubble burster, metal crusher, mitosis, fruit loot, locktrick, plague stave, pigstep, autohook, NEWER flea shooter, rockfall, stink bomb, reagent, mirror spatula, nail rat, plight, third place cauldron
+
+//grabbag: dice pump, flea shooter, bubble burster, giga drain, false swipe
+//fluff: mitosis
+
+var commonlist1 = ["Mouse Trap", "Umbrella", "Trinity Charm", "Hand Sanitiser", "Bubble Burster", "Glue Gun", "Metal Crusher"];
 var floor2items = ["Pocket Protector", "Giga Drain"];
-var floor2shop = ["Keyhole", "Stockpick", "Permapick"];
-var commonlist2 = ["Lantern", "Last Stand", "Fruit Loot", "False Swipe", "Lockpick", "Plague Stave"];
-var rarelist1 = ["Pigstep", "Hookshot", "Snake Eye Charm", "Midnight Charm", "Flea Shooter"];
-var commonlist3 = ["Lockpick", "Iron Armor", "Blight", "Detonator", "Spatula"];
-var floor4items = ["Nudgeblade"];
+var floor2shop = ["Mitosis", "Stockpick", "Permapick"];
+var commonlist2 = ["Booby Trap", "Lightreaver", "Bulletproof Glass", "Fruit Loot", "False Swipe", "Locktrick", "Plague Stave"];
+var rarelist1 = ["Pigstep", "Autohook", "Metal Crusher", "Push Knife", "Flea Shooter"];
+var commonlist3 = ["Rockfall", "Iron Helmet", "Stink Bomb", "Reagent", "Mirror Spatula"];
+var floor4items = ["Spear"];
 var tradeoffer;
 var traderesult;
 if(chance(10)){
@@ -12,10 +19,10 @@ if(chance(10)){
 	traderesult = ["Blender"];
 }else if(chance(10)){
 	tradeoffer = ["Lockpick"];
-	traderesult = ["Rat"];
+	traderesult = ["Nail Rat"];
 }else{
-	tradeoffer = ["Poison Needle", "Crowbar", "Lockpick", "Dagger"];
-	traderesult = ["Backstab", "Blight", "Catastrophe", "Glass Cauldron"];
+	tradeoffer = ["Poison Needle", "Crowbar", "Lockpick", "Christmas Dagger"];
+	traderesult = ["Baseball Bat", "Plight", "Incapacitate", "Third Place Cauldron"];
 }
 tradeoffer.push("any");
 

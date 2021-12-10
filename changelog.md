@@ -1,3 +1,10 @@
+12/9/2021 bert & gost
+- fixed crash when using compact resonator
+- gost: replaced nospellbook icon with the icon we made that fiship used
+- gost: merged in fiship's lost iron helmet nerf
+- gost: added gadgets to goggles and study
+- gost: more wip thief generator work
+
 12/9/2021 bert
 - subdivide is now in base equipment list
 - per matt: added a few more new items
