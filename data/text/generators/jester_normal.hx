@@ -20,22 +20,18 @@ items = [];
 gooditems = [awesomelist.pop()];
 otherstuff = [];
 goodotherstuff = [];
-
-addfloor("tiny")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor1 = addfloor('tiny').additems(items, gooditems);
+mycoolfloor1.theme = rand(['xmas1']);
+mycoolfloor1.generate();
 
 //Floor 2:
 items = [];
 gooditems = [floor2gooditem.pop()];
 otherstuff = [health()];
 goodotherstuff = [shop([jestershops.pop(), jestershops.pop(), jestershops.pop()])];
-
-addfloor("small")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor2.theme = rand(['xmas1']);
+mycoolfloor2.generate();
 
 //Floor 3:
 items = [];
@@ -48,11 +44,9 @@ goodotherstuff = [
   shop([jestershops.pop(), jestershops.pop(), jestershops.pop()]),
   upgrade()
 ];
-
-addfloor("normal")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor3 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor3.theme = rand(['xmas2']);
+mycoolfloor3.generate();
   
 //Floor 4:
 items = [];
@@ -62,11 +56,9 @@ otherstuff = [health()];
 goodotherstuff = [
   trade(["any"], [awesomelist.pop()])
 ];
-
-addfloor("normal")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor4 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor4.theme = rand(['xmas3']);
+mycoolfloor4.generate();
   
 //Floor 5:
 items = [];
@@ -79,10 +71,9 @@ goodotherstuff = [
   shop(["health", strangeshop.pop(), "health"], [4, 4, 4])
 ];
 
-addfloor("big")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor5.theme = rand(['xmas6']);
+mycoolfloor5.generate();
 
 //Floor 6:
 items = [];

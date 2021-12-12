@@ -1,3 +1,22 @@
+12/11/2021 gaetana & diane of wibi
+- gaetana & diane: thief generator is now entirely distinct from jester generator
+- gaetana & diane: ported several new items for thief
+- gaetana: updated flea shooter to its newest iteration as seen in grabbag
+- per matt: inventor generator no longer crashes
+- gaetana: fixed hall of daggers not resetting its damage after combat
+- gaetana: fixed base "no effect" version of reverse emulation potentially causing a crash from an ill-formed comment due to https://github.com/TerryCavanagh/diceymodgeons/issues/59 ... again
+- diane: waltzer's jinx now mentions that it repeats
+- diane: added metadata to angelmoon's new track
+- diane: dialog after winning the wheel spin now depends on what character you are (still placeholdery)
+(entry written by diane)
+
+12/11/2021 matt101 (he forgot to write this)
+- adds music to all episodes (robot and lady luck excluded)
+- added some more soundevents for the music
+- renamed all big generators from bigwinterinventor to bigi 
+- (added a new track by angelmoon; not mentioned)
+
+
 12/9/2021 bert & gost
 - fixed crash when using compact resonator
 - gost: replaced nospellbook icon with the icon we made that fiship used
