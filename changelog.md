@@ -1,3 +1,7 @@
+12/12/2021 gost
+- fixed wrong syntax for case statement in episodecomplete_mummy
+- fixed missing win-wheel-spin dialogue for witch
+
 12/11/2021 gaetana & diane of wibi
 - gaetana & diane: thief generator is now entirely distinct from jester generator
 - gaetana & diane: ported several new items for thief

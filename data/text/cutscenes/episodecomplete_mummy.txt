@@ -236,6 +236,14 @@ if (wheelwins) {
 				speak("Lady Luck", "How is standing on your spindly legs|physically possible?");
 				announcer.show("idle");
 				speak(player, "Fair point.");
+			case "Witch":
+				speak("Lady Luck", "You won the wheel spin. Huzzah.", "normal");
+				speak("Lady Luck", "Magic is now literally real.");
+				announcer.show("idle");
+				speak(player, "This is so epic. Can we get 5,000 likes?");
+				announcer.show("talking");
+				speak("Lady Luck", "No.");
+				announcer.show("idle");
 			case "Jester":
 				speak("Lady Luck", "Congratulations, Jess. You won.", "normal");
 				announcer.show("idle");
@@ -247,7 +255,7 @@ if (wheelwins) {
 				announcer.show("talking");
 				speak("Lady Luck", "Well, enjoy.");
 				announcer.show("idle");
-			case _:
+			default:
 				speak("Lady Luck", "You've won, but I don't even know who you are.", "normal");
 				announcer.show("idle");
 		}
