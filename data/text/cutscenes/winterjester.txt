@@ -4,6 +4,8 @@ setdatapath("data/graphics/cutscenes/intro/");
 addbackground("intro_stage", {animation: "background_stage.json", pack: "background_stage.pck"});
 #include ladyluckbiggraphics.txt
 
+setdatapath("data/graphics/cutscenes/inventor/");
+
 setdatapath("data/graphics/cutscenes/jester/");
 
 var jestergraphics = {
@@ -12,10 +14,11 @@ var jestergraphics = {
 		pack: "jester.pck",
 		loop: true
 	},
-	defiant_idle: {
-		animation: "jester_defiant_idle.json",
+	transform: {
+		animation: "jester_transform.json",
 		pack: "jester.pck",
-		loop: true
+		speed: 2,
+		loop: false
 	}
 }
 var jester = addsprite("jester", 1, jestergraphics);
@@ -26,11 +29,12 @@ var fade_time = 0.4;
 
 // ACTORS
 actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-actor("Jester", 2600, 600, Col.multiplylightness(Col.RED, 1.25), RIGHT, TOP, "chat_jester", "characters/jester/charicon_jester");
+actor("Jester", 2600, 600, 0xb496ec, RIGHT, TOP, "chat_jester", "characters/jester/charicon_jester");
 
-// INTRO
+changebackground("intro_stage");
+fadein();
 
-play("music_cutscene_lesscheery");
+play("music_cutscene_cheery");
 
 jester.scale = 0.5;
 jester.x = 2600 - ((jester.getwidth("idle") * jester.scale) / 2);
@@ -42,24 +46,66 @@ jester.show("idle");
 ladyluck_big.x = -screenwidth;
 ladyluck_big.show("idle");
 Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
+play("cutscene_audience");
 
 wait(0.5);
 
 ladyluck_big.show("talking", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 speak("Lady Luck", "You know what time it is, folks!");
-speak("Lady Luck", "Placeholder cutscene!", "normal");
-ladyluck_big.show("idle", true);
+ladyluck_big.show("talking-confused", true);
+speak("Lady Luck", "Everyone's favorite contestant, for whatever reason.", "confused");
+ladyluck_big.show("idle-confused", true);
 
-actor("Jester", 2600, 670, Col.multiplylightness(Col.RED, 1.25), CENTER, BOTTOM, "chat_jester", "characters/jester/charicon_jester");
 jester.show("idle");
-speak("Jester", "Wait, 'placeholder cutscene'? What?", "worried");
-speak("Jester", "Isn't 'cutscene' one of those video game words?|I don't play video games an awful lot.");
-
+speak("Jester", "Who, me?");
+speak("Jester", "Are you jealous, per chance?", "personality");
 
 ladyluck_big.show("talking-sly", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "1 2 3 go.", "normal");
+speak("Lady Luck", "Ha. Don't flatter yourself, Jester buddy", "sly");
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "But no. I'm not jealous.", "normal");
+speak("Lady Luck", "I'm just disappointed that|out of everyone on the show...", "normal");
+ladyluck_big.show("talking-confused", true);
+speak("Lady Luck", "You're the \"crowd favorite\".", "normal");
+ladyluck_big.show("idle-confused", true);
+
+jester.show("defiant_idle");
+speak("Jester", "Maybe be a better host.", "normal");
+speak("Jester", "I'm sure even one of our new kitschy washed-up|celebrities would make a better host!", "normal");
+speak("Jester", "Like... I don't know, Mariah Carey?");
+ladyluck_big.show("idle-angry", true);
+speak("Jester", "You know, I'm just saying.|It's true, ask anybody.", "worried");
+speak("Jester", "I'm sure they would all agree...").dismiss_in = 0.3;
+
+ladyluck_big.show("talking-angry", true);
+speak("Lady Luck", "Silence!", "scary");
+ladyluck_big.show("idle-angry", true);
+
+speak("Jester", "There you go again, losing your temper.", "normal");
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Whatever. I'm not the one getting|a confusing new mechanic", "sly");
+ladyluck_big.show("idle-sly", true);
+speak("Jester", "Not yet.", "determined");
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "Since it's the holidays, I'm going to forgive|your outspoken attitude and ask:", "sly");
+speak("Lady Luck", "What are you playing for today?");
+ladyluck_big.show("idle-sly", true);
+
+jester.show("idle");
+speak("Jester", "I know! A better host.", "normal");
+ladyluck_big.show("idle-angry", true);
+wait(0.25)
+speak("Jester", "I'm kidding.", "worried");
+ladyluck_big.show("idle-sly", true);
+speak("Jester", "I want 2 of every card in the show for my deck.|So I can snap to my heart's content!", "determined");
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Okay. You're playing for 2 of|every card in the show...", "sly");
+speak("Lady Luck", "Good luck with that wish when|you dont have your deck anymore", "sly");
 ladyluck_big.show("idle-sly", true);
 
 startgamefromcutscene();

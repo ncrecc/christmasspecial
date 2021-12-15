@@ -51,32 +51,33 @@ speak("Lady Luck", "...who dared to steal almost all decorative gifts from|under
 ladyluck_big.show("idle-confused", true);
 
 thief.show("worried_idle");
-speak("Thief", "...decorative?|This explains the fact why they are empty.", "worried");
+speak("Thief", "...decorative?|That explains why they're empty.", "worried");
 
 ladyluck_big.show("talking-thinking", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "I'm not sure you've been good this year...|Rather, I am sure in opposite.", "thinking");
+speak("Lady Luck", "I'm not sure you've been good this year...|Rather, I'm sure you were quite the opposite.", "thinking");
 ladyluck_big.show("talking-sly", true);
-speak("Lady Luck", "But I wonder what a greedy person|like you could wish for Christmas?");
+speak("Lady Luck", "But I wonder what a greedy person|like you would want for Christmas?");
 ladyluck_big.show("idle-sly", true);
 
 thief.show("idle");
 speak("Thief", "A billion dollars.");
 
-ladyluck_big.show("talking-confused", true);
+ladyluck_big.show("talking-sly", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Not very original.", "confused");
-ladyluck_big.show("idle-confused", true);
+speak("Lady Luck", "Wow! You truly are an enigma, dear.", "sly");
+ladyluck_big.show("idle-sly", true);
 
-speak("Thief", "Money is the best gift.");
-speak("Thief", "I can buy anything I want with them.", "determined");
+speak("Thief", "Look. Money is the best gift.");
+speak("Thief", "I can buy anything I want with it.", "determined");
+speak("Thief", "ESPECIALLY happiness.");
 
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 ladyluck_big.show("talking-sly", true);
-speak("Lady Luck", "Well, you wished for a second billion dollars.", "sly");
+speak("Lady Luck", "Well, you wished for another billion dollars.", "sly");
 speak("Lady Luck", "Why do you need so much money for you alone?");
 actor("Lady Luck", screenwidthmid + 40, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "I think you need to learn how to share.|You will definitely like this episode.", "sly");
+speak("Lady Luck", "I think you need to learn how to share.|You'll definitely like this episode.", "sly");
 ladyluck_big.show("idle-sly", true);
 
 startgamefromcutscene();

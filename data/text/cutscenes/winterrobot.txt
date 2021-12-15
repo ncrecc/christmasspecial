@@ -48,39 +48,15 @@ wait(0.5);
 
 ladyluck_big.show("talking", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Hello everyone! Lets welcome back the lovely|and clever Robot!", "normal");
-ladyluck_big.show("talking-sly", true);
-speak("Lady Luck", "So Robot you a big fan of puzzles?", "sly");
-ladyluck_big.show("idle-sly", true);
-
-actor("Robot", 2600, 780, 0xDDDDDD, CENTER, BOTTOM, "chat_robot", "characters/robot/charicon_robot");
-speak("Robot", "I enjoy them!", "personality");
-speak("Robot", "I know it's christmas but just confirming|Why do you ask?");
-
-ladyluck_big.show("talking", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Well since its christmas your gift will be....", "sly");
-speak("Lady Luck", "Puzzles!", "normal");
+speak("Lady Luck", "Placeholder cutscene!", "normal");
+speak("Lady Luck", "Previously this was a puzzle episode.|Now it's a boss episode.|So it needs a new cutscene.",);
 ladyluck_big.show("idle", true);
 
-speak("Robot", "Thats cool and all...");
-robot.show("worried_idle");
-speak("Robot", "But will they be hard at all?", "personality");
+actor("Robot", 2600, 780, 0xDDDDDD, CENTER, BOTTOM, "chat_robot", "characters/robot/charicon_robot");
+speak("Robot", "Oh, no.");
 
 ladyluck_big.show("talking-sly", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-ladyluck_big.show("talking-sly", true);
-speak("Lady Luck", "Oh, no no no not at all");
+speak("Lady Luck", "Have fun!", "sly");
 ladyluck_big.show("idle-sly", true);
-
-robot.show("idle");
-speak("Robot", "Oh phew what a relief", "personality");
-
-ladyluck_big.show("talking-scary", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-ladyluck_big.show("talking-scary", true);
-speak("Lady Luck", "They will be impossible!", "scary");
-speak("Lady Luck", "IN YOU GO!", "scary");
-ladyluck_big.show("idle-scary", true);
 
 startgamefromcutscene();

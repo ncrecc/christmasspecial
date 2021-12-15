@@ -74,7 +74,7 @@ if(space == 1 && themesequipped.length > 0) {
 	var neweq = runscript("christmasspecial/warriorthemes/" + theme[0].toLowerCase(),[allsmalleqs,alllargeeqs,alleqs,true, theme[1]]);
 	if(neweq != null) eqtoadd.push(neweq);
 	if(neweq != null) space -= neweq.size;
-}
+}/*
 while(space > 1) {
 	var neweq = new elements.Equipment(rand(alleqs));
 	if(neweq != null) eqtoadd.push(neweq);
@@ -84,7 +84,7 @@ if(space == 1) {
 	var neweq = new elements.Equipment(rand(allsmalleqs));
 	if(neweq != null) eqtoadd.push(neweq);
 	if(neweq != null) space -= neweq.size;
-}
+}*/
 shuffle(f.equipment);
 var oldequipment = f.equipment.copy();
 giveequipment(eqtoadd, true, false);

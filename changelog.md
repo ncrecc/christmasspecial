@@ -1,3 +1,12 @@
+12/14/2021 bert & buster
+- bert: implemented some feedback from terry for warrior: your skillcard is now combat roll, card reroll is your limit break, and you only receive 1 card per themecard
+- bert: added new credits art by hinata, fixed credits_01
+- bert: fixed missing sfx for gravity
+- buster: added jester cutscene by matt101
+- buster: changed warrior cutscene dialogue to be relevant to final warrior gimmick
+- buster: grammar pass on all cutscenes
+- buster: replaced robot cutscene with a placeholder because we need a new one since the focus of the episode changed. Fuck
+
 12/12/2021 gost
 - fixed wrong syntax for case statement in episodecomplete_mummy
 - fixed missing win-wheel-spin dialogue for witch
