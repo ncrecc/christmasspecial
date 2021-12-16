@@ -31,7 +31,7 @@ var witch = addsprite("lady", 1, witchgraphics);
 var fade_time = 0.4;
 
 // ACTORS
-actor("Mariah Carey", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_inventor", "characters/misc/charicon_mariahcarey");
+actor("Mariah Carey", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_mariahcarey", "characters/misc/charicon_mariahcarey");
 actor("Lady Luck", screenwidthmid + 800, 200, Col.RED, RIGHT, TOP, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
 
 // INTRO

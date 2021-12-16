@@ -1,0 +1,118 @@
+#include ladyluckbiggraphics.txt
+#include mariahcareybiggraphics.txt
+
+var testbackgrounds = [];
+var testbackgroundnum = 0;
+if(variables.test) {
+	testbackgrounds = ["equipment_mountain", "equipment_forest"];
+}
+
+var announcer = ladyluck_big;
+if (getplayername() == "Lady Luck") {
+	announcer = mariahcarey_big;
+}
+
+changebackground(variables.background);
+
+fadein();
+actor("Lady Luck", screenwidthmid - 100, screenheightmid + 200, Col.YELLOW, LEFT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+actor("Mariah Carey", screenwidthmid - 100, screenheightmid + 200, Col.YELLOW, LEFT, BOTTOM, "chat_mariahcarey", "characters/misc/charicon_mariahcarey");
+wait(0.2);
+
+announcer.x = -announcer.getwidth("idle");
+var currenttalkingstate = "talking";
+var currentidlestate = "idle";
+
+if(variables.messages.length > 0){
+  var message = variables.messages[0];
+	if (message.state == "normal" || message.state == "") {
+		currenttalkingstate = "talking";
+		currentidlestate = "idle";
+	} else {
+		currenttalkingstate = "talking-"+message.state;
+		currentidlestate = "idle-"+message.state;
+	}
+	if(!announcer.hasstate(currenttalkingstate)) {
+		currenttalkingstate = "talking";
+		currentidlestate = "idle";
+	}
+}
+
+announcer.show(currentidlestate);
+Actuate.tween(announcer, 1, { x: 0 }).ease(Sine.easeOut);
+wait(1);
+
+if(variables.test) {
+	announcer.show("talking", true);
+	speak("Lady Luck", "Ahem. Testing! 1, 2, 3! Here we go!");
+	announcer.show("idle", true);
+	wait(1);
+}
+
+for(message in variables.messages) {
+  var mood = "normal";
+
+	var splitted = message.text.split("||");
+	var i = 0;
+	while(i < splitted.length) {
+		var text = splitted[i];
+
+		var speakstate = speakstatecheck(text);
+		if(speakstate != ""){
+			currenttalkingstate = "talking-"+speakstate;
+			currentidlestate = "idle-"+speakstate;
+			mood = speakstate;
+		}else if (message.state == "normal" || message.state == "") {
+			currenttalkingstate = "talking";
+			currentidlestate = "idle";
+			mood = "normal";
+		} else {
+			currenttalkingstate = "talking-"+message.state;
+			currentidlestate = "idle-"+message.state;
+			mood = message.state;
+		}
+		
+		if(!announcer.hasstate(currenttalkingstate)) {
+			currenttalkingstate = "talking";
+			currentidlestate = "idle";
+			mood = "normal";
+		}
+		
+		announcer.show(currenttalkingstate, true);
+		
+		if(variables.test && text == "-") {
+			if (message.state == "normal" || message.state == "") {
+				announcer.show("idle", true);
+			}else{
+				announcer.show("idle-" + message.state, true);
+			} 
+			cleanuptextboxes();
+			var bg = testbackgrounds[testbackgroundnum % testbackgrounds.length];
+			testbackgroundnum++;
+			//trace(bg);
+			changebackground(bg);
+			sfx("cardappear");
+			wait(1);
+		} else {
+			if (getplayername() == "Lady Luck") {
+				speaksplit("Mariah Carey", text, mood, message.text, i);
+			} else {
+				speaksplit("Lady Luck", text, mood, message.text, i);
+			}
+		}
+
+		i += 1;
+	}
+	
+}
+
+announcer.show(currentidlestate, true);
+wait(0.35);
+Actuate.tween(announcer, 1, { x: screenwidth + 600 }).ease(Sine.easeOut);
+wait(0.35);
+
+if(variables.test) {
+	returntotitle();
+} else {
+	startgame();
+}
