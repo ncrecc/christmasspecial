@@ -14,11 +14,10 @@ var jestergraphics = {
 		pack: "jester.pck",
 		loop: true
 	},
-	transform: {
-		animation: "jester_transform.json",
+	defiant_idle: {
+		animation: "jester_defiant_idle.json",
 		pack: "jester.pck",
-		speed: 2,
-		loop: false
+		loop: true
 	}
 }
 var jester = addsprite("jester", 1, jestergraphics);
@@ -29,7 +28,7 @@ var fade_time = 0.4;
 
 // ACTORS
 actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-actor("Jester", 2600, 600, 0xb496ec, RIGHT, TOP, "chat_jester", "characters/jester/charicon_jester");
+actor("Jester", 2600, 200, Col.ORANGE, RIGHT, TOP, "chat_jester", "characters/jester/charicon_jester");
 
 changebackground("intro_stage");
 fadein();
@@ -97,7 +96,7 @@ ladyluck_big.show("idle-sly", true);
 jester.show("idle");
 speak("Jester", "I know! A better host.", "normal");
 ladyluck_big.show("idle-angry", true);
-wait(0.25)
+wait(0.25);
 speak("Jester", "I'm kidding.", "worried");
 ladyluck_big.show("idle-sly", true);
 speak("Jester", "I want 2 of every card in the show for my deck.|So I can snap to my heart's content!", "determined");

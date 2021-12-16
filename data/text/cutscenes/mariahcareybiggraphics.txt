@@ -1,0 +1,23 @@
+setdatapath("data/graphics/cutscenes/mariahcarey/");
+
+var mariahcareybiggraphics = {
+	idle: {
+		animation: "idle-normal.json",
+		pack: "mariahcarey_big.pck",
+		loop: true
+	},
+	talking: {
+		animation: "talking-normal.json",
+		pack: "mariahcarey_big.pck",
+		loop: true
+	},
+}
+var mariahcarey_states = ["angry", "confused", "sly", "thinking"	, "scary"];
+for(state in mariahcarey_states) {
+	addfield(mariahcareybiggraphics, "idle-"+state, {animation: "idle-"+state+".json", pack: "mariahcarey_big.pck", loop: true});
+	addfield(mariahcareybiggraphics, "talking-"+state, {animation: "talking-"+state+".json", pack: "mariahcarey_big.pck", loop: true});
+}
+
+//trace(mariahcareybiggraphics);
+
+var mariahcarey_big = addsprite("mariahcarey_big", 2, mariahcareybiggraphics);
