@@ -9,7 +9,7 @@ shuffle(alllargeeqs);
 var eq = null;
 
 while(eq == null) {
-	if(alllargeeqs.length == 0) {
+	if(allsmalleqs.length == 0) {
 		trace("couldn't find an equipment for A Merry Christmas with pleasereturnupgraded " + pleasereturnupgraded);
 		break;
 	}

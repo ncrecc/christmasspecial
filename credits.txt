@@ -91,7 +91,6 @@ grab bag, by xenonzed
 reference stuff, by neypah_tit
 indeed, by matt101
 further dungeons, by fiship
-yet more episodes, by not mario
 see [mod begin]/[mod end] sections in equipment.csv for exactly what mods comes from where
 
 =music=

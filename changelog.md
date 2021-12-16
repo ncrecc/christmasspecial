@@ -1,11 +1,9 @@
 12/16/2021 not mario
-- fixed themecards
-
-12/16/2021 not mario
 - implemented most remaining themecards
 - changed warrior generator
 - just yoinked some yme stuff
 - merged in some of fiship's changes
+- fixed renunciation
 
 12/14/2021 bert & buster
 - bert: implemented some feedback from terry for warrior: your skillcard is now combat roll, card reroll is your limit break, and you only receive 1 card per themecard
