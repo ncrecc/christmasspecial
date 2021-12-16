@@ -25,7 +25,7 @@ if(!chainableexists) {
 var chainable = [];
 for(eq in self.equipment) {
 	//trace(eq.name + " " + eq.hastag("immunetochain") + " " + eq.hastag("alreadyunchained") + " " + eq.onscreen() + " " + eq.equipalpha);
-	if(eq.skillcard == "" && !eq.hastag("immunetochain") && !eq.hastag("alreadyunchained") && eq.onscreen() && eq.equipalpha > 0) {
+	if(eq.skillcard == "" && !eq.hastag("immunetochain") && !eq.hastag("alreadyunchained") && eq.onscreen() && eq.equipalpha > 0 && eq.ready) {
 	//Okay, there's a bit to go over there... Checking eq.onscreen() is an ugly bad kludge that only exists because alreadyunchained isn't always set properly. It's so that the game doesn't choose an equipment that has already been used and has no uses left. Meanwhile, checking equipalpha is a kludge with Curse, which... isn't even mostly working here anyway. -Titku
 		chainable.push(eq);
 	}
