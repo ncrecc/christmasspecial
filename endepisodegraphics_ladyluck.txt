@@ -1,0 +1,95 @@
+setdatapath("data/graphics/characterselect/");
+
+addbackground("after_transform", {animation: "background.json", pack: "pack.pck"});
+
+setdatapath("data/graphics/cutscenes/intro/");
+
+addbackground("intro_sign", {animation: "background_sign.json", pack: "sign.pck"});
+addbackground("intro_transform", {sprites: ["background_transform.png"]});
+addbackground("nothing", {animation: "nothing.json", pack: "sign.pck"});
+
+var signgraphics = {
+	turn: {
+		animation: "sign_turn.json",
+		pack: "sign.pck",
+		speed: 3,
+		loop: false
+	},
+	loop: {
+		animation: "sign_loop.json",
+		pack: "sign.pck",
+		loop: true
+	}
+}
+var sign = addsprite("sign", 0, signgraphics);
+
+var ladyluckgraphics = {
+	idle: {
+		animation: "ladyluck_idle.json",
+		pack: "jester_ladyluck.pck",
+		loop: true
+	},
+	talking: {
+		animation: "ladyluck_talking.json",
+		pack: "jester_ladyluck.pck",
+		speed: 1,
+		loop: true
+	},
+	scary_idle: {
+		animation: "ladyluck_scary_idle.json",
+		pack: "jester_ladyluck.pck",
+		loop: true
+	},
+	scary_talking: {
+		animation: "ladyluck_scary_talking.json",
+		pack: "jester_ladyluck.pck",
+		speed: 1,
+		loop: true
+	},
+}
+var ladyluck_sign = addsprite("ladyluck_sign", 1, ladyluckgraphics);
+
+var mariahcareygraphics = {
+	idle: {
+		animation: "mariahcarey_idle.json",
+		pack: "mariahcarey.pck",
+		loop: true
+	},
+	talking: {
+		animation: "mariahcarey_talking.json",
+		pack: "mariahcarey.pck",
+		speed: 1,
+		loop: true
+	}
+}
+var mariah = addsprite("Mariah Carey", 1, mariahcareygraphics);
+
+setdatapath("data/graphics/ui/wheel_spin/");
+
+var wheelgraphics = {
+  spin1: {
+		animation: "spin_1.json",
+		pack: "pack.pck",
+		speed: 1,
+		loop: false
+  },
+  spin2: {
+		animation: "spin_2.json",
+		pack: "pack.pck",
+		speed: 1,
+		loop: false
+  }
+}
+
+var wheel = addsprite("wheel", 1, wheelgraphics);
+
+setdatapath("data/graphics/cutscenes/ladyluck/");
+var ladyluckdicegraphics = {
+	transform: {
+		animation: "ladyluck_transform_reverse.json",
+		pack: "lady luck.pck",
+		speed: 2,
+		loop: false
+	}
+}
+var ladyluckdice = addsprite("Lady Luck Dice", 1, ladyluckdicegraphics);

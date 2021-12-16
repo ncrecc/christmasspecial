@@ -1,0 +1,114 @@
+// SETUP
+
+setdatapath("data/graphics/cutscenes/intro/");
+addbackground("intro_stage", {animation: "background_stage.json", pack: "background_stage.pck"});
+#include ladyluckbiggraphics.txt
+
+setdatapath("data/graphics/cutscenes/witch/");
+
+var witchgraphics = {
+	idle: {
+		animation: "witch_idle.json",
+		pack: "witch.pck",
+		loop: true
+	},
+	worried_idle: {
+		animation: "witch_worried_idle.json",
+		pack: "witch.pck",
+		loop: true
+	}
+}
+var witch = addsprite("witch", 1, witchgraphics);
+
+// HELPER FUNCTIONS	
+
+var fade_time = 0.4;
+
+// ACTORS
+actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+actor("Witch", 2600, 600, 0xb496ec, RIGHT, TOP, "chat_witch", "characters/witch/charicon_witch");
+
+// INTRO
+
+play("music_cutscene_cheery");
+
+witch.scale = 0.5;
+witch.x = 2700 - ((witch.getwidth("idle") * witch.scale) / 2);
+witch.y = 650;
+changebackground("intro_stage");
+fadein();
+witch.show("idle");
+//witch.show("idle");
+
+ladyluck_big.x = -screenwidth;
+ladyluck_big.show("idle");
+Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
+play("cutscene_audience");
+
+wait(0.5);
+
+ladyluck_big.show("talking", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "My wonderful Witch! How have you been|enjoying your time during this holiday season?", "normal");
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "Don't have too much fun now", "sly");
+ladyluck_big.show("idle-sly", true);
+
+actor("Witch", 2680, 730, 0xb496ec, CENTER, BOTTOM, "chat_witch", "characters/witch/charicon_witch");
+speak("Witch", "I know", "determined");
+speak("Witch", "It's fun but it could use some spice|You know for the fans at home");
+
+ladyluck_big.show("talking", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "That's the christmas spirit, my dear!", "normal");
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "That no filter and fantastic mind|Is why this episode will be completely normal!");
+ladyluck_big.show("idle", true);
+
+speak("Witch", "Oh really! Thanks so much Lady Luck!", "determined");
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Normal with a twist");
+ladyluck_big.show("idle", true);
+
+witch.show("worried_idle");
+speak("Witch", "A twist?", "worried");
+
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Thats right a Christmas twist!");
+ladyluck_big.show("idle", true);
+
+speak("Witch", "Like decorations?", "worried");
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Decorations oh my dear Witch|That box of decorations hasn't been touched in decades");
+speak("Lady Luck", "see now you're going to have|3 spellbooks not just 1");
+ladyluck_big.show("idle", true);
+
+speak("Witch", "Oh no....", "worried");
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Oh yes....before we start however|what do you want to play for my dear");
+ladyluck_big.show("idle-sly", true);
+
+witch.show("idle");
+speak("Witch", "Real life magic?", "determined");
+speak("Witch", "So maybe I can shoot fireballs|without using a cam filter!", "determined");
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "You should learn to manage dungeon magic before|tapping into real life magic", "sly");
+speak("Lady Luck", "But hey I'm not the contestant");
+ladyluck_big.show("idle-sly", true);
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "good luck and in you go!");
+ladyluck_big.show("idle", true);
+
+startgamefromcutscene();

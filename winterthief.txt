@@ -1,0 +1,83 @@
+setdatapath("data/graphics/cutscenes/intro/");
+addbackground("intro_stage", {animation: "background_stage.json", pack: "background_stage.pck"});
+#include ladyluckbiggraphics.txt
+
+setdatapath("data/graphics/cutscenes/thief/");
+
+var thiefgraphics = {
+idle: {
+animation: "thief_idle.json",
+pack: "thief.pck",
+loop: true
+},
+worried_idle: {
+animation: "thief_worried_idle.json",
+pack: "thief.pck",
+loop: true
+}
+}
+var thief = addsprite("thief", 1, thiefgraphics);
+
+// HELPER FUNCTIONS
+
+var fade_time = 0.4;
+
+// ACTORS
+actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+actor("Thief", 2600, 780, Col.multiplylightness(Col.GREEN, 1.25), CENTER, BOTTOM, "chat_thief", "characters/thief/charicon_thief");
+
+// INTRO
+
+play("music_cutscene_cheery");
+
+thief.scale = 0.5;
+thief.x = 2620 - ((thief.getwidth("idle") * thief.scale) / 2);
+thief.y = 890;
+changebackground("intro_stage");
+fadein();
+thief.show("idle");
+
+ladyluck_big.x = -screenwidth;
+ladyluck_big.show("idle");
+Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
+
+wait(0.5);
+
+ladyluck_big.show("talking", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Let's warmly welcome a contestant...", "normal");
+ladyluck_big.show("talking-confused", true);
+speak("Lady Luck", "...who dared to steal almost all decorative gifts from|under the Christmas tree in the lobby.");
+ladyluck_big.show("idle-confused", true);
+
+thief.show("worried_idle");
+speak("Thief", "...decorative?|That explains why they're empty.", "worried");
+
+ladyluck_big.show("talking-thinking", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "I'm not sure you've been good this year...|Rather, I'm sure you were quite the opposite.", "thinking");
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "But I wonder what a greedy person|like you would want for Christmas?");
+ladyluck_big.show("idle-sly", true);
+
+thief.show("idle");
+speak("Thief", "A billion dollars.");
+
+ladyluck_big.show("talking-sly", true);
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "Wow! You truly are an enigma, dear.", "sly");
+ladyluck_big.show("idle-sly", true);
+
+speak("Thief", "Look. Money is the best gift.");
+speak("Thief", "I can buy anything I want with it.", "determined");
+speak("Thief", "ESPECIALLY happiness.");
+
+actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "Well, you wished for another billion dollars.", "sly");
+speak("Lady Luck", "Why do you need so much money for you alone?");
+actor("Lady Luck", screenwidthmid + 40, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+speak("Lady Luck", "I think you need to learn how to share.|You'll definitely like this episode.", "sly");
+ladyluck_big.show("idle-sly", true);
+
+startgamefromcutscene();
