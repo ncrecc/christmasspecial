@@ -189,5 +189,169 @@
 				"value": 1
 			}
 		}]
-	}
+	},
+     "xmas1": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/combat1",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    },
+     "xmas2": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/combat2",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    },
+     "xmas3": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/combat3",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    },
+     "xmas6": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/combat6",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    }
 }

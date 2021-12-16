@@ -1,4 +1,4 @@
-var warriorshops = [];
+var lady = shuffle(["Commandments@status","Commandments@dmg","Commandments@health","Commandments@dice"]);
 var strangeshop = [];
 var awesomelist = [];
 var floor2gooditem = [];
@@ -16,7 +16,7 @@ var otherstuff = [];
 var goodotherstuff = [];
 
 //Floor 1:
-items = [];
+items = [lady.pop()];
 gooditems = [];
 otherstuff = [];
 goodotherstuff = [];
@@ -26,7 +26,7 @@ mycoolfloor1.setlocation("GAMESHOW");
 mycoolfloor1.generate();
 
 //Floor 2:
-items = ["Commandments@status"];
+items = [];
 gooditems = [];
 otherstuff = [health()];
 goodotherstuff = [];
@@ -36,7 +36,7 @@ mycoolfloor2.setlocation("GAMESHOW");
 mycoolfloor2.generate();
 
 //Floor 3:
-items = [];
+items = [lady.pop()];
 gooditems = [];
 otherstuff = [health(), health()];
 
@@ -47,7 +47,7 @@ mycoolfloor3.setlocation("GAMESHOW");
 mycoolfloor3.generate();
 
 //Floor 4:
-items = [];
+items = [lady.pop()];
 gooditems = [];
 
 otherstuff = [health(), health()];
@@ -58,7 +58,7 @@ mycoolfloor4.setlocation("GAMESHOW");
 mycoolfloor4.generate();
   
 //Floor 5:
-items = [];
+items = [lady.pop()];
 gooditems = [];
 
 otherstuff = [health(), health()];

@@ -1,3 +1,90 @@
+12/16/2021 diane
+fixed some references to nonexistent skill "Against All Odds_old" (closest skill is "Against all odds_old")
+
+12/16/2021 matt
+bunch of stuff by matt basically, including cutscene work
+
+12/16/2021 not mario
+- fixed themecards
+
+12/16/2021 not mario
+- implemented most remaining themecards
+- changed warrior generator
+- just yoinked some yme stuff
+- merged in some of fiship's changes
+
+12/14/2021 bert & buster
+- bert: implemented some feedback from terry for warrior: your skillcard is now combat roll, card reroll is your limit break, and you only receive 1 card per themecard
+- bert: added new credits art by hinata, fixed credits_01
+- bert: fixed missing sfx for gravity
+- buster: added jester cutscene by matt101
+- buster: changed warrior cutscene dialogue to be relevant to final warrior gimmick
+- buster: grammar pass on all cutscenes
+- buster: replaced robot cutscene with a placeholder because we need a new one since the focus of the episode changed. Fuck
+
+12/12/2021 gost
+- fixed wrong syntax for case statement in episodecomplete_mummy
+- fixed missing win-wheel-spin dialogue for witch
+
+12/11/2021 gaetana & diane of wibi
+- gaetana & diane: thief generator is now entirely distinct from jester generator
+- gaetana & diane: ported several new items for thief
+- gaetana: updated flea shooter to its newest iteration as seen in grabbag
+- per matt: inventor generator no longer crashes
+- gaetana: fixed hall of daggers not resetting its damage after combat
+- gaetana: fixed base "no effect" version of reverse emulation potentially causing a crash from an ill-formed comment due to https://github.com/TerryCavanagh/diceymodgeons/issues/59 ... again
+- diane: waltzer's jinx now mentions that it repeats
+- diane: added metadata to angelmoon's new track
+- diane: dialog after winning the wheel spin now depends on what character you are (still placeholdery)
+(entry written by diane)
+
+12/11/2021 matt101 (he forgot to write this)
+- adds music to all episodes (robot and lady luck excluded)
+- added some more soundevents for the music
+- renamed all big generators from bigwinterinventor to bigi 
+- (added a new track by angelmoon; not mentioned)
+
+
+12/9/2021 bert & gost
+- fixed crash when using compact resonator
+- gost: replaced nospellbook icon with the icon we made that fiship used
+- gost: merged in fiship's lost iron helmet nerf
+- gost: added gadgets to goggles and study
+- gost: more wip thief generator work
+
+12/9/2021 bert
+- subdivide is now in base equipment list
+- per matt: added a few more new items
+- per matt: added items to thief, inventor, and robot generators
+- renamed "read" to "study"
+- made goggles size 2
+
+12/9/2021 bert
+- thief can no longer "share" once per battle equipment that's already been used
+- started work on thief generator (not actually used yet, & references some items that are not yet implemented)
+- fixed ncr_snap not disappearing on your turn and working improperly with enemies
+- renamed "special package" to "booby trap"
+
+12/8/2021 buster
+- fixed crash when using create opening
+- fixed crash when using jester's glove+ or jester's glove-
+- removed loads of Nulls that appeared in numerous places in the last column of spreadsheets
+- thief now starts with christmas dagger instead of normal dagger
+- christmas dagger now changes colors before execute (which actually took quite a while to rig up), and not at other arbitrary hooks
+- nerfed christmas dagger+ ("heal 3" effect now only heals 1)
+- christmas dagger+'s description now includes the changing effects
+- per matt: added new items and gadgets for inventor
+- per matt: added new spotlight stage art by mondaybear
+
+12/8/2021 bert
+- "if you're seeing this yell at wibi" no longer shows after episodes (we didn't know how episodecomplete actually worked and assumed the mummyepisodewin lines of introductions.csv would never actually play)
+- per matt: inventor no longer uses blindinspiration
+- per matt: inventor items are usually cheaper
+- per matt: robot no longer gets a vampire item
+
+12/8/2021 bert
+- thief preliminary. gimmick is now 99% working barring some edge-cases or last minute typos (VERY nearly missed a semicolon right before pushing this). hurrah.
+
 12/7/2021 bert
 - fixed dice printer upgrade crashing due to a single-character typo during buster's rebalancing (dice printer was accidentally kept size 1 when it should be size 2, but its upgrade was made reducesize regardless)
 

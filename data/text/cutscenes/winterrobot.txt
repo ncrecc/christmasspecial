@@ -48,39 +48,55 @@ wait(0.5);
 
 ladyluck_big.show("talking", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Hello everyone! Lets welcome back the lovely|and clever Robot!", "normal");
-ladyluck_big.show("talking-sly", true);
-speak("Lady Luck", "So Robot you a big fan of puzzles?", "sly");
-ladyluck_big.show("idle-sly", true);
-
-actor("Robot", 2600, 780, 0xDDDDDD, CENTER, BOTTOM, "chat_robot", "characters/robot/charicon_robot");
-speak("Robot", "I enjoy them!", "personality");
-speak("Robot", "I know it's christmas but just confirming|Why do you ask?");
-
-ladyluck_big.show("talking", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Well since its christmas your gift will be....", "sly");
-speak("Lady Luck", "Puzzles!", "normal");
+speak("Lady Luck", "Heya wonderful robot...", "normal");
+speak("Lady Luck", "How are you doing?");
 ladyluck_big.show("idle", true);
 
-speak("Robot", "Thats cool and all...");
+actor("Robot", 2600, 780, 0xDDDDDD, CENTER, BOTTOM, "chat_robot", "characters/robot/charicon_robot");
+speak("Robot", "Good? Honestly you terrify me|some- well most the time.");
+
+ladyluck_big.show("talking-thinking", true);
+speak("Lady Luck", "whys that?", "thinking");
+speak("Lady Luck", "is it because I control all luck?");
+speak("Lady Luck", "or perhaps because I am|if you think about it a dungeon master?");
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "No matter the reason let's get|on with this I'm late meeting a new celebrity on stage", "normal");
+speak("Lady Luck", "let me ask you robot|do the normal bosses scare you?", "thinking");
+ladyluck_big.show("idle", true);
+
+speak("Robot", "No not really in fact I'm friends with most of them");
+wait(1.5);
+speak("Robot", "Why do you ask?", "normal");
+
+
+ladyluck_big.show("talking-thinking", true);
+speak("Lady Luck", "why do you think?", "thinking");
+ladyluck_big.show("idle-thinking", true);
+
+speak("Robot", "Hmmmm");
+wait(1.7);
 robot.show("worried_idle");
-speak("Robot", "But will they be hard at all?", "personality");
+speak("Robot", "Oh no if my calculations are correct|a new boss?", "worried");
+
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "yes and no", "normal");
+speak("Lady Luck", "Yes new bosses but they aren't new per say");
+speak("Lady Luck", "perhaps just rehashes of other enemies");
+ladyluck_big.show("idle", true);
+
+speak("Robot", "This is still detrimental", "worried");
 
 ladyluck_big.show("talking-sly", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-ladyluck_big.show("talking-sly", true);
-speak("Lady Luck", "Oh, no no no not at all");
+speak("Lady Luck", "well on the bright side any wishes before we start?", "sly");
 ladyluck_big.show("idle-sly", true);
 
-robot.show("idle");
-speak("Robot", "Oh phew what a relief", "personality");
+speak("Robot", "A cyrogenic sleep pod", "normal");
+speak("Robot", "Like from futurerama");
+speak("Robot", "So if I have to sleep it won't affect my lifespan", "normal");
 
-ladyluck_big.show("talking-scary", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-ladyluck_big.show("talking-scary", true);
-speak("Lady Luck", "They will be impossible!", "scary");
-speak("Lady Luck", "IN YOU GO!", "scary");
-ladyluck_big.show("idle-scary", true);
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "Ok! sounds good to me!", "normal");
+speak("Lady Luck", "good luck!");
+ladyluck_big.show("idle", true);
 
 startgamefromcutscene();

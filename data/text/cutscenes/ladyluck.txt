@@ -2,7 +2,7 @@
 
 setdatapath("data/graphics/cutscenes/intro/");
 addbackground("intro_stage", {animation: "background_stage.json", pack: "background_stage.pck"});
-#include ladyluckbiggraphics.txt
+#include mariahcareybiggraphics.txt
 
 setdatapath("data/graphics/cutscenes/ladyluck/");
 
@@ -31,8 +31,8 @@ var witch = addsprite("lady", 1, witchgraphics);
 var fade_time = 0.4;
 
 // ACTORS
-actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-actor("Lady", 2600, 600, 0xb496ec, RIGHT, TOP, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
+actor("Mariah Carey", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_inventor", "characters/misc/charicon_mariahcarey");
+actor("Lady Luck", screenwidthmid + 800, 200, Col.RED, RIGHT, TOP, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
 
 // INTRO
 
@@ -43,19 +43,20 @@ witch.x = 2700 - ((witch.getwidth("idle") * witch.scale) / 2);
 witch.y = 650;
 changebackground("intro_stage");
 fadein();
-witch.show("idle");
-//witch.show("idle");
 
-ladyluck_big.x = -screenwidth;
-ladyluck_big.show("idle");
-Actuate.tween(ladyluck_big, 2, { x: 0 }).ease(Expo.easeOut);
+mariahcarey_big.x = -screenwidth;
+mariahcarey_big.show("idle");
+Actuate.tween(mariahcarey_big, 2, { x: 0 }).ease(Expo.easeOut);
 play("cutscene_audience");
 
 wait(0.5);
 
-ladyluck_big.show("talking", true);
-actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Next scene!", "normal");
+mariahcarey_big.show("talking", true);
+actor("Mariah Carey", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_inventor", "characters/misc/charicon_mariahcarey");
+speak("Mariah Carey", "Lets get ready for our next|Contestant the fantastic Lady Luck!");
+mariahcarey_big.show("talking-sly", true);
+speak("Mariah Carey", "I'm sure shes dying to be a dice!");
+mariahcarey_big.show("idle-sly", true);
 
 fadeout();
 while(isfading()) {
@@ -63,7 +64,7 @@ while(isfading()) {
 }
 changebackground("intro_transform");
 witch.hide();
-ladyluck_big.hide();
+mariahcarey_big.hide();
 fadein();
 
 witch.x = screenwidth;
@@ -78,16 +79,15 @@ while(true) {
 	if(!marker_human && transform.marker == "human") {
 		marker_human = true;
 		transform.paused = true;
-		speak("Lady Luck", "It's... ME!!");
+		speak("Lady Luck", "I'm here to amaze as a dice!");
 		play("transformintodice");
 		transform.paused = false;
 	} else if(!marker_dice && transform.marker == "dice") {
 		marker_dice = true;
 		transform.paused = true;
-		actor("Lady", screenwidthmid, screenheightmid - 300, Col.multiplylightness(Col.GREEN, 1.25), CENTER, BOTTOM, "chat_thief", "characters/lady luck/charicon_lady_luck");
-    speak("Lady", "Wait, you meant that dice thing literally?", "thinking");
-		actor("Lady Luck", screenwidthmid, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-    speak("Lady Luck", "I mean *everything* literally.", "sly");
+		actor("Lady Luck", 800, 200, Col.RED, RIGHT, TOP, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
+    speak("Lady Luck", "Wait, how DID you do that?", "normal");
+    speak("Lady Luck", "It is meant to be my job", "scary");
     fadeout();
 	  break;
 	}
@@ -97,11 +97,31 @@ witch.scale = 0.5;
 witch.x = 2700 - ((witch.getwidth("idle") * witch.scale) / 2);
 witch.y = 650;
 changebackground("intro_stage");
-fadein();
 witch.show("idle");
+mariahcarey_big.x = -screenwidth;
+mariahcarey_big.show("idle");
+Actuate.tween(mariahcarey_big, 2, { x: 0 }).ease(Expo.easeOut);
+fadein();
 
-actor("Lady", screenwidthmid, screenheightmid - 300, Col.multiplylightness(Col.GREEN, 1.25), CENTER, BOTTOM, "chat_thief", "characters/lady luck/charicon_lady_luck");
-speak("Lady", "Wait, you meant that dice thing literally?", "thinking");
-		
+mariahcarey_big.show("talking", true);
+speak("Mariah Carey", "Lets just say some one [jester]|may have shown me how to do your tricks");
+mariahcarey_big.show("talking-sly", true);
+speak("Mariah Carey", "Aren't they lovely?");
+mariahcarey_big.show("idle-sly", true);
+actor("Lady Luck", screenwidthmid + 800, 200, Col.RED, RIGHT, TOP, "chat_ladyluck", "characters/lady luck/charicon_lady_luck");
+speak("Lady Luck", "No they aren't");
+speak("Lady Luck", "They are starting to actually get on my nerves");
+mariahcarey_big.show("talking", true);
+speak("Mariah Carey", "See your attitude is exactly why I'm the host now");
+mariahcarey_big.show("idle", true);
+speak("Lady Luck", "Not for long I'm going to beat this|episode and turn back just watch me!");
+mariahcarey_big.show("talking-sly", true);
+speak("Mariah Carey", "You aren't turning back until you win|the wheel so 50/50 I'd say");
+speak("Mariah Carey", "and your wish is to turn|back into a human and host right?");
+mariahcarey_big.show("idle-sly", true);
+speak("Lady Luck", "Yes!");
+mariahcarey_big.show("talking-sly", true);
+speak("Mariah Carey", "good luck then, in you go!");
+mariahcarey_big.show("sly-idle", true);
 
 startgamefromcutscene();

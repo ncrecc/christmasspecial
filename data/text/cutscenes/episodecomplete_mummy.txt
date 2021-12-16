@@ -6,6 +6,7 @@
 var player = getplayername();
 var isladyluck = player == "Lady Luck";
 var announcer = isladyluck ? mariah : ladyluck_sign;
+var debugalwayswin = false;
 
 // HELPER FUNCTIONS
 
@@ -112,7 +113,7 @@ announcer.show("idle");
 
 announcer.hide();
 
-var wheelwins = chance(50); // 50% chance to win
+var wheelwins = chance(50) || debugalwayswin; // 50% chance to win
 spinthewheel(sign, wheel, wheelwins ? "spin2" : "spin1");
 
 signanimate(sign);
@@ -193,13 +194,71 @@ if (wheelwins) {
 		endingcredits();
 		return;
     } else {
-        speak("Lady Luck", "Wow, it looks like it landed on the prize!", "normal");
-        speak("Lady Luck", "What do you want, " + player + "?");
-        speak(player, "I want some candy!");
-        speak("Lady Luck", "Really? Candy?");
-        speak(player, "Yep!");
-        speak("Lady Luck", "Okay then...");
-		announcer.show("idle");
+		switch(player) {
+			case "Warrior":
+				speak("Lady Luck", "Wow, it looks like it landed on the prize!", "normal");
+				speak("Lady Luck", "What do you want, " + player + "?");
+				announcer.show("idle");
+				speak(player, "I want some candy!");
+				announcer.show("talking");
+				speak("Lady Luck", "Really? Candy?");
+				announcer.show("idle");
+				speak(player, "Yep!");
+				announcer.show("talking");
+				speak("Lady Luck", "Okay then...");
+				announcer.show("idle");
+			case "Thief":
+				speak("Lady Luck", "Huh! It actually landed on the prize space.", "normal");
+				announcer.show("idle");
+				speak(player, "Gimme my money.");
+				announcer.show("talking");
+				speak("Lady Luck", "Alright.");
+				announcer.show("idle");
+			case "Robot":
+				speak("Lady Luck", "Well, would you look at that. Right on the prize.", "normal");
+				announcer.show("idle");
+				speak(player, "Wow.");
+				speak(player, "Incredible.");
+				announcer.show("talking");
+				speak("Lady Luck", "Truly incredible.");
+				speak("Lady Luck", "Enjoy your cyropod.|Not like you should need one.");
+				announcer.show("idle");
+			case "Inventor":
+				speak("Lady Luck", "You did it! You actually won the wheel spin.", "normal");
+				announcer.show("idle");
+				speak(player, "That's fantastic!");
+				announcer.show("talking");
+				speak("Lady Luck", "Have fun with your infinite toolbox.");
+				announcer.show("idle");
+				speak(player, "Thanks!");
+				speak(player, "...Wait, how is an endless toolbox|physically possible?");
+				announcer.show("talking");
+				speak("Lady Luck", "How is standing on your spindly legs|physically possible?");
+				announcer.show("idle");
+				speak(player, "Fair point.");
+			case "Witch":
+				speak("Lady Luck", "You won the wheel spin. Huzzah.", "normal");
+				speak("Lady Luck", "Magic is now literally real.");
+				announcer.show("idle");
+				speak(player, "This is so epic. Can we get 5,000 likes?");
+				announcer.show("talking");
+				speak("Lady Luck", "No.");
+				announcer.show("idle");
+			case "Jester":
+				speak("Lady Luck", "Congratulations, Jess. You won.", "normal");
+				announcer.show("idle");
+				speak(player, "So I did.");
+				announcer.show("talking");
+				speak("Lady Luck", "You know having EVERY item will break|pretty much everything, right?");
+				announcer.show("idle");
+				speak(player, "I've always wanted to see the most|spectacular crash ever.");
+				announcer.show("talking");
+				speak("Lady Luck", "Well, enjoy.");
+				announcer.show("idle");
+			default:
+				speak("Lady Luck", "You've won, but I don't even know who you are.", "normal");
+				announcer.show("idle");
+		}
     }
 } else if (isladyluck) {
     speak("Mariah Carey", "Oof, better luck next time!");

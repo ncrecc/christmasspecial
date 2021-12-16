@@ -1,9 +1,24 @@
-var jestershops = shuffle(["Doom and Gloom", "Pip Master", "Christmas Pistol","Blighted Zap", "Christmas Revolver", "Nine Iron", "Shrug", "Gatling Pea", "Brace", "Pocket Protector", "Electric Arc", "Rock Crusher", "Dime", "Bloody Drill", "Power Glove", "Frosty Bufu", "Dynamite Shotgun", "Sandbag", "Asklepios", "Matchbook"]);
-var strangeshop = shuffle(["Bet", "Wide Spatula", "Ice Skates", "Quake Sigma", "Sickle", "Dazzler", "Cactus Cauldron"]);
-var awesomelist = shuffle(["Doom and Gloom", "Christmas Pistol","Countvalanche", "Roulette", "AC Unit", "Christmas Revolver", "Flame Lance", "Poison Sting", "Power Glove", "Ukulele", "Shovel Blade", "Lucky Punch"]);
-var floor2gooditem = shuffle(["Budge", "Pip Master"]);
-var floor3item = shuffle(["Parry", "Double Parry", "Lightreaver", "Minigun", "Shielding Potion", "The Monarch", "Innovate"]);
-var floor5item = shuffle(["Parrying Sword", "Parrying Claw", "Locket", "False Swipe", "The Monarch", "Biohazard"]);
+var commonlist1 = ["Mouse Trap", "Umbrella", pick(["Demote", "Trinity Charm"]), "Hand Sanitiser", "Bubble Burster", "Glue Gun", "Natural Charm", "Waltzer"];
+var floor2items = ["Pocket Protector", "Giga Drain"];
+var floor2shop = ["Mitosis", pick(["Stockpick", "Permapick"]), "Luckpick"];
+var commonlist2 = ["Booby Trap", "Lightreaver", "Bulletproof Glass", "Fruit Loot", "False Swipe", "Locktrick", "Plague Stave", "Locket", "The Monarch", "Precognition"];
+var rarelist1 = ["Pigstep", "Autohook", "Metal Crusher", "Push Knife", "Flea Shooter", "Eternity Cannon", "Adamant Rail"];
+var commonlist3 = ["Rockfall", "Iron Helmet", "Biohazard", "Reagent", "Mirror Spatula"];
+var floor4items = ["Spear"];
+var tradeoffer;
+var traderesult;
+if(chance(10)){
+	tradeoffer = ["Lockpick"];
+	traderesult = ["Stockpick"];
+}else if(chance(10)){
+	tradeoffer = ["Lockpick"];
+	traderesult = ["Nail Rat"];
+}else{
+	tradeoffer = ["Stink Bomb", "Greedy Crowbar", "Lockpick", "Christmas Dagger"];
+	traderesult = ["Poison Thread", "Plight", "Incapacitate", "Third Place Cauldron"];
+}
+tradeoffer.push("any");
+
 var vampireitem = ["Silver Sword"];
 
 
@@ -16,65 +31,76 @@ var otherstuff = [];
 var goodotherstuff = [];
 
 //Floor 1:
-items = [];
-gooditems = [awesomelist.pop()];
-otherstuff = [];
-goodotherstuff = [];
+items = [commonlist1.pop()];
+
 var mycoolfloor1 = addfloor('tiny').additems(items, gooditems);
-mycoolfloor1.theme = rand(['music_combat2']);
+mycoolfloor1.theme = rand(['xmas1']);
 mycoolfloor1.generate();
-
+  
 //Floor 2:
-items = [];
-gooditems = [floor2gooditem.pop()];
-otherstuff = [health()];
-goodotherstuff = [shop([jestershops.pop(), jestershops.pop(), jestershops.pop()])];
-var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor2.theme = mycoolfloor1.theme;
-mycoolfloor2.generate();
+commonlist1 = commonlist1.concat(floor2items);
+commonlist1 = shuffle(commonlist1);
 
-//Floor 3:
-items = [];
-items.push(floor3item.pop());
+items = [commonlist1.pop()];
 gooditems = [];
 
 otherstuff = [health(), health()];
+goodotherstuff = [shop(shuffle([floor2shop.pop(), commonlist1.pop(), commonlist1.pop()]))];
 
+var mycoolfloor2 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor2.theme = rand(['xmas1']);
+mycoolfloor2.generate();
+  
+//Floor 3:
+items = [commonlist2.pop()];
+gooditems = [];
+
+otherstuff = [
+  health(),
+  health()
+];
 goodotherstuff = [
-  shop([jestershops.pop(), jestershops.pop(), jestershops.pop()]),
+  shop([commonlist2.pop(), commonlist2.pop(), commonlist1.pop()]),
   upgrade()
 ];
-var mycoolfloor3 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor3.theme = rand(['music_combat3']);
-mycoolfloor3.generate();
-  
-//Floor 4:
-items = [];
-gooditems = [awesomelist.pop()];
 
-otherstuff = [health()];
-goodotherstuff = [
-  trade(["any"], [awesomelist.pop()])
-];
-var mycoolfloor4 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
-mycoolfloor4.theme = rand(['music_combat3']);
-mycoolfloor4.generate();
-  
-//Floor 5:
-items = [];
-items.push(floor5item.pop());
+
+var mycoolfloor3 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor3.theme = rand(['xmas2']);
+mycoolfloor3.generate();
+
+//Floor 4:
+items = [commonlist3.pop()];
 gooditems = [];
 
+var floor5item = commonlist3.pop();
+
+commonlist3 = commonlist3.concat(floor4items);
+commonlist3 = shuffle(commonlist3);
+
 otherstuff = [health(), health()];
+
+var thieftrade = trade(tradeoffer,traderesult);
 goodotherstuff = [
-  upgrade(),
-  shop(["health", strangeshop.pop(), "health"], [4, 4, 4])
+  shop([rarelist1.pop(), rarelist1.pop(), commonlist2.pop()]),
+  thieftrade
+];
+var mycoolfloor4 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor4.theme = rand(['xmas3']);
+mycoolfloor4.generate();
+  
+ //Floor 5:
+items = [floor5item];
+gooditems = [];
+otherstuff = [health(), health(), health()];
+goodotherstuff = [
+  shop(shuffle(["health", commonlist3.pop(), pick([rarelist1.pop(), commonlist2.pop()])])), 
+  upgrade()
 ];
 
-addfloor("big")
-  .additems(items, gooditems)
-  .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+mycoolfloor5.theme = rand(['xmas6']);
+mycoolfloor5.generate();
 
 //Floor 6:
 items = [];

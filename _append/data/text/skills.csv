@@ -4,7 +4,7 @@ Regenative Ablity,Gain [grace]1 regeneration,inflictself(~regeneration~[;] 1); s
 Hibernate,+[heal]2 health[;] +[shield]2 shield,attackself(-2); inflictself(SHIELD[;] 2); sfx(~_shield~); sfx(~_heal~);
 Candy Spear,Do [sword]2 dmg[;] +[heal]2 health,attack(2); sfxdamage(target[;] 2); attackself(-2); sfx(~_heal~);
 AGAIN!,Take another turn,inflictself(EXTRATURN); sfx(~_thinghappens~);
-Card Redraw,Reroll all random cards,self.destroyallequipment(); giveequipment([~Short Sword~][;]true[;]false); giveequipment([~Card Reroll~][;]true[;]false); giveequipment(rand(getequipmentlist(null[;][][;][~alternateversion~[;]~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~]))[;] -1); giveequipment(rand(getequipmentlist(null[;][][;][~alternateversion~[;]~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~]))[;] -1); sfx(~_thinghappens~);
+Card Redraw,Reroll all random cards,sfx(~_thinghappens~); runscript(~christmasspecial/warrior_dotide~[;][self[;]target[;]true]);
 Blue Flame,Do [ice]3 and [fire]3 damage,attack(3[;] ICE); attack(3[;] FIRE); sfx(~_fire~); sfx(~_ice~);
 Snow Catapult,Do [ice]4 damage,attack(4[;] ICE); sfxdamage(target[;] 4); sfx(~_ice~);
 Whelm (2 Uses),Do [sword]2 dmg[;] inflict [bleed],inflict(~Bleed~); sfx(~_poison~); attack(2); sfxdamage(target[;] 2); Gadget.changegadget(self[;] ~Whelm 2 Uses~[;] ~Whelm 1 Use~); Gadget.reactivate(self[;] ~Whelm 1 Use~);
@@ -78,3 +78,7 @@ Improvise,Get a temporary item,giveequipment(rand(getequipmentlist(null[;][][;][
 Waltzer Quine,,jinx(~Waltzer~|~take [sword]%VAR% damage~|~Take [sword]%VAR% damage~|~attack(%VAR%); sfxdamage(null|%VAR%); var s = new elements.Skill(\~Waltzer Quine\~); s.execute(self|target);~|target|self|3|3); 
 Waltzer Quine Upgraded,,jinx(~Waltzer+~|~take [sword]%VAR% damage~|~Take [sword]%VAR% damage~|~attack(%VAR%); sfxdamage(null|%VAR%); var s = new elements.Skill(\~Waltzer Quine Upgraded\~); s.execute(self|target);~|target|self|2|3); 
 Waltzer Quine Downgraded,,jinx(~Waltzer-~|~take [sword]%VAR% damage~|~Take [sword]%VAR% damage~|~attack(%VAR%); sfxdamage(null|%VAR%); var s = new elements.Skill(\~Waltzer Quine Downgraded\~); s.execute(self|target);~|target|self|4|3); 
+Heat,Weaken all ice items,inflict(~heater~); sfx(~_ice~); sfx(~_weaken~);
+Invent,All items are randomized,self.destroyallequipment(); giveequipment(rand(getequipmentlist(null[;][][;][~alternateversion~[;]~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~]))[;] -1); giveequipment(rand(getequipmentlist(null[;][][;][~alternateversion~[;]~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~]))[;] -1); giveequipment(rand(getequipmentlist(null[;][][;][~alternateversion~[;]~skillcard~[;]~excludefromrandomlists~[;]~robotonly~[;]~witchonly~]))[;] -1); sfx(~_thinghappens~);
+Laser Eyes,Unblind & unlock all dice,for(dice in self.dicepool) { if(dice.blind || dice.locked) { dice.blind = false; dice.locked = false; dice.animate(~flashshake~); } }
+Plexiglass,-1 dice for you and enemy,if(self.dice + self.extradice == 1 # target.dice + target.extradice == 1) { self.textparticle(~Can't go lower!~); } else { self.extradice--; target.extradice--; sfx(~magic_gaindice~); }

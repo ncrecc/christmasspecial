@@ -77,13 +77,20 @@ ladyluck_big.show("talking-confused", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 speak("Lady Luck", "Look, the scope of today's show is a little...|low.", "confused");
 speak("Lady Luck", "We're losing sponsors left and right.|Family Feud's been taking them all.");
+/* reference to old warrior gimmick of enemy getting a random item each turn
 ladyluck_big.show("talking", true);
 speak("Lady Luck", "Don't you worry, though. I scrounged up just enough|to give all the minions their own gifts.", "normal");
 ladyluck_big.show("talking-sly", true);
 speak("Lady Luck", "Yours might be coming up a little bit later.", "sly");
 ladyluck_big.show("idle-sly", true);
+*/
+ladyluck_big.show("talking", true);
+speak("Lady Luck", "Don't you worry, though. I scrounged up just enough|to make sure you get plenty of gifts each turn.", "normal");
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "Mystery gifts, of course.|And you don't get to keep them, either.", "sly");
+ladyluck_big.show("idle-sly", true);
 
-speak("Warrior", "Oh, um.... I don't think thats very fair.", "worried");
+speak("Warrior", "Oh, um.... I don't think that's very fair.", "worried");
 speak("Warrior", "It is Christmas, after all.");
 
 ladyluck_big.show("talking-sly", true);
