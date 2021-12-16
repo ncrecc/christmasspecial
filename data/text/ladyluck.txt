@@ -6,5 +6,8 @@ Each turn, your items change, and if you
 follow the commandments on your skillcard,
 you receive a bonus effect.
 
+When you earn new cards,
+only equip one at a time!
+
 Good luck! Not from me, of course. 
 		-Jester [jester]

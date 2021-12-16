@@ -1,0 +1,24 @@
+setdatapath("data/graphics/cutscenes/ladyluck/");
+
+var ladyluckbiggraphics = {
+	idle: {
+		animation: "idle-normal.json",
+		pack: "ladyluck_big.pck",
+		loop: true
+	},
+	talking: {
+		animation: "talking-normal.json",
+		pack: "ladyluck_big.pck",
+		loop: true
+	},
+}
+
+var ladyluck_states = ["angry", "confused", "sly", "thinking"	, "scary"];
+for(state in ladyluck_states) {
+	addfield(ladyluckbiggraphics, "idle-"+state, {animation: "idle-"+state+".json", pack: "ladyluck_big.pck", loop: true});
+	addfield(ladyluckbiggraphics, "talking-"+state, {animation: "talking-"+state+".json", pack: "ladyluck_big.pck", loop: true});
+}
+//trace(ladyluckbiggraphics);
+
+
+var ladyluck_big = addsprite("ladyluck_big", 2, ladyluckbiggraphics);
