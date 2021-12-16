@@ -1,3 +1,9 @@
+12/16/2021 diane
+fixed some references to nonexistent skill "Against All Odds_old" (closest skill is "Against all odds_old")
+
+12/16/2021 matt
+bunch of stuff by matt basically, including cutscene work
+
 12/16/2021 not mario
 - fixed themecards
 
