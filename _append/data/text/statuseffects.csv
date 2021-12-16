@@ -94,5 +94,5 @@ fireweakness,Fire_Weakness,fireweakness,You are weak to [fire] fire.,NO,NO,NO,NO
 restore,Restore,heal,Heal [heal]<value> health at the end of your turn.,YES,YES,NO,NO,NO,,,,,,,if(target.hp > 0){attackself(-status.value); sfx(~_heal~); },,,,
 ncr_lingeringshield,Lingering_shield,shield,Receive [shield]<value> shield every turn.,YES,NO,NO,NO,NO,,,inflictself(SHIELD|stat.value);,,,,,,,,
 ncr_restraint_all,Restrain_all,weaken,Temporarily weaken a random equipment whenever you use a card|directed at the enemy. Equipment becomes less powerful.,NO,YES,NO,NO,YES,,,,,if(e.castdirection == 1) { inflictself(WEAKEN); self.applyequipmentcurses(); },,,,,,
-eternitycannon,Eternity [yellow]Cannon,eternitycannon,Do [sword]5 damage at the start of each turn <value> time(s).,YES,NO,NO,NO,NO,,,,for(i in 0...status.value){ attack(5); }; sfxdamage(target[;]5*status.value);,,,,,,,
-eternitycannondowngraded,Eternity [yellow]Cannon-,eternitycannon,Do [sword]3 damage at the start of each turn <value> time(s).,YES,NO,NO,NO,NO,,,,for(i in 0...status.value){ attack(3); }; sfxdamage(target[;]3*status.value);,,,,,,,
+eternitycannon,Eternity_Cannon,eternitycannon,Do [sword]5 damage at the start of each turn <value> time(s).,YES,NO,NO,NO,NO,,,,for(i in 0...status.value){ attack(5); }; sfxdamage(target[;]5*status.value);,,,,,,,
+eternitycannondowngraded,Eternity_Cannon-,eternitycannon,Do [sword]3 damage at the start of each turn <value> time(s).,YES,NO,NO,NO,NO,,,,for(i in 0...status.value){ attack(3); }; sfxdamage(target[;]3*status.value);,,,,,,,
