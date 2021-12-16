@@ -1,11 +1,9 @@
 h1|Winter Warrior
 
-In this episode all enemies have 10%
-More max hp!
+In this episode[;] your items are randomized each
+turn. However[;] the items you have in the overworld
+act as guidelines for what items should replace them.
 
-They also gain a random item each turn!
-
-Simple right?
-	-Matt
-
+For example[;] open the inventory and check out
+your starter weapon.
 
