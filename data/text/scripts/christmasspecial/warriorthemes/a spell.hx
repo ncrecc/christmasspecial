@@ -1,7 +1,7 @@
 //written by not mario
 var pleasereturnupgraded = args[4];
 
-var allspells = loadtext("diceydungeons/unexpectedspells_remix");
+var allspells = loadtext("christmasspecial/warrior_spells");
 
 shuffle(allspells);
 
