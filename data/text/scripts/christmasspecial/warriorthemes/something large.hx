@@ -4,16 +4,16 @@ var pleasereturnsmall = args[3];
 if(pleasereturnsmall) return null;
 var pleasereturnupgraded = args[4];
 
-shuffle(allsmalleqs);
+shuffle(alllargeeqs);
 
 var eq = null;
 
 while(eq == null) {
-	if(allsmalleqs.length == 0) {
+	if(alllargeeqs.length == 0) {
 		trace("couldn't find an equipment for Something Large with pleasereturnupgraded " + pleasereturnupgraded);
 		break;
 	}
-	var testeq = new elements.Equipment(allsmalleqs.pop());
+	var testeq = new elements.Equipment(alllargeeqs.pop());
 	if(pleasereturnupgraded) {
 		if(testeq.upgradetype == "") continue;
 		testeq = new elements.Equipment(testeq.name + "+");
