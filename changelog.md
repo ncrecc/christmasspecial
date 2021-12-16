@@ -1,3 +1,12 @@
+12/16/2021 gost & geddy
+- gost & geddy: fixed consumerism. matt originally made a pr whose description was literally nothing but the line above, and instead of fixing it he actually replaced it entirely with an entirely different equipment (which also didn't work)
+- geddy: fixed missing eternitycannon status icon
+
+12/16/2021 buster & titku
+- rewrote the rules for each episode (except witch, which seems fine as-is)
+- buster: jester no longer arbitrarily excludes random enemies
+- buster: inventor no longer calls Rules.mixedupshops(); in start game script (which probably didn't even do anything)
+
 12/16/2021 diane
 fixed some references to nonexistent skill "Against All Odds_old" (closest skill is "Against all odds_old")
 
