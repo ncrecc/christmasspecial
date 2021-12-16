@@ -11,9 +11,8 @@ for(eq in self.equipment) {
 }
 
 if(!f.getvar("wj-initialized")) {
-	if(chainable.length > 0) chainable[0].addtag("alreadyunchained");
-	if(chainable.length > 1) {
-		for(i in 1...chainable.length) {
+	if(chainable.length > 0) {
+		for(i in 0...chainable.length) {
 			chainable[i].addtag("chained");
 			f.setvar("wj-initialized",1);
 		}
@@ -27,3 +26,4 @@ if(chainable.length > 0) {
 		}
 	}
 }
+runscript("christmasspecial/jester_dochaining", [self]);
