@@ -1,12 +1,6 @@
-var warriorshops = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
-var strangeshop = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
-var awesomelist = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
-var floor2gooditem = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
-var floor3item = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
-var floor5item = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Gun","A Tool"]);
+var colours = shuffle(["Something Red","Something Blue","Something Purple","Something Orange","Something Yellow","Something Green","Something Pink","Something Gray","Something Warm","Something Cold","A Merry Christmas"]);
+var themes = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Spell","A Flower","A Bonus","Something Large","A Finale","A Scrap"]);
 var vampireitem = ["Silver Sword"];
-
-
 
 usestandardenemies();
 
@@ -17,7 +11,7 @@ var goodotherstuff = [];
 
 //Floor 1:
 items = [];
-gooditems = [awesomelist.pop()];
+gooditems = [themes.pop()];
 otherstuff = [];
 goodotherstuff = [];
 
@@ -29,7 +23,7 @@ mycoolfloor1.generate();
 items = [];
 gooditems = [];
 otherstuff = [health()];
-goodotherstuff = [shop([warriorshops.pop(), warriorshops.pop(), warriorshops.pop()])];
+goodotherstuff = [shop([colours.pop(), colours.pop(), colours.pop()])];
 
 var mycoolfloor2 = addfloor('small').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor2.theme = rand(['xmas1']);
@@ -37,13 +31,13 @@ mycoolfloor2.generate();
 
 //Floor 3:
 items = [];
-items.push(floor3item.pop());
+items.push(themes.pop());
 gooditems = [];
 
 otherstuff = [health(), health()];
 
 goodotherstuff = [
-  shop([warriorshops.pop(), warriorshops.pop(), warriorshops.pop()]),
+  shop([themes.pop(), colours.pop(), themes.pop()]),
   upgrade()
 ];
 
@@ -53,11 +47,11 @@ mycoolfloor3.generate();
   
 //Floor 4:
 items = [];
-gooditems = [awesomelist.pop()];
+gooditems = [themes.pop()];
 
 otherstuff = [health()];
 goodotherstuff = [
-  trade(["any"], [awesomelist.pop()])
+  trade(["any"], [themes.pop()])
 ];
 
 var mycoolfloor4 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
@@ -66,13 +60,13 @@ mycoolfloor4.generate();
   
 //Floor 5:
 items = [];
-items.push(floor5item.pop());
+items.push(colours.pop());
 gooditems = [];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
   upgrade(),
-  shop(["upgrade", strangeshop.pop(), "health"], [4, 4, 4])
+  shop(["upgrade", themes.pop(), "health"], [4, 4, 4])
 ];
 
 var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);

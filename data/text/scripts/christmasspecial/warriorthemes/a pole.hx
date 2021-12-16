@@ -1,26 +1,27 @@
-//written by diane of wibi
-//with upgrade handling by bert of wibi
+//written by not mario
 var alllargeeqs = args[1];
 var pleasereturnsmall = args[3];
 if(pleasereturnsmall) return null;
 var pleasereturnupgraded = args[4];
 
-shuffle(alllargeeqs);
+shuffle(allsmalleqs);
 
 var eq = null;
+
 while(eq == null) {
-	if(alllargeeqs.length == 0) {
-		trace("couldn't find an equipment for A Blade with pleasereturnupgraded " + pleasereturnupgraded);
+	if(allsmalleqs.length == 0) {
+		trace("couldn't find an equipment for A Pole with pleasereturnupgraded " + pleasereturnupgraded);
 		break;
 	}
-	var testeq = new elements.Equipment(alllargeeqs.pop());
+	var testeq = new elements.Equipment(allsmalleqs.pop());
 	if(pleasereturnupgraded) {
 		if(testeq.upgradetype == "") continue;
 		testeq = new elements.Equipment(testeq.name + "+");
-		if(testeq.size == 1) continue;
+		if(testeq.size == 2) continue;
 	}
 	if(
-		(!testeq.hastag("notweapon") && !testeq.hastag("notblade"))
+		testeq.countdown > 0 && 
+		(!testeq.hastag("notweapon"))
 		&&
 		(
 			(
@@ -29,9 +30,6 @@ while(eq == null) {
 			) || (
 				testeq.script.indexOf('drain(') != -1
 			)
-		) && (
-			testeq.getslots().length == 1 &&
-			testeq.getslots()[0] == 'NORMAL'
 		)
 	) {
 		eq = testeq;
