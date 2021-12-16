@@ -33,15 +33,35 @@ if (type == "all" || type == "status") {
 		["burn all enemy dice.", "inflict(FIRE, ALL);"],
 		["freeze 2 enemy dice.", "inflict(ICE, 2);"],
 		["shock and[newline]weaken enemy.", "inflict(WEAKEN); inflict(SHOCK);"],
-		["lock 1 enemy dice.", "inflict(LOCK);"]
+		["lock 1 enemy dice.", "inflict(LOCK);"],
+		["snap an item.", "inflictself(\'ncr_snap\');"]
 	]);
 }
 if (type == "all" || type == "damage") {
 	bonuses = bonuses.concat([
-		["do [sword]5 damage.", "attack(5);"],
-		["heal [heal]5 hp.", "attackself(-5);"],
+		["do [sword]4 damage.", "attack(4);"],
+		["snap an item.", "inflictself(\'ncr_snap\');"],
+		["inflict 2 poison", "inflict(POISON, 2);"],
+		["inflict [powerdown]1 powerdown", "inflict(\'Powerdown\');"],
+		["inflict [bleed]2 bleed", "inflict(\'bleed\', 2);"]
+	]);
+}
+if (type == "all" || type == "dice") {
+	bonuses = bonuses.concat([
+		["lock 1 enemy dice.", "inflict(LOCK);"],
 		["roll a 6 next turn.", "inflictself(\'stash6\'); inflictself(\'illuminate\');"],
-		["snap an item.", "inflictself(\'ncr_snap\');"]
+		["snap an item.", "inflictself(\'ncr_snap\');"],
+		["roll all 6s next turn.", "inflictself(\'all6\');"],
+		["roll a dice next turn.", "var d = rand([1,2,3,4,5,6]); inflictself(\'stash\' + d); inflictself(\'illuminate\');"]
+	]);
+}
+if (type == "all" || type == "health") {
+	bonuses = bonuses.concat([
+		["heal [heal]5 hp.", "attackself(-5);"],
+		["gain [grace]2 regeneration", "inflictself(\'regeneration\', 2);"],
+		["inflict [powerdown]1 powerdown", "inflict(\'Powerdown\');"],
+		["gain [heal]fireplace", "inflictself(\'fireplace\');"],
+		["inflict [heart]too sweet", "inflict(\'Too Sweet\');"]
 	]);
 }
 var bonus = rand(bonuses);
