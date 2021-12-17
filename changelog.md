@@ -1,3 +1,13 @@
+12/17/2021 gost & bert
+- gost: the divine killer and its skill counterpart now have the same description
+- bert: something large+ no longer tries to return a small equipment
+- bert: new themecards by not mario now indicate they only fetch equipment of the same size
+- per fiship: moved non-furtherdungeons equipment to \_append/data/equipment.csv
+- per fiship: added more original equipment while removing some other original equipment (can be seen in fiship's scrapped items.csv)
+- bert: gadget smash is no longer incorrectly lumped in with fd items
+- bert: sponge now checks that there's enough space left for it to become large, just in case
+- bert: added more stuff to inventor's generator (particularly floor1crap and floor1countdowns)
+
 12/17/2021 gost
 - fixed third place cauldron not rerolling dice
 - fixed mf_healnextturn not being removed on start turn

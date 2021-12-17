@@ -17,7 +17,7 @@ while(eq == null) {
 	if(pleasereturnupgraded) {
 		if(testeq.upgradetype == "") continue;
 		testeq = new elements.Equipment(testeq.name + "+");
-		if(testeq.size == 2) continue;
+		if(testeq.size == 1) continue;
 	}
 	if (testeq.slots.length == 0) continue;
 	var realslots = 0;
