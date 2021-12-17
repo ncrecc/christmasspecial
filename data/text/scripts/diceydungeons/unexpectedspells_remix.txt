@@ -1,78 +1,119 @@
+Magic Barrier
 Hall of Mirrors
+Magic Shield
+Magic Missile
+Burning Light
+Healing Crystal
+Midnight Charm
+Snake Eye Charm
 Fury Spell
+Antidote
+Bump
+Nudge
+Counter Spell
+Boomerang
+Lockpick
+Crowbar
+Iron Armor
+Hookshot
+Skeleton Key
+Bandage
+First Aid Kit
+Spanner
+Doppeldice
+Matchstick
+Sonic Wave
+Backstab
 Duplicate
+Infliction
 Magic Dagger
+Electric Shock
+Ice Shard
+Lightning Bolt
+Inferno
+Blizzard
+Shockwave
+Illuminate
+Life Drain
+Slime Ball
 Meteor
 Cauldron
+Hex
+Magic Spear
+Glass Cauldron
+Gold Cauldron
+Silver Cauldron
 Crucible
 Absolute Zero
+Spatula
+Sharp Spike
+Bumpblade
+Keyblade
+Rat
+Catastrophe
+Spark
+Snowflake
+Teleport Spell
+Polar Star
+Parrying Dagger
 Trident
 Capacitor
+Pickaxe
+Kite Shield
+Thick Skin
+Fishing Net
+Ignite
+Elastic Heart
+Lucky Roll
+Sine Wave
+Candle
 Slingshot
+Magic Key
+Sword Hilt
 Starspear
-Subdivide
-Shadow Dice
-Snapdragon
-Fruit Bowl
-Enchanted Shield
-Mirror Cauldron
-Sun Beam
-Winds of Winter
-Spring Equinox
-Doppeltwice
-Magnifying Glass
-Stew Pot
-Flower Pot
-Bronze Cauldron
-Moon Beam
-Northern Lights
-Daffodil
-Honeysuckle
-Sunburn
-Cold Snap
-Summer Solstice
-Winter Solstice
-Gladioli
-Moonlight Spear
-Magic Thistle
-Blue Ocean
-Lucky 7
-Nunchucks
-Pitchfork
-Frozen Sword
-Flaming Sword
+Lucky Star
+Ungeradedice
 Vise Grip
 Saw Wave
 Premium Heart
 Missing Score
+Subdivide
+Lollipop
+Shadow Dice
+Gumball Machine
 Princess Guard
 Venus Gospel
-Enchanted Armor
-Christmas Bells
-Candy Steal
-Hotplate
-Cold Burn
-Blessed Bowl
-Christmas Star
-Coffee Pot
-Double Cast
-Overwinter
-Wide Divide
-Confetti
-Little Pot
-Luck Omen
-Sultry Winds
-Chilly Pepper
-Winter Eclipse
-Winter Wings
-Manic Repeater
-Recurring Winds
-Dragon Dust
-Glass Dust
-Ashtray
-Vampire Blade
-Wicked Contract
-Raisin
-Sludge Spear
-Fogged Mirror
-Transporter
+Spring Equinox
+Doppeltwice
+Bronze Cauldron
+Lunasa
+Lucky 7
+Nunchucks
+Master Key
+Cowbell
+Chisel
+Signal Jammer
+Blast Chiller
+Paper Lantern
+Cloak
+Plaster
+Gong
+Dramatic Exit
+Berlin Key
+Square Pair
+Wrecking Ball
+Determination
+Tetraphobia
+Secret Weapon
+Lighter
+Knitting Needle
+Chainsaw
+Giant Spatula
+Blood Cauldron
+Memorise
+Icecube
+Cold Wind
+Frozen Sword
+Icicle
+Pitchfork
+Furnace

@@ -1,3 +1,6 @@
+12/17/2021 bert
+- added some missing stuff from fiship's commit
+
 12/17/2021 gost & bert
 - gost: the divine killer and its skill counterpart now have the same description
 - bert: something large+ no longer tries to return a small equipment
