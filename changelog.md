@@ -1,3 +1,8 @@
+12/17/2021 gost
+- fixed third place cauldron not rerolling dice
+- fixed mf_healnextturn not being removed on start turn
+- the deal offer and cooling dagger are now marked robotonly
+
 12/17/2021 not mario
 - added level up rewards to warrior
 - some bugfixes
