@@ -7,27 +7,20 @@ var pleasereturnupgraded = args[4];
 shuffle(alllargeeqs);
 
 var eq = null;
-
 while(eq == null) {
 	if(alllargeeqs.length == 0) {
-		trace("couldn't find an equipment for Something Large with pleasereturnupgraded " + pleasereturnupgraded);
+		trace("couldn't find an equipment for A Shield with pleasereturnupgraded " + pleasereturnupgraded);
 		break;
 	}
 	var testeq = new elements.Equipment(alllargeeqs.pop());
 	if(pleasereturnupgraded) {
 		if(testeq.upgradetype == "") continue;
 		testeq = new elements.Equipment(testeq.name + "+");
-		if(testeq.size == 2) continue;
-	}
-	if (testeq.slots.length == 0) continue;
-	var realslots = 0;
-	for (slot in testeq.slots) {
-		if (["FREE1","FREE2","FREE3","FREE4","FREE5","FREE6"].indexOf(slot) == -1) {
-			realslots++;
-		}
+		if(testeq.size == 1) continue;
 	}
 	if(
-		realslots >= 2
+		testeq.script.indexOf('inflictself(SHIELD') != -1 ||
+		testeq.script.indexOf('inflictself("shield') != -1
 	) {
 		eq = testeq;
 	}

@@ -1,5 +1,5 @@
-var colours = shuffle(["Something Red","Something Blue","Something Purple","Something Orange","Something Yellow","Something Green","Something Pink","Something Gray","Something Warm","Something Cold","A Merry Christmas"]);
-var themes = shuffle(["A Maneuver","A Gun","A Tool","A Maneuver","A Spell","A Flower","A Bonus","Something Large","A Finale","A Scrap"]);
+var colours = shuffle(["Something Red","Something Blue","Something Purple","Something Orange","Something Yellow","Something Green","Something Pink","Something Gray","Something Warm","Something Cold"]);
+var themes = shuffle(["A Maneuver","A Gun","A Maneuver","A Spell","A Flower","A Bonus","Something Large","A Finale","A Scrap"]);
 var vampireitem = ["Silver Sword"];
 
 usestandardenemies();
@@ -21,7 +21,7 @@ mycoolfloor1.generate();
 
 //Floor 2:
 items = [];
-gooditems = [];
+gooditems = [colours.pop()];
 otherstuff = [health()];
 goodotherstuff = [shop([colours.pop(), colours.pop(), colours.pop()])];
 
