@@ -2706,6 +2706,53 @@
             }
         ]
     },
+	"chat_mariahcarey": {
+        "playsounds": [
+            {
+                "file": "sfx/chat/inventor/chat"
+            }
+        ]
+    },
+	"chat_mariahcarey_voice": {
+        "playsounds": [
+            {
+                "channel": 2,
+                "folder": "voiceovers/mariah carey/personality",
+                "sequential": true,
+                "tag": "action"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/mariah carey/personality",
+                "sequential": true,
+                "tag": "determined"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/mariah carey/personality",
+                "sequential": true,
+                "tag": "normal"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/mariah carey/personality",
+                "sequential": true,
+                "tag": "personality"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/mariah carey/personality",
+                "sequential": true,
+                "tag": "thinking"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/mariah carey/personality",
+                "sequential": true,
+                "tag": "worried"
+            }
+        ]
+    },
     "chat_monster1": {
         "playsounds": [
             {
