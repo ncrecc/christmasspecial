@@ -1,4 +1,7 @@
 12/16/2021 geddy
+per matt: added a lady luck cutscene & an introduction line
+
+12/16/2021 geddy
 - added angelmoon's ice atmos
 - actually fixed consumerism for actual this time (previously it didn't properly reset your gadget amount)
 - fixed consumerism not properly resetting skillcard height once you're back to 2 gadgets
