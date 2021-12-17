@@ -2,12 +2,11 @@ h1|Lady Luck
 
 Hey, Lady Luck! Now you're in our shoes!
 
-Each turn, your items change, and if you
-follow the commandments on your skillcard,
-you receive a bonus effect.
+Each turn, your items change, and if you follow the
+commandments on your skillcard, you receive a bonus effect.
 
-When you earn new cards,
-only equip one at a time!
+The only item you can keep is your skillcard.
+When you get new items, you can only equip 1 at a time!
 
 Good luck! Not from me, of course. 
 		-Jester [jester]

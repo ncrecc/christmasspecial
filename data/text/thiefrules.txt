@@ -1,0 +1,11 @@
+h1|Winter Thief
+
+On odd turns[;] you steal a copy of an enemy equipment[;]
+just like you normally do. The equipment you steal stays
+for two turns[;] until you steal another equipment.
+
+On even turns[;] however[;] the enemy steals a copy of
+*your* equipment[;] and gets to keep it until they steal
+another equipment from you.
+
+Isn't sharing fun?

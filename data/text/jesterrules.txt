@@ -1,15 +1,10 @@
-h1|chainmode
+h1|Winter Jester
 
-might as well have this lol
+The Jester no longer has a deck[;] and now
+they're exactly like everyone else!
 
-jester now gets a NORMAL equipment layout
-and now they're exactly like everyone else
+...Except equipment is now part of a "cycle"[;]
+and has to be used in a random order each turn.
 
-except equipment is now "chained" so to speak
-and has to be used in a random order each turn
-
-you have a "cycle" skillcard that lets you
-advance the chain prematurely
-
-good luck
--abagail
+To compensate[;] you have more dice than normal[;] and
+a "Cycle" skillcard that lets you advance the cycle.
