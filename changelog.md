@@ -1,3 +1,7 @@
+12/17/2021 not mario
+- added level up rewards to warrior
+- some bugfixes
+
 12/16/2021 geddy
 per matt: added a lady luck cutscene & an introduction line
 
