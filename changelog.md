@@ -1,3 +1,12 @@
+12/16/2021 geddy
+- added angelmoon's ice atmos
+- actually fixed consumerism for actual this time (previously it didn't properly reset your gadget amount)
+- fixed consumerism not properly resetting skillcard height once you're back to 2 gadgets
+- rewrote snow cover to be less eye-burning under the hood
+- per matt: removed tennis racket from robot
+- "path spell" equipment is now marked excludefromrandomlists
+- booby trap is now marked excludefromrandomlists
+
 12/16/2021 gost & geddy
 - gost & geddy: fixed consumerism. matt originally made a pr whose description was literally nothing but the line above, and instead of fixing it he actually replaced it entirely with an entirely different equipment (which also didn't work)
 - geddy: fixed missing eternitycannon status icon
