@@ -259,6 +259,9 @@ if (wheelwins) {
 				speak("Lady Luck", "You've won, but I don't even know who you are.", "normal");
 				announcer.show("idle");
 		}
+		play("stopallmusic");
+		endingcredits();
+		return;
     }
 } else if (isladyluck) {
     speak("Mariah Carey", "Oof, better luck next time!");
