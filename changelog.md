@@ -1,3 +1,6 @@
+12/17/2021 geddy
+- i forgot a semicolon in the new snow cover script i swear to fucking god
+
 12/17/2021 bert
 - added some missing stuff from fiship's commit
 
