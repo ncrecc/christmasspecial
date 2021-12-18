@@ -8,7 +8,7 @@ var eq = null;
 
 while(eq == null) {
 	if(allsmalleqs.length == 0) {
-		trace("couldn't find an equipment for Something Red with pleasereturnupgraded " + pleasereturnupgraded);
+		trace("couldn't find an equipment for Something Cold with pleasereturnupgraded " + pleasereturnupgraded);
 		break;
 	}
 	var testeq = new elements.Equipment(allsmalleqs.pop());

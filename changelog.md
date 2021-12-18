@@ -1,3 +1,11 @@
+12/17/2021 diane
+- fixed several items having a change_power upgrade but no actual upgraded versions. this is very likely the source of all cases of warrior failing to get equipment
+- wheel of fortune and amp are now marked excludefronrandomlists
+- readded renunciation (still in inventor's generator)
+- gift bag and tree shake now have a 1-turn cooldown rather than only being available on odd turns (as requested by matt)
+- fixed a pole+, a finale+, and a merry christmas+ and returning small equipment
+- when not mario's "something (color)" themecards fail to provide an upgraded version of an equipment, the themecards should now report their own name properly
+
 12/17/2021 geddy
 - fixed snow cover giving you random dice instead of 1s
 - removed duplicate "yes this is the stuff that's supposed to be in \_append but was tagged fd" items in data/text/equipment.csv
