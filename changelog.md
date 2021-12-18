@@ -1,4 +1,11 @@
 12/17/2021 geddy
+- fixed snow cover giving you random dice instead of 1s
+- removed duplicate "yes this is the stuff that's supposed to be in \_append but was tagged fd" items in data/text/equipment.csv
+
+12/17/2021 matt
+(readded some shit that was missing from equipment.csv because libreoffice just yote changes out the window)
+
+12/17/2021 geddy
 - i forgot a semicolon in the new snow cover script i swear to fucking god
 
 12/17/2021 bert
