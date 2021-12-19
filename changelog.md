@@ -1,3 +1,16 @@
+12/19/2021 diane & buster
+- diane: dodge no longer breaks jester
+- diane: regeneration spell and sweet spell's downgrades are no longer "noffect"
+- diane: fixed misspelling of gumball machine in witch generator ("gumbal machine")
+- buster: polished characters.csv a bit (also rewrote the joke description for robot, and made jester's description fit)
+- buster: changed jester's idle pose in the character select to defiant_idle, which inadvertently solves the problem of lady luck and jester having the same idle pose
+- buster: polished lady luck's cutscene
+- buster: polished some of the win dialogue
+
+12/18/2021 matt
+fixed fiships generator awaiting vanilla items
+Added wibis logo to the title screen
+
 12/18/2021 gost & diane
 - gost: fixed missing bracket in fiship's generator
 - gost: marked final frost excludefromrandomlists (per matt's request)

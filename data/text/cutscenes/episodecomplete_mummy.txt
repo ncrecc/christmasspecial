@@ -177,7 +177,7 @@ if (wheelwins) {
 		speak("Lady Luck", "I know I'm great, but please look at everything in the mod.");
 		ladyluck_big.show("talking", true);
 		speak("Lady Luck", "Now where were we?");
-		speak("Lady Luck", "Oh right! Mariah, how would you like to be a contestant?");
+		speak("Lady Luck", "Oh, right! Mariah, how would you like to be a contestant?");
 		
 		play("stopallmusic");
 		fadeout();
@@ -233,9 +233,9 @@ if (wheelwins) {
 				speak(player, "Thanks!");
 				speak(player, "...Wait, how is an endless toolbox|physically possible?");
 				announcer.show("talking");
-				speak("Lady Luck", "How is standing on your spindly legs|physically possible?");
+				speak("Lady Luck", "How is standing on your spindly legs|physically possible?", "sly");
 				announcer.show("idle");
-				speak(player, "Fair point.");
+				speak(player, "Point taken.");
 			case "Witch":
 				speak("Lady Luck", "You won the wheel spin. Huzzah.", "normal");
 				speak("Lady Luck", "Magic is now literally real.");
@@ -253,7 +253,7 @@ if (wheelwins) {
 				announcer.show("idle");
 				speak(player, "I've always wanted to see the most|spectacular crash ever.");
 				announcer.show("talking");
-				speak("Lady Luck", "Well, enjoy.");
+				speak("Lady Luck", "Well, enjoy yourself.|Not right now, of course.");
 				announcer.show("idle");
 			default:
 				speak("Lady Luck", "You've won, but I don't even know who you are.", "normal");
