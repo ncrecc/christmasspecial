@@ -1,3 +1,16 @@
+12/18/2021 gost & diane
+- gost: fixed missing bracket in fiship's generator
+- gost: marked final frost excludefromrandomlists (per matt's request)
+- gost: visual rehaul of "christmas special" logo (was very jagged and miscoloured in parts)
+- gost: "a spell" pool no longer inexplicably includes christmas star (which references the spellbook)
+- diane: old nail is now marked excludefromrandomlists (caused problems getting it through present shotgun and then turning it into sharpened nail)
+- diane: removed a hackier duplicate of endless winter
+- diane: timely demise now only deals damage once every 2 seconds
+
+
+12/18/2021 fiship
+(added newer version of witch generator)
+
 12/17/2021 diane
 - fixed several items having a change_power upgrade but no actual upgraded versions. this is very likely the source of all cases of warrior failing to get equipment
 - wheel of fortune and amp are now marked excludefronrandomlists

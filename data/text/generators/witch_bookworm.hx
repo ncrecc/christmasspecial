@@ -56,7 +56,8 @@ gooditems = ["Mirror Cauldron",dicethings.pop()];
 otherstuff = [health(),health()];
 
 goodotherstuff = [
-  shop(shuffle([rand(enchantedbolts.pop(),duplicatelike.pop()]), rand([healings.pop,weirdspells.pop()]),  rand([missiles.pop(),shields.pop()])]))];
+  shop(shuffle([rand([enchantedbolts.pop(),duplicatelike.pop()]), rand([healings.pop,weirdspells.pop()]),  rand([missiles.pop(),shields.pop()])]))
+];
 
 var mycoolfloor2 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor2.theme = rand(['xmas1']);
