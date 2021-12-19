@@ -3,7 +3,7 @@ var weirddicethings = ["Spanner",rand(["Skeleton Key","Giant Spatula"]),"Skeleto
 var enchantedbolts = ["Enchanted Bolt","Enchanted Bolt","Sealing Stamp","Sealing Stamp","Enchanted Missile","Dragon Dust","Glass Dust"];
 var shields = ["Magic Shield","Spirit Shield","Spirit Shield",rand(["Leather Armor","Cloak"]),"Leather Armor","Worm Scarf","Earth Shield","Forefront","Small Helmet"];
 var missiles = ["Magic Missile","Christmas Star","Lucky 7","Lucky 7","Tetraphobia","Missing Score","Magic Axe","Berlin Blade","Magic Kapow","Detonator"];
-var duplicatelike = ["Illuminate",rand(["Illuminate","Paper Lantern"]),rand(["Magic Key","Lockpick"]),"Magic Key",rand(["Master Key","Subdivide"]),"Subdivide","Signal Jammer","Shadow Dice",rand(["Doppeldice","Ungeradedice"]),rand(["Doppeldice","Doppeltwice"]),"Duplicate"])
+var duplicatelike = ["Illuminate",rand(["Illuminate","Paper Lantern"]),rand(["Magic Key","Lockpick"]),"Magic Key",rand(["Master Key","Subdivide"]),"Subdivide","Signal Jammer","Shadow Dice",rand(["Doppeldice","Ungeradedice"]),rand(["Doppeldice","Doppeltwice"]),"Duplicate"];
 var healings = ["Healing Crystal",rand(["Healing Crystal","Elastic Heart"]),rand(["Bandage","Plaster"]),"Life Drain","Bandage","Gumbal Machine","Gumbal Machine","Syringe","Thick Skin","Umbrella"];
 var weirdspells = ["Infliction","Knitting Needle","Poison Needle","Antidote",rand(["Nunchucks","Sharp Spike"]),"Wrecking Ball",rand(["Magic Dagger","Push Knife"]),"Magic Dagger",rand(["Hex","Nightstick"]),rand(["Ignite","Cold Wind"]),"Icicle","Lighter","Hex","Cowbell",rand(["Capacitor","Blast Chiller","Furnace"]),"Slime Ball","Slime Ball",rand(["Matchstick","Weird Flame"]),"Weird Flame",rand(["Icecube","Snowflake"]),"Snowflake","Blood Let","Catastrophe","Fiasco",rand(["Determination","Secret Weapon"]),"Spring Equinox","Overwinter"];
 var cauldrons = ["Cauldron","Silver Cauldron","Gold Cauldron","Rat","Silver Cauldron","Gold Cauldron",rand(["Rat","Locket"]),"Contact Juggling"];
@@ -27,8 +27,8 @@ shuffle(weirdspells);
 shuffle(cauldrons);
 shuffle(goodcauldrons);
 shuffle(requirexspells);
-shuffle(counterspelllike);
-shuffle(goodshotcontents);
+shuffle(counterspelllikes);
+shuffle(goodshopcontents);
 shuffle(strongspells);
 shuffle(floor2items);
 shuffle(finespells);
@@ -42,7 +42,7 @@ var otherstuff = [];
 var goodotherstuff = [];
 
 //Floor 1:
-items = [shields.pop(),missile.pop()];
+items = [shields.pop(),missiles.pop()];
 gooditems = [dicethings.pop()];
 otherstuff = [];
 goodotherstuff = [];
@@ -69,7 +69,7 @@ gooditems = [requirexspells.pop()];
 		
 otherstuff = [health(), health()];
 
-goodotherstuff = [shop([goodshopcontents.pop(), "Health", goodshopcontents.pop()], [2, 3, 2])];
+goodotherstuff = [shop([goodshopcontents.pop(), "health", goodshopcontents.pop()], [2, 3, 2])];
 
 var mycoolfloor3 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor3.theme = rand(['xmas2']);
