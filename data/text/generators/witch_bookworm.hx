@@ -9,7 +9,7 @@ var weirdspells = ["Infliction","Knitting Needle","Poison Needle","Antidote",ran
 var cauldrons = ["Cauldron","Silver Cauldron","Gold Cauldron","Rat","Silver Cauldron","Gold Cauldron",rand(["Rat","Locket"]),"Contact Juggling"];
 var goodcauldrons = ["Half Moon Cauldron","Skewer","Lucky Star","Slingshot","Glass Cauldron","Sand Cauldron","Glass Cauldron","Sand Cauldron","Crucible","Blood Cauldron","Blood Cauldron","Polarized Cauldron","Pulsing Cauldron","Bronze Cauldron","Bronze Cauldron","Bronze Bowl","Bumpblade"];
 var requirexspells = ["Fury Spell","Fury Spell","Sludge Spear","Iron Armor","Magic Barrier","Sheer Wall","Teleport Spell","Magic Spear","Magic Spear","Hall of Mirrors","Hookshot","Starspear","Sword Hilt"];
-var counterspelllikes = ["Counter Spell","Parrying Dagger","Embargo@fd"];
+var counterspelllikes = ["Counter Spell","Parrying Dagger","Counter Spell","Parrying Dagger"];
 var goodshopcontents = ["Lightning Bolt","Inferno","Blizzard", "Shockwave","Raw Energy"];
 var strongspells = [rand(["Absolute Zero", "Meteor"]), rand(["Kite Shield","First Aid Kit","Blight"])];
 var floor2items = ["Mirror Cauldron"];
@@ -56,7 +56,7 @@ gooditems = ["Mirror Cauldron",dicethings.pop()];
 otherstuff = [health(),health()];
 
 goodotherstuff = [
-  shop(shuffle([rand([enchantedbolts.pop(),duplicatelike.pop()]), rand([healings.pop,weirdspells.pop()]),  rand([missiles.pop(),shields.pop()])]))
+  shop(shuffle([rand([enchantedbolts.pop(),duplicatelike.pop()]), rand([healings.pop(),weirdspells.pop()]),  rand([missiles.pop(),shields.pop()])]))
 ];
 
 var mycoolfloor2 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
@@ -64,7 +64,7 @@ mycoolfloor2.theme = rand(['xmas1']);
 mycoolfloor2.generate();
   	
 //Floor 3:
-items = [rand([weirddicethings.pop(),cauldrons.pop()]),rand([weirdspells.pop(),duplicate.pop()])];
+items = [rand([weirddicethings.pop(),cauldrons.pop()]),rand([weirdspells.pop(),duplicatelike.pop()])];
 gooditems = [requirexspells.pop()];
 		
 otherstuff = [health(), health()];
@@ -79,12 +79,9 @@ mycoolfloor3.generate();
 items = [weirdspells.pop()];
 gooditems = [goodcauldrons.pop()];
 		
-shuffle(commonlist_dicemanipulation);
-shuffle(commonlist_offensive);
-		
 otherstuff = [health(),health(),health()];
 
-goodotherstuff = [shop(shuffle([weirdspells(),weirddicethings(), rand([enchantedbolts.pop(),counterspells.pop()])]), [3, 4, 3])];
+goodotherstuff = [shop(shuffle([weirdspells.pop(),weirddicethings.pop(), rand([enchantedbolts.pop(),counterspelllikes.pop()])]), [3, 4, 3])];
 		
 var mycoolfloor4 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor4.theme = rand(['xmas3']);
@@ -92,9 +89,9 @@ mycoolfloor4.generate();
   
 //Floor 5:
 items = [];
-gooditems = [commonlist_dicemanipulation.pop()];
+gooditems = [dicethings.pop()];
 otherstuff = [health(), health(), health()];
-goodotherstuff = [shop(shuffle([strongspells.pop, enchantedbolts.pop, finespells.pop])),shop(shuffle([strongspells.pop, missiles.pop, finespells.pop]))];
+goodotherstuff = [shop(shuffle([strongspells.pop(), enchantedbolts.pop(), finespells.pop()])),shop(shuffle([strongspells.pop(), missiles.pop(), finespells.pop()]))];
 		
 var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor5.theme = rand(['xmas6']);
@@ -106,7 +103,13 @@ gooditems = [];
 otherstuff = [];
 goodotherstuff = [];
 
-addfloor("boss")
+var lastfloor = addfloor("boss");
+
+if (getfinalboss() == "Mariah Carey"){
+  items.push("BOOO!");
+}
+
+lastfloor
   .additems(items, gooditems)
   .setlocation('BOSS')
   .addotherstuff(otherstuff, goodotherstuff)

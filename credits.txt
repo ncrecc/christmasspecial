@@ -14,27 +14,27 @@ titku of wibi
 
 ==warrior==
 =concept=
-matt101
+matt101, wibi
 =design=
-matt101
+matt101, wibi, not mario
 =coding=
-matt101
+wibi, not mario
 
 ==thief==
 =concept=
 the witness of wibi
 =design=
-green of the coral system
+wibi, green of the coral system
 =coding=
-green of the coral system
+wibi
 
 ==robot==
 =concept=
-the witness of wibi
+matt101
 =design=
-levelworld
+matt101
 =coding=
-levelworld
+matt101
 
 ==inventor==
 =concept=
@@ -46,12 +46,11 @@ fiship
 
 ==witch==
 =concept=
-matt101
+fiship
 =design=
-matt101
+fiship, terry
 =coding=
-matt101
-abagail of wibi
+fiship
 
 ==jester==
 =concept=
@@ -63,6 +62,7 @@ get this of wibi
 titku of wibi
 get this of wibi
 diane of wibi
+bert of wibi
 
 ==lady luck==
 =concept=
@@ -77,6 +77,7 @@ plokmijnuhby
 =new equipment=
 titku of wibi
 matt101
+fiship
 
 =new enemies=
 matt101

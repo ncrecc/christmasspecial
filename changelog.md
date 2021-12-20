@@ -1,3 +1,22 @@
+12/20/2021 bert
+- added catastrophe (missing from witch generator)
+- plethora of witch generator fixes
+- fixed several items missing spellcosts
+- added excludefromrandomlists to some vanilla items brought in by witch that were missing it
+- booo! now has a witch spell cost
+- unused "winterventor" levels can no longer come up
+- "bigi" levels have been reamed "inventorlarge" to avoid coming up when a "big" level is requested
+- fixed crash with shockcast actuator missing an end brace
+- actuators in foocast now stop old instances of them before starting
+- changed nospellbook icon to be the same color as its defined color in symbols.csv (somewhat more parseable)
+- per fiship: readded missing functionality for spellbook bans in witch spellbook
+- fixed wrong ordinal suffices on spellbook names when banned (e.g. "1rd spellbook")
+- marked luck omen as excludefromrandomlists
+- upgradecast taking effect now makes the upgraded card flash and shake, and make the "upgradeequipment" sfx
+- changed order of credits_01 and credits_03
+- added yet more episodes to credits.csv
+- updated credits.txt a bit
+
 12/20/2021 brej
 fixed some duplicate stuff caused by merging the below update
 

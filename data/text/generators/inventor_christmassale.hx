@@ -61,7 +61,7 @@ otherstuff = [
 goodotherstuff = [
   shop(shuffle([scrapitems.pop(),scrapitems.pop(),scrapitems.pop()]), shuffle([1, 2, 1]))
 ];
-var mycoolfloor1 = addfloor('bigi').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+var mycoolfloor1 = addfloor('inventorlarge').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor1.theme = rand(['xmas1']);
 mycoolfloor1.generate();
   
@@ -80,7 +80,7 @@ goodotherstuff = [
   shop(shuffle(["upgrade", shoplist1.pop(), pick(scrapitems)]), shuffle([2, 1, 2])),
   upgrade()
 ];
-var mycoolfloor2 = addfloor('bigi').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+var mycoolfloor2 = addfloor('inventorlarge').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor2.theme = rand(['xmas1']);
 mycoolfloor2.generate();
 
@@ -97,7 +97,7 @@ goodotherstuff = [
   upgrade(),
   upgrade()
 ];
-var mycoolfloor3 = addfloor('bigi').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+var mycoolfloor3 = addfloor('inventorlarge').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor3.theme = rand(['xmas2']);
 mycoolfloor3.generate();
   
@@ -111,7 +111,7 @@ goodotherstuff = [
   shop(shuffle([floor1crap.pop(),midtierdrops.pop(),floor1crap.pop()]), shuffle([1, 2, 1])),
   shop(shuffle([floor1crap.pop(),commonlist1.pop(),commonlist2.pop()]), shuffle([3, 2, 4]))
 ];
-var mycoolfloor4 = addfloor('bigi').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+var mycoolfloor4 = addfloor('inventorlarge').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor4.theme = rand(['xmas3']);
 mycoolfloor4.generate();
   
@@ -127,7 +127,7 @@ goodotherstuff = [
   shop(shuffle([shoplist1.pop(),commonlist1.pop(),shoplist1.pop()]), shuffle([2, 2, 1]))
 ];
 		
-var mycoolfloor5 = addfloor('bigi').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
+var mycoolfloor5 = addfloor('inventorlarge').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor5.theme = rand(['xmas6']);
 mycoolfloor5.generate();
 
