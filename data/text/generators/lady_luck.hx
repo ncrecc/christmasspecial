@@ -63,7 +63,6 @@ gooditems = [];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
-  upgrade(),
   shop(["health", "health", "health"], [4, 4, 4])
 ];
 

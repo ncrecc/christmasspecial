@@ -92,7 +92,7 @@ if (isladyluck) {
 	announcer.show("talking");
 	speak("Mariah Carey", "Just a minute, dear. Let me bask in this glory for a moment.");
 	announcer.show("idle");
-	wait(3);
+	wait(2);
 	speak("Lady Luck", "Are you done yet?");
 	announcer.show("talking");
 	speak("Mariah Carey", "Sure.");
@@ -127,7 +127,8 @@ if (wheelwins) {
     if (isladyluck) {
         speak("Mariah Carey", "What the he- how did yo- wha?");
 		announcer.show("idle");
-		speak("Lady Luck", "Turn me back NOW.");
+		speak("Lady Luck", "Seems like just a matter of chance.");
+		speak("Lady Luck", "I trust that you'll fulfill your end of the deal.");
 		announcer.show("talking");
 		speak("Mariah Carey", "Okay, fine.");
 		
@@ -212,7 +213,11 @@ if (wheelwins) {
 				announcer.show("idle");
 				speak(player, "Gimme my money.");
 				announcer.show("talking");
-				speak("Lady Luck", "Alright.");
+				speak("Lady Luck", "What, no awe-filled moment of reflection?");
+				announcer.show("idle");
+				speak(player, "I said GIMME.");
+				announcer.show("talking");
+				speak("Lady Luck", "Alright, then.");
 				announcer.show("idle");
 			case "Robot":
 				speak("Lady Luck", "Well, would you look at that. Right on the prize.", "normal");

@@ -1,3 +1,27 @@
+12/19/2021 bert, buster, black widow, & brej
+- brej: timely demise has been reworked to avoid accessibility issues - formerly it did 1 damage to you every second (later nerfed to every 2 seconds), but this would cause unfairness for players who physically can't react very fast. plus it was out of place in a largely non-realtime game. timely demise now makes you lose 1 health per equipment used, identical to bleed but stacking differently
+- bert: renamed ncrmod's "magic axe" to "ephemeral axe" to avoid conflict with fiship's "magic axe"
+- buster: a little more polish for win dialogue
+- buster: (per matt) marked gift bag and contained blast excludefromrandomlists
+- bert: present shotgun now has a gadget (emulator)
+- bert: deva form is no longer marked as a finale card since CS uses it as a normal card
+- bert: added several more finale cards to be selected by A Finale (including an unfinished unnamed card from ncrmod's upcoming pu update, which black widow named and got working)
+- bert: removed magic pink from dice_1080.png, which manifested as the logo having a magenta background in the credits (used it as a visual aid to mark fully transparent areas, forgot to undo it)
+- bert: fixed some slight jank on the christmas special logo which may have been caused by pasting it on top of the old logo without actually removing the old logo underneath
+- bert: nerfed krampus head (odd -> doubles)
+- bert: (per matt) fixed judgement@fullhp having wrong script
+- brej: (per matt) divine killer no longer says "no effect on bosses"
+- brej: (per matt) nerfed soul crush-
+- bert: added crazy glue to inventor generator as floor 1 crap
+- bert: (per matt) removed upgrade from lady luck floor 5
+- bert: plight now says "alt poison" instead of "PU poison" due to a playtester not understanding the term "PU"
+- bert: added thermostat and hot table fron ncrmod as passive items for A Bonus
+- bert: present shotgun now ignores items with the "nomidturnsummon" tag
+- bert: stopwatch is now marked nomidturnsummon
+- bert: fixed burst beam not fetching your limit value for its description until you use an item
+- bert: fixed scrap sleet only inflicting 1 slush rather than 2
+- bert: added more info about status icons to credits.txt
+
 12/19/2021 diane & buster
 - diane: dodge no longer breaks jester
 - diane: regeneration spell and sweet spell's downgrades are no longer "noffect"
