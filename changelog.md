@@ -1,3 +1,9 @@
+12/20/2021 brej
+fixed some duplicate stuff caused by merging the below update
+
+12/20/2021 fiship
+(bunch of witch stuff)
+
 12/19/2021 bert, buster, black widow, & brej
 - brej: timely demise has been reworked to avoid accessibility issues - formerly it did 1 damage to you every second (later nerfed to every 2 seconds), but this would cause unfairness for players who physically can't react very fast. plus it was out of place in a largely non-realtime game. timely demise now makes you lose 1 health per equipment used, identical to bleed but stacking differently
 - bert: renamed ncrmod's "magic axe" to "ephemeral axe" to avoid conflict with fiship's "magic axe"
