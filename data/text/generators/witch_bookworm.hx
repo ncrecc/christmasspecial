@@ -1,7 +1,38 @@
-var commonlist_basic = shuffle(["Enchanted Armor", "Spiked Coffin", "Blue Ocean", "Fear Ocean", "Christmas Bells"]);
-var commonlist_offensive = ["Candy Steal","Cold Burn","Winds Of Winter","Enchanted Bolt","Christmas Star","Glass Dust","Staff Hilt"];
-var commonlist_dicemanipulation = ["Coffee Pot", "Stew Pot", "Spring Equinox","Overwinter","Wide Divide","Confetti"];
-var cursedlist = shuffle(["Luck Omen", rand(["Cold Snap", "Sun Beam", "Moon Beam"]), "Dragon Dust", "Sultry Winds", "Chilly Pepper", "Christmas Star"]);
+var dicethings = [rand(["Budge","Nudge"]),"Vise Grip","Innovate","Vise Grip","Nudge","Dice Pump","Sine Wave","Sine Wave"];
+var weirddicethings = ["Spanner",rand(["Skeleton Key","Giant Spatula"]),"Skeleton Key","Spatula","Candle","Candle","Saw Wave","Saw Wave","Berlin Key"];
+var enchantedbolts = ["Enchanted Bolt","Enchanted Bolt","Sealing Stamp","Sealing Stamp","Enchanted Missile","Dragon Dust","Glass Dust"];
+var shields = ["Magic Shield","Spirit Shield","Spirit Shield",rand(["Leather Armor","Cloak"]),"Leather Armor","Worm Scarf","Earth Shield","Forefront","Small Helmet"];
+var missiles = ["Magic Missile","Christmas Star","Lucky 7","Lucky 7","Tetraphobia","Missing Score","Magic Axe","Berlin Blade","Magic Kapow","Detonator"];
+var duplicatelike = ["Illuminate",rand(["Illuminate","Paper Lantern"]),rand(["Magic Key","Lockpick"]),"Magic Key",rand(["Master Key","Subdivide"]),"Subdivide","Signal Jammer","Shadow Dice",rand(["Doppeldice","Ungeradedice"]),rand(["Doppeldice","Doppeltwice"]),"Duplicate"];
+var healings = ["Healing Crystal",rand(["Healing Crystal","Elastic Heart"]),rand(["Bandage","Plaster"]),"Life Drain","Bandage","Gumball Machine","Gumball Machine","Syringe","Thick Skin","Umbrella"];
+var weirdspells = ["Infliction","Knitting Needle","Poison Needle","Antidote",rand(["Nunchucks","Sharp Spike"]),"Wrecking Ball",rand(["Magic Dagger","Push Knife"]),"Magic Dagger",rand(["Hex","Nightstick"]),rand(["Ignite","Cold Wind"]),"Icicle","Lighter","Hex","Cowbell",rand(["Capacitor","Blast Chiller","Furnace"]),"Slime Ball","Slime Ball",rand(["Matchstick","Weird Flame"]),"Weird Flame",rand(["Icecube","Snowflake"]),"Snowflake","Blood Let","Catastrophe","Fiasco",rand(["Determination","Secret Weapon"]),"Spring Equinox","Overwinter"];
+var cauldrons = ["Cauldron","Silver Cauldron","Gold Cauldron","Rat","Silver Cauldron","Gold Cauldron",rand(["Rat","Locket"]),"Contact Juggling"];
+var goodcauldrons = ["Half Moon Cauldron","Skewer","Lucky Star","Slingshot","Glass Cauldron","Sand Cauldron","Glass Cauldron","Sand Cauldron","Crucible","Blood Cauldron","Blood Cauldron","Polarized Cauldron","Pulsing Cauldron","Bronze Cauldron","Bronze Cauldron","Bronze Bowl","Bumpblade"];
+var requirexspells = ["Fury Spell","Fury Spell","Sludge Spear","Iron Armor","Magic Barrier","Sheer Wall","Teleport Spell","Magic Spear","Magic Spear","Hall of Mirrors","Hookshot","Starspear","Sword Hilt"];
+var counterspelllikes = ["Counter Spell","Parrying Dagger","Embargo@fd"];
+var goodshopcontents = ["Lightning Bolt","Inferno","Blizzard", "Shockwave","Raw Energy"];
+var strongspells = [rand(["Absolute Zero", "Meteor"]), rand(["Kite Shield","First Aid Kit","Blight"])];
+var floor2items = ["Mirror Cauldron"];
+var finespells = [rand(["Electric Shock","Electric Shock","Sheer Will"]), rand(["Ice Shard","Ice Shard","Trident"]), rand(["Sonic Wave","Sonic Wave","Venus Gospel"]), rand(["Burning Light","Burning Light","Pitchfork"]),rand(["Princess Guard","Fishing Net"])];
+var vampireitems = ["Wooden Stake"];
+var myitempools = [dicethings, weirddicethings, enchantedbolts, shields, missiles, duplicatelike, healings, weirdspells, cauldrons, goodcauldrons, requirexspells, counterspelllikes, goodshopcontents, counterspelllikes, goodshopcontents, strongspells, floor2items, finespells, vampireitems];
+shuffle(dicethings);
+shuffle(weirddicethings);
+shuffle(enchantedbolts);
+shuffle(shields);
+shuffle(missiles);
+shuffle(duplicatelike);
+shuffle(healings);
+shuffle(weirdspells);
+shuffle(cauldrons);
+shuffle(goodcauldrons);
+shuffle(requirexspells);
+shuffle(counterspelllikes);
+shuffle(goodshopcontents);
+shuffle(strongspells);
+shuffle(floor2items);
+shuffle(finespells);
+
 
 usestandardenemies();
 
@@ -11,8 +42,8 @@ var otherstuff = [];
 var goodotherstuff = [];
 
 //Floor 1:
-items = [commonlist_basic.pop(),commonlist_basic.pop()];
-gooditems = [commonlist_basic.pop()];
+items = [shields.pop(),missiles.pop()];
+gooditems = [dicethings.pop()];
 otherstuff = [];
 goodotherstuff = [];
 var mycoolfloor1 = addfloor('big').additems(items, gooditems);
@@ -20,43 +51,40 @@ mycoolfloor1.theme = rand(['xmas1']);
 mycoolfloor1.generate();
 
 //Floor 2:
-commonlist_dicemanipulation = shuffle(commonlist_dicemanipulation);
-commonlist_offensive = shuffle(commonlist_offensive);
-		
-items = ["Path Spell 1"]; //Must be a dice/mana manipulation or something
-		
-gooditems = ["Mirror Cauldron",commonlist_dicemanipulation.pop()];
+items = [weirdspells.pop()];
+gooditems = ["Mirror Cauldron",dicethings.pop()];
 otherstuff = [health(),health()];
 
 goodotherstuff = [
-  shop(shuffle([commonlist_offensive.pop(), "Path Spell 2",  commonlist_basic.pop()]))]; //Must be a weapon or something
+  shop(shuffle([rand([enchantedbolts.pop(),duplicatelike.pop()]), rand([healings.pop,weirdspells.pop()]),  rand([missiles.pop(),shields.pop()])]))
+];
 
 var mycoolfloor2 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor2.theme = rand(['xmas1']);
 mycoolfloor2.generate();
   	
 //Floor 3:
-items = [commonlist_dicemanipulation.pop(),commonlist_offensive.pop()];
-gooditems = ["Path Spell 3"]; //Must be a really good weapon or something
+items = [rand([weirddicethings.pop(),cauldrons.pop()]),rand([weirdspells.pop(),duplicate.pop()])];
+gooditems = [requirexspells.pop()];
 		
 otherstuff = [health(), health()];
 
-goodotherstuff = [shop(["Different Path 1", "Health", "Different Path 2"], [2, 3, 2])];  //Here you can pick another path!
+goodotherstuff = [shop([goodshopcontents.pop(), "health", goodshopcontents.pop()], [2, 3, 2])];
 
 var mycoolfloor3 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor3.theme = rand(['xmas2']);
 mycoolfloor3.generate();
   
 //Floor 4:
-items = [commonlist_offensive.pop()];
-gooditems = [cursedlist.pop()];
+items = [weirdspells.pop()];
+gooditems = [goodcauldrons.pop()];
 		
 shuffle(commonlist_dicemanipulation);
 shuffle(commonlist_offensive);
 		
 otherstuff = [health(),health(),health()];
 
-goodotherstuff = [shop(shuffle(["Path Spell 4", "Path Spell 5", "Path Spell 6"]), [3, 4, 3])]; //All three are equipments from different paths and/or cool spells for current path
+goodotherstuff = [shop(shuffle([weirdspells(),weirddicethings(), rand([enchantedbolts.pop(),counterspells.pop()])]), [3, 4, 3])];
 		
 var mycoolfloor4 = addfloor('normal').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor4.theme = rand(['xmas3']);
@@ -66,7 +94,7 @@ mycoolfloor4.generate();
 items = [];
 gooditems = [commonlist_dicemanipulation.pop()];
 otherstuff = [health(), health(), health()];
-goodotherstuff = [shop(shuffle([cursedlist.pop(), "Path Spell 7", "Path Spell 8"]))]; //Multislot or countdown weapon from starter path and something from another
+goodotherstuff = [shop(shuffle([strongspells.pop, enchantedbolts.pop, finespells.pop])),shop(shuffle([strongspells.pop, missiles.pop, finespells.pop]))];
 		
 var mycoolfloor5 = addfloor('big').additems(items, gooditems).addotherstuff(otherstuff, goodotherstuff);
 mycoolfloor5.theme = rand(['xmas6']);
