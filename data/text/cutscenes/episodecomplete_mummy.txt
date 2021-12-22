@@ -177,7 +177,7 @@ if (wheelwins) {
 		ladyluck_big.show("talking-sly", true);
 		speak("Lady Luck", "I know I'm great, but please look at everything in the mod.");
 		ladyluck_big.show("talking", true);
-		speak("Lady Luck", "Now where were we?");
+		speak("Lady Luck", "Now... where were we?");
 		speak("Lady Luck", "Oh, right! Mariah, how would you like to be a contestant?");
 		
 		play("stopallmusic");
@@ -206,6 +206,11 @@ if (wheelwins) {
 				announcer.show("idle");
 				speak(player, "Yep!");
 				announcer.show("talking");
+				speak("Lady Luck", "Even after we talked about how|there are much better things|to wish for?");
+				announcer.show("idle");
+				speak(player, "Oh, true. Lemme think.");
+				speak(player, "Yep!");
+				announcer.show("talking");
 				speak("Lady Luck", "Okay then...");
 				announcer.show("idle");
 			case "Thief":
@@ -227,6 +232,11 @@ if (wheelwins) {
 				announcer.show("talking");
 				speak("Lady Luck", "Truly incredible.");
 				speak("Lady Luck", "Enjoy your cyropod.|Not like you should need one.");
+				speak("Lady Luck", "Don't you have a hibernate mode?");
+				announcer.show("idle");
+				speak(player, "Probably, but you have no idea|how unintuitive biomechanical|operating systems are!");
+				announcer.show("talking");
+				speak("Lady Luck", "Fair enough.");
 				announcer.show("idle");
 			case "Inventor":
 				speak("Lady Luck", "You did it! You actually won the wheel spin.", "normal");
@@ -256,7 +266,9 @@ if (wheelwins) {
 				announcer.show("talking");
 				speak("Lady Luck", "You know having EVERY item will break|pretty much everything, right?");
 				announcer.show("idle");
-				speak(player, "I've always wanted to see the most|spectacular crash ever.");
+				speak(player, "Exactly!");
+				//speak(player, "I've always wanted to see the most|spectacular crash ever.");
+				speak(player, "I've heard many a legend about the|\"Null Object Reference\", but now|I can finally see it for real!.");
 				announcer.show("talking");
 				speak("Lady Luck", "Well, enjoy yourself.|Not right now, of course.");
 				announcer.show("idle");
@@ -276,6 +288,9 @@ if (wheelwins) {
 	speak("Mariah Carey", "Oh no you're not. You're going to be a dice until you win the wheel.");
 	announcer.show("idle");
 	speak("Lady Luck", "What?!");
+	play("stopallmusic");
+	endingcredits();
+	return;
 } else {
     var secondlinevoice = false;
     for(message in variables.messages_afterspin) {
@@ -287,7 +302,10 @@ if (wheelwins) {
         speak("Lady Luck", message.text);
       }
     }
-	announcer.show("idle");
+    announcer.show("idle");
+    play("stopallmusic");
+    endingcredits();
+    return;
 }
 
 gamecompletefromcutscene();

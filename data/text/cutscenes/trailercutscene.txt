@@ -1,0 +1,21 @@
+#include mariahcareybiggraphics.txt
+
+var announcer = mariahcarey_big;
+
+changebackground("equipment_ice");
+
+fadein();
+actor("Mariah Carey", screenwidthmid - 100, screenheightmid + 200, Col.YELLOW, LEFT, BOTTOM, "chat_mariahcarey", "characters/misc/charicon_mariahcarey");
+wait(0.2);
+
+announcer.x = -announcer.getwidth("idle");
+Actuate.tween(announcer, 1, { x: 0 }).ease(Sine.easeOut);
+announcer.show("idle");
+wait(1);
+announcer.show("talking");
+speak("Mariah Carey", "Hey there, welcome to the Christmas special!");
+speak("Mariah Carey", "I sure hope you're ready to enjoy your holidays beating some dungeons!");
+speak("Mariah Carey", "Oh, and I bet you're wondering where Lady Luck is?");
+speak("Mariah Carey", "I'm sure she's, you know... around.");
+
+returntotitle();

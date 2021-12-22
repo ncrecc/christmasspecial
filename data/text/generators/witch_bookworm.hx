@@ -7,14 +7,14 @@ var duplicatelike = ["Illuminate",rand(["Illuminate","Paper Lantern"]),rand(["Ma
 var healings = ["Healing Crystal",rand(["Healing Crystal","Elastic Heart"]),rand(["Bandage","Plaster"]),"Life Drain","Bandage","Gumball Machine","Gumball Machine","Syringe","Thick Skin","Umbrella"];
 var weirdspells = ["Infliction","Knitting Needle","Poison Needle","Antidote",rand(["Nunchucks","Sharp Spike"]),"Wrecking Ball",rand(["Magic Dagger","Push Knife"]),"Magic Dagger",rand(["Hex","Nightstick"]),rand(["Ignite","Cold Wind"]),"Icicle","Lighter","Hex","Cowbell",rand(["Capacitor","Blast Chiller","Furnace"]),"Slime Ball","Slime Ball",rand(["Matchstick","Weird Flame"]),"Weird Flame",rand(["Icecube","Snowflake"]),"Snowflake","Blood Let","Catastrophe","Fiasco",rand(["Determination","Secret Weapon"]),"Spring Equinox","Overwinter"];
 var cauldrons = ["Cauldron","Silver Cauldron","Gold Cauldron","Rat","Silver Cauldron","Gold Cauldron",rand(["Rat","Locket"]),"Contact Juggling"];
-var goodcauldrons = ["Half Moon Cauldron","Skewer","Lucky Star","Slingshot","Glass Cauldron","Sand Cauldron","Glass Cauldron","Sand Cauldron","Crucible","Blood Cauldron","Blood Cauldron","Polarized Cauldron","Pulsing Cauldron","Bronze Cauldron","Bronze Cauldron","Bronze Bowl","Bumpblade"];
+var goodcauldrons = ["Half Moon Cauldron","Skewer","Lucky Star","Slingshot","Glass Cauldron","Sand Cauldron","Glass Cauldron","Sand Cauldron","Crucible","Blood Cauldron","Blood Cauldron","Polarized Cauldron","Pulsing Cauldron","Bronze Cauldron","Bronze Cauldron","Star Cauldron","Bumpblade"];
 var requirexspells = ["Fury Spell","Fury Spell","Sludge Spear","Iron Armor","Magic Barrier","Sheer Wall","Teleport Spell","Magic Spear","Magic Spear","Hall of Mirrors","Hookshot","Starspear","Sword Hilt"];
 var counterspelllikes = ["Counter Spell","Parrying Dagger","Counter Spell","Parrying Dagger"];
 var goodshopcontents = ["Lightning Bolt","Inferno","Blizzard", "Shockwave","Raw Energy"];
 var strongspells = [rand(["Absolute Zero", "Meteor"]), rand(["Kite Shield","First Aid Kit","Blight"])];
 var floor2items = ["Mirror Cauldron"];
 var finespells = [rand(["Electric Shock","Electric Shock","Sheer Will"]), rand(["Ice Shard","Ice Shard","Trident"]), rand(["Sonic Wave","Sonic Wave","Venus Gospel"]), rand(["Burning Light","Burning Light","Pitchfork"]),rand(["Princess Guard","Fishing Net"])];
-var vampireitems = ["Wooden Stake"];
+var vampireitems = ["Silver Sword@witch"];
 var myitempools = [dicethings, weirddicethings, enchantedbolts, shields, missiles, duplicatelike, healings, weirdspells, cauldrons, goodcauldrons, requirexspells, counterspelllikes, goodshopcontents, counterspelllikes, goodshopcontents, strongspells, floor2items, finespells, vampireitems];
 shuffle(dicethings);
 shuffle(weirddicethings);
@@ -33,6 +33,7 @@ shuffle(strongspells);
 shuffle(floor2items);
 shuffle(finespells);
 
+runscript("christmasspecial/witch_checkgeneratorisaccurate",[myitempools]);
 
 usestandardenemies();
 

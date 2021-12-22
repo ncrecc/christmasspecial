@@ -1,8 +1,8 @@
 var thisgenerator = "inventor_normal";
 var floor1countdowns = ["Sceptre", "Chain Knife", "Steamstaff", "Revolver", "Pinball Machine", "Drumkit"];
 var scrapitems = ["Scrap Ooze", "Scrap Heater", "Scrap Sleet", "Scrap Crystal", "Scraptula", "Scrap Lamp", "Scrapstick", "Scrapsies", "Scrap Slingshot", "Scrap Trap"];
-var floor1crap = ["Flicker","Pocket Sand","Washcloth","Create Opening","Cherry Bomb","Chain Link","Ubernudge","Veneer","Loud Brostep","Burner Phone", "Crazy Glue"];
-var commonlist1 = ["Gadget Smash", "Tennis Racket", "Umbrella", "Sharpie", "Bronze Medal", "Stockpick", "Waltzer", "Safety Scissors", "Cloak and Dagger", "Natural Charm", "Glue Pact", "Flamebringer", "Plasma Rifle"];
+var floor1crap = ["Flicker","Pocket Sand","Washcloth","Create Opening","Cherry Bomb","Chain Link","Ubernudge","Zoop Zoop","Loud Brostep","Burner Phone", "Crazy Glue"];
+var commonlist1 = ["Murk", "Tennis Racket", "Umbrella", "Sharpie", "Bronze Medal", "Stockpick", "Waltzer", "Safety Scissors", "Cloak and Dagger", "Natural Charm", "Glue Pact", "Flamebringer", "Plasma Rifle"];
 var shoplist1 = ["Study", "Tennis Racket", "Stopwatch", "Technology", "Rising Dagger", "Compact Resonator", "Burst Beam", "Repast Rapier", "Jester's Glove", "Hand Sanitiser", "Spin Attack", pick(["Eternal Cauldron","Plug Socket"]), "Metal Crusher", "Iron Helmet", "Two Handed Spatula", "Contact Juggling"];
 if (chance(30)) shoplist1.push("Gravity");
 if (chance(30)) shoplist1.push("Gavel");
@@ -17,6 +17,11 @@ floor5items.push(threeturnsitems.pop());
 if(chance(25)) floor5items.push(threeturnsitems.pop());
 
 var vampireitem = ["BOOO!"];
+
+var itempools = [floor1countdowns, scrapitems, floor1crap, commonlist1, shoplist1, midtierdrops, floor3items, commonlist2, floor5items, threeturnsitems, ["Gravity", "Gavel", "Eternal Cauldron", "Plug Socket", "Wispy Kaboom Smash", "Switchblade", "Hall of Daggers", "Devilsknife", "Reverse Emulation", "Supersonic", "Endless Pond", "Deva Form"]];
+
+runscript("christmasspecial/checkgeneratorisaccurate",[itempools]);
+//runscript("christmasspecial/checkgeneratorgadgetsexist",[itempools]);
 
 trace(floor1countdowns);
 /*

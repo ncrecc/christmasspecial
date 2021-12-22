@@ -6,7 +6,9 @@ var floor3item = [];
 var floor5item = [];
 var vampireitem = ["Silver Sword"];
 
+var itempools = [lady, strangeshop, awesomelist, floor2gooditem, floor3item, floor5item, vampireitem];
 
+runscript("christmasspecial/checkgeneratorisaccurate",[itempools]);
 
 usestandardenemies();
 

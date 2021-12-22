@@ -51,7 +51,7 @@ wait(0.5);
 
 ladyluck_big.show("talking", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "You know what time it is, folks!");
+speak("Lady Luck", "You know what time it is, folks!", "personality");
 ladyluck_big.show("talking-confused", true);
 speak("Lady Luck", "Everyone's favorite contestant, for whatever reason.", "confused");
 ladyluck_big.show("idle-confused", true);
@@ -64,7 +64,7 @@ ladyluck_big.show("talking-sly", true);
 speak("Lady Luck", "Ha. Don't flatter yourself, Jester buddy", "sly");
 ladyluck_big.show("talking", true);
 speak("Lady Luck", "But no. I'm not jealous.", "normal");
-speak("Lady Luck", "I'm just disappointed that|out of everyone on the show...", "normal");
+speak("Lady Luck", "I'm just disappointed that|out of everyone on the show...");
 ladyluck_big.show("talking-confused", true);
 speak("Lady Luck", "You're the \"crowd favorite\".", "normal");
 ladyluck_big.show("idle-confused", true);
@@ -78,7 +78,7 @@ speak("Jester", "You know, I'm just saying.|It's true, ask anybody.", "worried")
 speak("Jester", "I'm sure they would all agree...").dismiss_in = 0.3;
 
 ladyluck_big.show("talking-angry", true);
-speak("Lady Luck", "Silence!", "scary");
+speak("Lady Luck", "Silence!", "angry");
 ladyluck_big.show("idle-angry", true);
 
 speak("Jester", "There you go again, losing your temper.", "normal");
@@ -104,7 +104,9 @@ speak("Jester", "I want 2 of every card in the show for my deck.|So I can snap t
 ladyluck_big.show("talking-sly", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 speak("Lady Luck", "Okay. You're playing for 2 of|every card in the show...", "sly");
-speak("Lady Luck", "Good luck with that wish when|you dont have your deck anymore", "sly");
+speak("Lady Luck", "Good luck with that wish when|you dont have your deck anymore!", "sly");
 ladyluck_big.show("idle-sly", true);
+
+speak("Jester", "What?!", "determined");
 
 startgamefromcutscene();

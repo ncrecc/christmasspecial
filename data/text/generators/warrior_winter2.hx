@@ -2,6 +2,8 @@ var colours = shuffle(["Something Red","Something Blue","Something Purple","Some
 var themes = shuffle(["A Maneuver","A Gun","A Maneuver","A Spell","A Flower","A Bonus","Something Large","A Finale","A Scrap"]);
 var vampireitem = ["Silver Sword"];
 
+runscript("christmasspecial/checkgeneratorisaccurate",[[colours, themes, vampireitem]]);
+
 usestandardenemies();
 
 var items = [];

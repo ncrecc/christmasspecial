@@ -8,6 +8,9 @@ var floor5item = shuffle(["Parrying Sword", "Parrying Claw", "Locket", "False Sw
 var vampireitem = ["Bunker Buster", "Binary Code", "Encryption", "Password", "Dice Printer", "Back Up Drive", "Risky Bet", "Antivirus", "Copy Machine", "Cooling Dagger", "The Deal Offer"];
 var mariah = ["BOOO!"];
 
+var itempools = [robotitems, jestershops, strangeshop, awesomelist, floor2gooditem, floor3item, floor5item, vampireitem, mariah];
+
+runscript("christmasspecial/checkgeneratorisaccurate",[itempools]);
 
 var bosses = ["Mega Snowman", "Ultra Mariah Carey"];
 bosses = shuffle(bosses);

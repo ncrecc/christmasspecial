@@ -6,7 +6,9 @@ var floor3item = shuffle(["Parry", "Double Parry", "Lightreaver", "Minigun", "Sh
 var floor5item = shuffle(["Parrying Sword", "Parrying Claw", "Locket", "False Swipe", "The Monarch", "Biohazard"]);
 var vampireitem = ["Silver Sword"];
 
+var itempools = [jestershops, strangeshop, awesomelist, floor2gooditem, floor3item, floor5item, vampireitem];
 
+runscript("christmasspecial/checkgeneratorisaccurate",[itempools]);
 
 usestandardenemies();
 

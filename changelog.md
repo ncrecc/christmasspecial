@@ -1,3 +1,22 @@
+12/22/2021 geddy, buster, bert, titku, diane
+- geddy: credits now show after an episode even if you dont win the wheel spin (since the menu credits are broken)
+- geddy: scrooge is now unencounterable
+- buster: fixed technology not having sfxdamage
+- buster: fixed consumerism changing its slots to 2 needs 6 slots
+- geddy: bunch of fixes to creative crisis because my kludgefix for consumerism adding extra invisible broken gadgets messes up broken gadgets in a complicated way
+- geddy: removed gadget smash (didnt make sense since inventor has 2 gadgets in christmas special)
+- buster: inventor no longer gets veneer since it's right before bronze medal, which is almost strictly worse
+- buster: added 2 more items and put them in inventor's generator to accommodate for the above 2 changes (murk and zoop zoop from ncrmod)
+- titku & bert: polished robot and witch cutscenes
+- bert: made some more misc. dialogue revisions
+- bert: polished lady luck's character description
+- diane: caught all non-spell equipment in witch's generator
+- titku: (per matt) made ultra mariah carey have 3 dice
+- titku: (per matt) made song removed on end turn rather then on countdown reduce
+- geddy: (per matt) removed present because it crashed the ai a lot with the items it got
+- geddy: fixed tyrant's glare having no gadget
+- diane: added some utility scripts to check if each item in a generator 1. is a valid item, 2. is a valid witch spell, or 3. has a valid gadget
+
 12/20/2021 bert
 - added catastrophe (missing from witch generator)
 - plethora of witch generator fixes

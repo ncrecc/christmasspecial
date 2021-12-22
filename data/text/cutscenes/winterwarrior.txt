@@ -75,7 +75,7 @@ speak("Warrior", "Whoa, Lady Luck! Where's your holly jolly spirit?", "worried")
 
 ladyluck_big.show("talking-confused", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
-speak("Lady Luck", "Look, the scope of today's show is a little...|low.", "confused");
+speak("Lady Luck", "Look, the aim for today's show is a little...|low.", "confused");
 speak("Lady Luck", "We're losing sponsors left and right.|Family Feud's been taking them all.");
 /* reference to old warrior gimmick of enemy getting a random item each turn
 ladyluck_big.show("talking", true);
@@ -118,8 +118,13 @@ speak("Warrior", "I don't even know what those things are!", "thinking");
 
 ladyluck_big.show("idle-confused", true);
 wait(1.5);
+/*
 ladyluck_big.show("talking-sly", true);
 wait(0.125);
+//intended to look like lady luck is speechless but might just look buggy
+*/
+ladyluck_big.show("talking-sly", true);
+speak("Lady Luck", "Well...", "sly");
 ladyluck_big.show("idle-confused", true);
 wait(1.0);
 

@@ -21,7 +21,9 @@ tradeoffer.push("any");
 
 var vampireitem = ["Silver Sword"];
 
+var itempools = [commonlist1, floor2items, floor2shop, commonlist2, rarelist1, commonlist3, floor4items, vampireitem, ["Demote", "Trinity Charm", "Stockpick", "Permapick", "Poison Thread", "Plight", "Incapacitate", "Nail Rat", "Third Place Cauldron"]];
 
+runscript("christmasspecial/checkgeneratorisaccurate",[itempools]);
 
 usestandardenemies();
 

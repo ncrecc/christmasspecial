@@ -47,7 +47,7 @@ ladyluck_big.show("talking", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 speak("Lady Luck", "Let's warmly welcome a contestant...", "normal");
 ladyluck_big.show("talking-confused", true);
-speak("Lady Luck", "...who dared to steal almost all decorative gifts from|under the Christmas tree in the lobby.");
+speak("Lady Luck", "...who dared to steal all the decorative gifts from|under the Christmas tree in the lobby.");
 ladyluck_big.show("idle-confused", true);
 
 thief.show("worried_idle");

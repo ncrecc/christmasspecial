@@ -96,10 +96,10 @@ ladyluck_big.show("idle", true);
 
 inventor.show("worried_idle");
 inventor.y += 40;
-speak("Inventor", "...Oh. THAT'S what Christmas is all about.", "worried");
+speak("Inventor", "...Oh. Maybe that's what Christmas is all about.", "worried");
 
-ladyluck_big.show("talking", true);
+ladyluck_big.show("talking-sly", true);
 speak("Lady Luck", "Spot on, dear.", "sly");
-ladyluck_big.show("idle", true);
+ladyluck_big.show("idle-sly", true);
 
 startgamefromcutscene();
