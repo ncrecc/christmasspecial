@@ -96,7 +96,7 @@ yet more episodes, by not mario
 see [mod begin]/[mod end] sections in equipment.csv for exactly what mods comes from where
 
 =music=
-xangelmoonx
+xangelmoonx (remixes of dicey dungeons ost, plus one original composition and one remix of chipped of the necrodancer ost. see metadata for more info)
 
 =art=
 mondaybear21

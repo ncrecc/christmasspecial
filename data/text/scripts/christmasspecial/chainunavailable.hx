@@ -17,6 +17,8 @@ for(i in 0...e.unavailabledetails.length) {
 			e.unavailabledetails[i] = e.unavailabledetails[i].split("<quintuple>").join("5x[d6]");
 			e.unavailabledetails[i] = e.unavailabledetails[i].split("<evendice_d6>").join("[d6]");
 			e.unavailabledetails[i] = e.unavailabledetails[i].split("<odddice_d6>").join("[d6]");
+			e.unavailabledetails[i] = e.unavailabledetails[i].split("<var:6rolls>").join("?");
+			e.unavailabledetails[i] = e.unavailabledetails[i].split("<var:randomdice>").join("?");
 		} else {
 			e.unavailabledetails[i] = e.unavailabledetails[i].split("<d6>").join("[d6] + " + power);
 			e.unavailabledetails[i] = e.unavailabledetails[i].split("<double>").join("2x([d6] + " + power + ")");

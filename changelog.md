@@ -1,3 +1,14 @@
+12/23/2021 diane & geddy
+- diane: sponge now grows correctly after combat
+- diane: christmas pistol's description is clearer
+- diane: fixed selfvar displays for unavailable chained jester items
+- diane: fixed magic axe boosting countdowns by 3 instead of 4
+- diane: replaced "tear down this wall" thief levelup reward with "come on and slam" (tdtw is a hammerlike where "on even, set a dice to d6", coas is a hammerlike where "on 6, reroll all your dice", the latter of which i think is more in the spirit of skeleton key)
+- diane: nerfed self consume
+- diane: judgement and random judgement are now normal-slot
+- geddy: divine grip now returns 2 random dice on doubles (so it's not literally just vise grip but size 2) and is no longer excludefromrandomlists
+- geddy: revised lady luck's rules to say you *shouldn't* equip more than one item rather than you *can't*
+
 12/23/2021 buster, bert, diane
 - buster: fixed scrap crystal having no sfx
 - buster: fixed revelation, in order: erroring, casting forward, and giving blessings to the enemy instead of you

@@ -6,7 +6,7 @@ Each turn, your items change, and if you follow the
 commandments on your skillcard, you receive a bonus effect.
 
 The only item you can keep is your skillcard.
-When you get new items, you can only equip 1 at a time!
+When you get new items, only equip 1 at a time!
 
 Good luck! Not from me, of course. 
 		-Jester [jester]
