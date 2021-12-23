@@ -1,3 +1,22 @@
+12/23/2021 buster, bert, diane
+- buster: fixed scrap crystal having no sfx
+- buster: fixed revelation, in order: erroring, casting forward, and giving blessings to the enemy instead of you
+- bert: fixed passives with effects in before start turn, like hot table, applying twice if you're warrior
+- bert: added more passive equipment for A Bonus
+- bert: added rainmaking for Something Large
+- bert: marked slushie, sing, tree shake, stygian blade, divine grip, and luck omen as excludefromrandomlists
+- bert: rewrote A Spell to specify it just has to be a *valid* witch spell
+- bert: retooled A Flower to be a mana generator instead of just any mana equipment
+- bert: added more mana-generating equipment for A Flower
+- diane: fixed thief's generator never being shuffled
+- diane: some if(simulation) wrapping for thief items
+- diane: excluded nicholas from thief's episode due to gift bag giving thief too many items
+- diane: main menu credits now point out that they're incomplete and player must beat an episode to view full credits
+- diane: changed credits music to angelmoon's ice stage remix
+- diane: tidied up the credits a bit
+- diane: excluded bounty hunter from jester becasue making cards unavailable for reasons other than chain doesn't work right
+- diane: fixed offset of christmas ghosts
+
 12/22/2021 geddy, buster, bert, titku, diane
 - geddy: credits now show after an episode even if you dont win the wheel spin (since the menu credits are broken)
 - geddy: scrooge is now unencounterable

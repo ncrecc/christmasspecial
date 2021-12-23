@@ -5,7 +5,7 @@ var awesomelist = shuffle(["Christmas Pistol","Countvalanche", "Roulette", "AC U
 var floor2gooditem = shuffle(["Budge", "Pip Master"]);
 var floor3item = shuffle(["Parry", "Double Parry", "Lightreaver", "Minigun", "Shielding Potion", "The Monarch", "Innovate"]);
 var floor5item = shuffle(["Parrying Sword", "Parrying Claw", "Locket", "False Swipe", "The Monarch", "Biohazard"]);
-var vampireitem = ["Bunker Buster", "Binary Code", "Encryption", "Password", "Dice Printer", "Back Up Drive", "Risky Bet", "Antivirus", "Copy Machine", "Cooling Dagger", "The Deal Offer"];
+var vampireitem = shuffle(["Bunker Buster", "Binary Code", "Encryption", "Password", "Dice Printer", "Back Up Drive", "Risky Bet", "Antivirus", "Copy Machine", "Cooling Dagger", "The Deal Offer"]);
 var mariah = ["BOOO!"];
 
 var itempools = [robotitems, jestershops, strangeshop, awesomelist, floor2gooditem, floor3item, floor5item, vampireitem, mariah];

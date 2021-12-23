@@ -62,7 +62,7 @@ while(space > 1 && themesequipped.length > 0) {
 	
 	//4th arg requests the script to return only a small equipment if set to true. if the script receives the 4th arg as true, it MUST return either a small equipment or null. -diane
 		//clarifying on the above a bit - this isn't because themecards normally can't be asked to return equipment of a particular size; this is because of cases where all slots are filled and a card that can return small *or* large equipment would not have space to return a large equipment. -bert
-	//5th arg requests the script to return an upgraded equipment if passed true. (on the scripts' side they still have to return a properly sized equipment, though note that as currently implemented, small equipment that becomes large on upgrade (e.g. proton pack) will not count as an upgraded large equipment, since large equipment is only oikked from getequipmentlist with the "large" argument supplied. not sure how i would solve this) -bert
+	//5th arg requests the script to return an upgraded equipment if passed true. (on the scripts' side they still have to return a properly sized equipment, though note that as currently implemented, small equipment that becomes large on upgrade (e.g. proton pack) will not count as an upgraded large equipment, since large equipment is only picked from getequipmentlist with the "large" argument supplied. not sure how i would solve this) -bert
 	//...in retrospect it's pretty messy to literally just write one of three variants of "also if it wants upgraded return upgraded thx" in every single themecard (variant 1 is base, variant 2 rejects all size 1 upgraded equipment, variant 3 rejects all size 2 upgraded equipment) but dicey dungeons is 90% kludge so w/e -bert
 	var neweq = runscript("christmasspecial/warriorthemes/" + theme[0].toLowerCase(),[allsmalleqs,alllargeeqs,alleqs,false,theme[1]]); 
 	
@@ -91,7 +91,7 @@ giveequipment(eqtoadd, true, false);
 var newequipment = f.equipment.copy();
 for(eq in newequipment) {
 	if(oldequipment.indexOf(eq) == -1) {
-		runscript("christmasspecial/evalstarthooks",[f,target,eq,true,true,midturn]);
+		runscript("christmasspecial/evalstarthooks",[f,target,eq,true,midturn,midturn]);
 	}
 }
 f.fixskillcard();

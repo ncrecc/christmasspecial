@@ -1,10 +1,10 @@
-var commonlist1 = ["Mouse Trap", "Umbrella", pick(["Demote", "Trinity Charm"]), "Hand Sanitiser", "Bubble Burster", "Glue Gun", "Natural Charm", "Waltzer"];
-var floor2items = ["Pocket Protector", "Giga Drain"];
-var floor2shop = ["Mitosis", pick(["Stockpick", "Permapick"]), "Luckpick"];
-var commonlist2 = ["Booby Trap", "Lightreaver", "Bulletproof Glass", "Fruit Loot", "False Swipe", "Locktrick", "Plague Stave", "Locket", "The Monarch", "Precognition"];
-var rarelist1 = ["Pigstep", "Autohook", "Metal Crusher", "Push Knife", "Flea Shooter", "Eternity Cannon", "Adamant Rail"];
-var commonlist3 = ["Rockfall", "Iron Helmet", "Biohazard", "Reagent", "Mirror Spatula"];
-var floor4items = ["Spear"];
+var commonlist1 = shuffle(["Mouse Trap", "Umbrella", pick(["Demote", "Trinity Charm"]), "Hand Sanitiser", "Bubble Burster", "Glue Gun", "Natural Charm", "Waltzer"]);
+var floor2items = shuffle(["Pocket Protector", "Giga Drain"]);
+var floor2shop = shuffle(["Mitosis", pick(["Stockpick", "Permapick"]), "Luckpick"]);
+var commonlist2 = shuffle(["Booby Trap", "Lightreaver", "Bulletproof Glass", "Fruit Loot", "False Swipe", "Locktrick", "Plague Stave", "Locket", "The Monarch", "Precognition"]);
+var rarelist1 = shuffle(["Pigstep", "Autohook", "Metal Crusher", "Push Knife", "Flea Shooter", "Eternity Cannon", "Adamant Rail"]);
+var commonlist3 = shuffle(["Rockfall", "Iron Helmet", "Biohazard", "Reagent", "Mirror Spatula"]);
+var floor4items = shuffle(["Spear"]);
 var tradeoffer;
 var traderesult;
 if(chance(10)){
@@ -15,7 +15,7 @@ if(chance(10)){
 	traderesult = ["Nail Rat"];
 }else{
 	tradeoffer = ["Stink Bomb", "Greedy Crowbar", "Lockpick", "Christmas Dagger"];
-	traderesult = ["Poison Thread", "Plight", "Incapacitate", "Third Place Cauldron"];
+	traderesult = shuffle(["Poison Thread", "Plight", "Incapacitate", "Third Place Cauldron"]);
 }
 tradeoffer.push("any");
 

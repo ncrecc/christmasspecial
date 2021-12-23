@@ -98,3 +98,4 @@ eternitycannon,Eternity_Cannon,eternitycannon,Do [sword]5 damage at the start of
 eternitycannondowngraded,Eternity_Cannon-,eternitycannon,Do [sword]3 damage at the start of each turn <value> time(s).,YES,NO,NO,NO,NO,,,,for(i in 0...status.value){ attack(3); }; sfxdamage(target[;]3*status.value);,,,,,,,
 chain,chain,cog,text should not appear,NO,NO,NO,YES,NO,status.scriptoncursetrigger = ~runscript(\~christmasspecial/jester_dochaining\~[;][self])~; status.scriptonenemydodge = status.scriptoncursetrigger;,,,,,,,,,,\
 mkapowcharge,Magic_Kapow_Charge,fury,Magic Kapow will deal double damage this turn.,NO,YES,NO,NO,NO,,,,,,,,,,,
+shielddown,Shield_Down,potion,At the start of your turn[;] lose [shield]<value> shield.,YES,NO,NO,NO,YES,,,,removestatusself(SHIELD|status.value);,,,,,,,

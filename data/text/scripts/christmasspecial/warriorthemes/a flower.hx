@@ -19,11 +19,7 @@ while(eq == null) {
 	}
 	if(
 		testeq.script.indexOf('inflictself(MANA') != -1 ||
-		testeq.script.indexOf('inflictself("mana"') != -1 ||
-		testeq.script.indexOf('removestatusself(MANA') != -1 ||
-		testeq.script.indexOf('removestatusself("mana"') != -1 ||
-		testeq.script.indexOf('getstatusself(MANA') != -1 ||
-		testeq.script.indexOf('getstatusself("mana"') != -1
+		testeq.script.indexOf('inflictself("mana"') != -1
 	) {
 		eq = testeq;
 	}

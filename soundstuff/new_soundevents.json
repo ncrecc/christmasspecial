@@ -26525,7 +26525,7 @@
             },
             {
                 "channel": 1,
-                "file": "music/cutscene/cutscene_finale",
+                "file": "music/atmos/ice",
                 "loop": true,
                 "volume": {
                     "fade": 1,
