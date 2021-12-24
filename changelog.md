@@ -1,3 +1,6 @@
+12/24/2021 diane
+- mimic and ghosts of christmas no longer show up for thief
+
 12/24/2021 bert
 - fixed weird deprecated coffee pot- script (rolled a new dice, the dice you put in, and the dice minus 1)
 - nerfed frozen slash by taking away its free2
