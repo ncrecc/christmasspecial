@@ -1,3 +1,15 @@
+12/23/2021 diane
+- divine grip's description now fits
+- divine grip no longer crashes
+- changed episode names so none of them are just "winter x"
+- rewrote something large's description to be a little less confusing
+- rewrote waltzer's jinx to mention it repeats
+- replaced neypah's redundant credit for "mod item additions" with a credit to matt for concepts
+- per matt's request, readded a DnD reference ("dungeon master") in robot's cutscene
+- per matt's request, added more thief sound clips in thief's cutscene
+- wheel win dialogue in episodecomplete_mummy now has voice clips for the player
+- tweaked thief's wheel win dialogue a bit
+
 12/23/2021 diane & geddy
 - diane: sponge now grows correctly after combat
 - diane: christmas pistol's description is clearer

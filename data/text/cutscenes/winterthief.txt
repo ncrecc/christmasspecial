@@ -61,16 +61,16 @@ speak("Lady Luck", "But I wonder what a greedy person|like you would want for Ch
 ladyluck_big.show("idle-sly", true);
 
 thief.show("idle");
-speak("Thief", "A billion dollars.");
+speak("Thief", "A billion dollars.", "determined");
 
 ladyluck_big.show("talking-sly", true);
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 240, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 speak("Lady Luck", "Wow! You truly are an enigma, dear.", "sly");
 ladyluck_big.show("idle-sly", true);
 
-speak("Thief", "Look. Money is the best gift.");
-speak("Thief", "I can buy anything I want with it.", "determined");
-speak("Thief", "ESPECIALLY happiness.");
+speak("Thief", "Look. Money is the best gift.", "normal");
+speak("Thief", "I can buy anything I want with it.", "personality");
+speak("Thief", "ESPECIALLY happiness.", "determined");
 
 actor("Lady Luck", screenwidthmid + 240, screenheightmid - 280, Col.YELLOW, RIGHT, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
 ladyluck_big.show("talking-sly", true);
