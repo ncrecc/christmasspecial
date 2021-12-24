@@ -6,7 +6,9 @@ spellbooks using a special card in your 4th spell slot.
 You also start with 4 dice and your limit is stronger.
 But[;] you don't have a prepared spell slot
 
-Your starter spells are [yellow]Cauldron[] and [yellow]Infliction[] in book 1[;] [yellow]Magic_Shield[] and [yellow]Magic_Missile[] in book 2[;] [yellow]Duplicate[] and [yellow]Hall_of_Mirrors[] in book 3.
+Your starter spells are [yellow]Cauldron[] and [yellow]Infliction[] in book 1[;]
+[yellow]Magic_Shield[] and [yellow]Magic_Missile[] in book 2[;] and
+[yellow]Duplicate[] and [yellow]Hall_of_Mirrors[] in book 3.
 
 That's all. Good luck there!
                    -[ice][]Fiship

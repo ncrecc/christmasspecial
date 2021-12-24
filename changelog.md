@@ -1,3 +1,8 @@
+12/23/2021 diane
+- grinch no longer shows up for lady luck
+- witch rules no longer bleed offscreen
+- blessed bowl (random warrior item) no longer crashes the game
+
 12/23/2021 bert
 - popcorn no longer crashes the game (previously it used mf's special version of illuminate, "lightstatus")
 
