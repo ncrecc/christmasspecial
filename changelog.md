@@ -1,3 +1,20 @@
+12/24/2021 bert
+- fixed weird deprecated coffee pot- script (rolled a new dice, the dice you put in, and the dice minus 1)
+- nerfed frozen slash by taking away its free2
+- tree shake's description now correctly reflects that you receive 2-4 ornaments
+- copycat and grinch are now excluded from warrior
+- nicholas is now excluded from thief
+- next tome can no longer be furied
+- copycat is now excluded from witch
+- nerfed chaingun (now needs even and does 3 damage)
+- chaingun now works on dodge
+- snowball machinegun now attacks once on dodge (similarly to tetraphobia)
+- ice skates and fire boots now upgrade correctly
+- creative crisis's description is now clearer
+- all gadgets now properly break after finishing a battle with creative crisis used
+- removed the weird changeslots shenenigans creative crisis was doing (doesn't work great with combination slots) and just made it once per battle
+- creative crisis and consumerism statuses are no longer invisible
+
 12/23/2021 diane
 - grinch no longer shows up for lady luck
 - witch rules no longer bleed offscreen
