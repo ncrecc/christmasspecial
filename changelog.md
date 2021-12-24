@@ -1,3 +1,10 @@
+12/23/2021 bert
+- popcorn no longer crashes the game (previously it used mf's special version of illuminate, "lightstatus")
+
+
+release!
+
+
 12/23/2021 diane
 - divine grip's description now fits
 - divine grip no longer crashes
